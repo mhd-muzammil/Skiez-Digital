@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import HeroFont from "../components/HeroFont";
 import GlowButton from "./ui/GlowButton";
+import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 
 export default function Hero() {
   const container = {
@@ -72,12 +73,12 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
-              <GlowButton
-                href="/services"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-teal-500 text-white font-semibold shadow hover:brightness-95 transition"
+              <InteractiveHoverButton
+                href="/Services"
+                  className="inline-flex items-center gap-2 px-6 py-4 rounded-lg bg-teal-500 text-white font-semibold shadow hover:brightness-95 transition"
               >
                 Our Services
-              </GlowButton>
+              </InteractiveHoverButton>
               <GlowButton
                 href="#showcase"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-teal-500 transition"
