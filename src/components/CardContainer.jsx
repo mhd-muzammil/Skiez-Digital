@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import BorderButton from "./ui/border-button";
 
 /* -------------------------
    Data (must be above component)
@@ -36,7 +37,9 @@ const cardInfo = [
 const CardContainer = () => {
   return (
     <Section>
-      <h2 className="section-title">Services We Offer</h2>
+      <h2 className="section-title" >
+        Our Services
+      </h2>
 
       {/* MARQUEE: track holds two copies of the card row for seamless loop */}
       <MarqueeContainer>
