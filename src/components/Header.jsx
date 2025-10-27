@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <>
       {/* HEADER */}
-      <header className="fixed inset-x-0 top-0 z-40">
+      <header className="fixed inset-x-0 top-0 z-[99999] isolate">
         <div className="bg-white/80 backdrop-blur-sm border-b border-slate-200">
           <div className="mx-auto max-w-[1200px] px-6 md:px-12 flex items-center justify-between h-16">
             {/* Logo */}

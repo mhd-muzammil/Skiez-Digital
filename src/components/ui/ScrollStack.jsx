@@ -258,7 +258,10 @@
       if (lenisRef.current) {
         try {
           lenisRef.current.destroy();
-        } catch (e) {}
+        } catch (err) {
+          console.error(err);
+          
+        }
         lenisRef.current = null;
       }
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -378,7 +381,10 @@
         if (lenisRef.current) {
           try {
             lenisRef.current.destroy();
-          } catch (e) {}
+          } catch (err) {
+            console.error(err);
+            
+          }
           lenisRef.current = null;
         }
         window.removeEventListener("scroll", updateCardTransforms);
