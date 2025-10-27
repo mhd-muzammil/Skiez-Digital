@@ -6,12 +6,14 @@ import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import Header from './components/Header'
 import About from './pages/About'
+import CanvasCursor from './components/Cursor'
 
 const App = () => {
   return (
     <>
       <div>
         <BrowserRouter>
+          <CanvasCursor/>
           <Header />
           <Routes>
             <Route path='/' element={ <Home />} />
