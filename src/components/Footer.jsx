@@ -16,19 +16,19 @@ const Footer = () => {
             />
 
             <p className="text-gray-400 leading-relaxed mb-6">
-              We provide creative digital solutions — from web development and
-              marketing to data-driven growth strategies — empowering businesses
+              We provide creative digital solutions from web development and
+              marketing to data-driven growth strategies empowering businesses
               to scale globally.
             </p>
 
             <div className="text-sm space-y-2">
               <p>
-                <span className="font-semibold text-white">WhatsApp:</span> +1
-                515-519-9991
+                <span className="font-semibold text-white">WhatsApp:</span> +91
+                9876543210
               </p>
               <p>
                 <span className="font-semibold text-white">Email:</span>{" "}
-                hello@yourbrand.co
+                info@SkiezDigital.com
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             <h4 className="text-white font-semibold text-lg mb-4">Products</h4>
             <ul className="space-y-2 text-gray-400">
               <li className="hover:text-sky-400 transition">
-                OTT / Video Solutions
+                Customized Web Applications
               </li>
               <li className="hover:text-sky-400 transition">E-commerce</li>
             </ul>
@@ -70,11 +70,31 @@ const Footer = () => {
               Quick Links
             </h4>
             <ul className="space-y-2 text-gray-400">
-              <li className="hover:text-sky-400 transition">About Us</li>
-              <li className="hover:text-sky-400 transition">Contact Us</li>
-              <li className="hover:text-sky-400 transition">Privacy Policy</li>
-              <li className="hover:text-sky-400 transition">
-                Terms & Conditions
+              <li>
+                <a href="/about" className="hover:text-sky-400 transition">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="/contact" className="hover:text-sky-400 transition">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/privacy-policy"
+                  className="hover:text-sky-400 transition"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/terms-and-conditions"
+                  className="hover:text-sky-400 transition"
+                >
+                  Terms & Conditions
+                </a>
               </li>
             </ul>
           </div>
@@ -86,7 +106,7 @@ const Footer = () => {
             </h4>
             <p className="text-gray-400 mb-3">
               <span className="font-semibold text-white">Enquiries:</span>{" "}
-              hello@yourbrand.co
+              info@skiezDigital.com
             </p>
 
             <h5 className="text-white font-semibold text-md mb-2">
@@ -116,16 +136,10 @@ const Footer = () => {
               Contact Address
             </h4>
             <p className="text-gray-400 text-sm leading-relaxed">
-              <span className="font-semibold text-white">USA:</span> 1910,
-              Thomes Avenue, Cheyenne, Wyoming - 82001 USA.
               <br />
-              <br />
-              <span className="font-semibold text-white">UK:</span> 46 Throwley
-              Way, Sutton, SM1 4AF United Kingdom
-              <br />
-              <br />
-              <span className="font-semibold text-white">India:</span> B513, The
-              Royal Castlw, Tirumudivakam, Chennai - 600044, India
+              <span className="font-semibold text-white">India:</span> No: 81/5,
+              6th street, Shanthi Nagar, Chengalpattu District, Tamilnadu 603
+              003.
             </p>
           </div>
         </div>
