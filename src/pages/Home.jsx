@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <div className=""></div>
       <CardContainer />
       <StackHome />
       

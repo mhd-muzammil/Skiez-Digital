@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  * Requires Tailwind CSS and framer-motion
  */
 
-const mobileTech = [
+const tech = [
   {
     name: "React Native",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
@@ -16,10 +16,6 @@ const mobileTech = [
   {
     name: "Flutter",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
-  },
-  {
-    name: "Expo",
-    logo: "https://raw.githubusercontent.com/expo/vector-icons/master/src/Expo.png",
   },
   {
     name: "Kotlin",
@@ -32,10 +28,6 @@ const mobileTech = [
   {
     name: "Figma",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
-  },
-  {
-    name: "Lottie",
-    logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/lottie.svg",
   },
   {
     name: "Redux",
@@ -52,10 +44,6 @@ const mobileTech = [
   {
     name: "GraphQL",
     logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg",
-  },
-  {
-    name: "REST APIs",
-    logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/api.svg",
   },
   {
     name: "Fastlane",
@@ -337,49 +325,92 @@ export default function MobileApp() {
       </section>
 
       {/* TOOLING */}
-      <section className="py-12 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="flex items-center justify-between mb-6">
-            <h4 className="text-sm text-gray-600 uppercase tracking-wider">
-              Our Tooling
-            </h4>
-            <p className="text-gray-700 text-sm">
-              Platform, prototyping, infra, analytics & delivery tools we use
-              for mobile apps.
-            </p>
+      <section className="py-16 border-t border-gray-100 bg-white overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
+          <h4 className="text-lg font-bold text-gray-700 uppercase tracking-wider mb-10">
+            Our Tooling & Tech Stack
+          </h4>
+
+          {/* Gradient fade edges for depth */}
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+
+          {/* Row 1 - Left to Right */}
+          <div className="relative flex overflow-hidden mb-10">
+            <div
+              className="flex gap-10 animate-marquee whitespace-nowrap"
+              style={{ animationDuration: "40s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row1-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
-            initial={{ opacity: 0, y: 6 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {mobileTech.map((t, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transform transition hover:scale-[1.02]"
-                title={t.name}
-              >
-                <img
-                  src={t.logo}
-                  alt={t.name}
-                  className="h-8 w-8 object-contain"
-                  loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src =
-                      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><rect width='24' height='24' fill='%23f3f4f6'/><text x='12' y='14' text-anchor='middle' font-size='7' fill='%239ca3af'>logo</text></svg>";
-                  }}
-                />
-                <span className="text-sm font-medium text-gray-700">
-                  {t.name}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+          {/* Row 2 - Right to Left */}
+          <div className="relative flex overflow-hidden">
+            <div
+              className="flex gap-10 animate-marquee-reverse whitespace-nowrap"
+              style={{ animationDuration: "42s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row2-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* Animations */}
+        <style>
+          {`
+    @keyframes marquee {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes marquee-reverse {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      animation: marquee linear infinite;
+    }
+    .animate-marquee-reverse {
+      display: flex;
+      animation: marquee-reverse linear infinite;
+    }
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
+    `}
+        </style>
       </section>
 
       {/* SELECTED WORK */}
@@ -425,136 +456,136 @@ export default function MobileApp() {
 
       {/* TIMELINE / PROCESS (replace existing section) */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-              <motion.h2
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900"
+        >
+          How we work
+        </motion.h2>
+
+        <div className="relative max-w-3xl mx-auto">
+          {/* Vertical line */}
+          <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200 hidden md:block" />
+
+          <div className="space-y-8">
+            {[
+              {
+                step: "1",
+                title: "Discovery",
+                desc: "Workshops, stakeholder interviews and market research to define goals & KPIs.",
+                accent: "Research",
+              },
+              {
+                step: "2",
+                title: "Design",
+                desc: "Interactive prototypes, user testing and UI systems for rapid feedback cycles.",
+                accent: "Prototyping",
+              },
+              {
+                step: "3",
+                title: "Build",
+                desc: "Component-driven development, automated tests, and CI/CD for reliable releases.",
+                accent: "Engineering",
+              },
+              {
+                step: "4",
+                title: "Launch & Support",
+                desc: "Monitoring, performance optimisations and iterative improvements after launch.",
+                accent: "Growth",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900"
+                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                className="flex items-start gap-6"
+                aria-labelledby={`process-${item.step}-title`}
               >
-                How we work
-              </motion.h2>
-      
-              <div className="relative max-w-3xl mx-auto">
-                {/* Vertical line */}
-                <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200 hidden md:block" />
-      
-                <div className="space-y-8">
-                  {[
-                    {
-                      step: "1",
-                      title: "Discovery",
-                      desc: "Workshops, stakeholder interviews and market research to define goals & KPIs.",
-                      accent: "Research",
-                    },
-                    {
-                      step: "2",
-                      title: "Design",
-                      desc: "Interactive prototypes, user testing and UI systems for rapid feedback cycles.",
-                      accent: "Prototyping",
-                    },
-                    {
-                      step: "3",
-                      title: "Build",
-                      desc: "Component-driven development, automated tests, and CI/CD for reliable releases.",
-                      accent: "Engineering",
-                    },
-                    {
-                      step: "4",
-                      title: "Launch & Support",
-                      desc: "Monitoring, performance optimisations and iterative improvements after launch.",
-                      accent: "Growth",
-                    },
-                  ].map((item, idx) => (
-                    <motion.div
-                      key={item.step}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.45, delay: idx * 0.08 }}  
-                      className="flex items-start gap-6"
-                      aria-labelledby={`process-${item.step}-title`}
-                    >
-                      {/* Step indicator */}
-                      <div className="relative flex-shrink-0">
-                        <div className="md:absolute md:-left-[44px] md:top-0 flex items-center justify-center w-12 h-12 rounded-full bg-teal-600 text-white font-semibold shadow-lg">
-                          {item.step}
-                        </div>
-      
-                        {/* small accent chip for mobile (visible on small screens) */}
-                        <div className="block md:hidden">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold">
-                              {item.step}
-                            </div>
-                          </div>
-                        </div>
+                {/* Step indicator */}
+                <div className="relative flex-shrink-0">
+                  <div className="md:absolute md:-left-[44px] md:top-0 flex items-center justify-center w-12 h-12 rounded-full bg-teal-600 text-white font-semibold shadow-lg">
+                    {item.step}
+                  </div>
+
+                  {/* small accent chip for mobile (visible on small screens) */}
+                  <div className="block md:hidden">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold">
+                        {item.step}
                       </div>
-      
-                      {/* Content card */}
-                      <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
-                        <div className="flex items-center justify-between gap-4">
-                          <div>
-                            <h3
-                              id={`process-${item.step}-title`}
-                              className="text-lg font-semibold text-gray-900"
-                            >
-                              {item.title}
-                            </h3>
-                            <div className="text-sm text-teal-600 font-medium mt-1">
-                              {item.accent}
-                            </div>
-                          </div>
-                          {/* subtle arrow / icon */}
-                          <svg
-                            className="w-6 h-6 text-gray-300"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            aria-hidden
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </div>
-      
-                        <p className="mt-3 text-gray-600 leading-relaxed">
-                          {item.desc}
-                        </p>
-      
-                        {/* optional micro-CTA */}
-                        <div className="mt-4">
-                          <a
-                            href="/contact"
-                            className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 hover:underline"
-                          >
-                            Talk to an expert
-                            <svg
-                              className="w-4 h-4"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                              aria-hidden
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M5 12h14M12 5l7 7-7 7"
-                              />
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </section>
+
+                {/* Content card */}
+                <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <h3
+                        id={`process-${item.step}-title`}
+                        className="text-lg font-semibold text-gray-900"
+                      >
+                        {item.title}
+                      </h3>
+                      <div className="text-sm text-teal-600 font-medium mt-1">
+                        {item.accent}
+                      </div>
+                    </div>
+                    {/* subtle arrow / icon */}
+                    <svg
+                      className="w-6 h-6 text-gray-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* optional micro-CTA */}
+                  <div className="mt-4">
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 hover:underline"
+                    >
+                      Talk to an expert
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 12h14M12 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* PRICING TIERS */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">

@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-
+import webdev from "@/assets/web-development.jpg"
 export default function WebDevelopment() {
   const features = [
     {
@@ -157,12 +157,11 @@ export default function WebDevelopment() {
       <section
         className="relative flex items-center justify-center text-center h-[480px] md:h-[600px] bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1523475496153-3d6cc0b3ed3c?auto=format&fit=crop&w=1800&q=80')",
+          backgroundImage: `url(${webdev})`,
         }}
         aria-label="Web development hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/50 to-black/50" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -299,25 +298,92 @@ export default function WebDevelopment() {
       </section>
 
       {/* TECH STACK */}
-      <section className="py-12 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <h4 className="text-sm text-gray-600 uppercase tracking-wider mb-6">
-            Our Tooling
+      <section className="py-16 border-t border-gray-100 bg-white overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
+          <h4 className="text-lg font-bold text-gray-700 uppercase tracking-wider mb-10">
+            Our Tooling & Tech Stack
           </h4>
-          <div className="flex items-center gap-6 flex-wrap">
-            {tech.map((t, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-transform hover:scale-105"
-              >
-                <img src={t.logo} alt={t.name} className="h-8 w-auto" />
-                <span className="text-sm font-medium text-gray-700">
-                  {t.name}
-                </span>
-              </div>
-            ))}
+
+          {/* Gradient fade edges for depth */}
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+
+          {/* Row 1 - Left to Right */}
+          <div className="relative flex overflow-hidden mb-10">
+            <div
+              className="flex gap-10 animate-marquee whitespace-nowrap"
+              style={{ animationDuration: "40s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row1-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 - Right to Left */}
+          <div className="relative flex overflow-hidden">
+            <div
+              className="flex gap-10 animate-marquee-reverse whitespace-nowrap"
+              style={{ animationDuration: "42s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row2-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Animations */}
+        <style>
+          {`
+    @keyframes marquee {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes marquee-reverse {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      animation: marquee linear infinite;
+    }
+    .animate-marquee-reverse {
+      display: flex;
+      animation: marquee-reverse linear infinite;
+    }
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
+    `}
+        </style>
       </section>
 
       {/* PROCESS (compact) */}

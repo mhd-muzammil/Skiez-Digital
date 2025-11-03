@@ -18,6 +18,7 @@ import ContentMarketing from './pages/DigitalMarketing/ContentMarketing'
 import SocialMediaMarketing from './pages/DigitalMarketing/SocialMediaMarketing'
 import MetaAds from './pages/DigitalMarketing/MetaAds'
 import GoogleCampign from './pages/DigitalMarketing/GoogleCampign'
+import Careers from './pages/Careers'
 
 const App = () => {
   return (
@@ -37,14 +38,15 @@ const App = () => {
             <Route path="/services/mobile-apps" element={<MobileApps />} />
             <Route path="/services/seo-marketing" element={<SeoMarketing />} />
             <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path='/services/digital-marketing/seo' element={<Seo/>} />
             <Route path='/services/digital-marketing/email-marketing' element={<EmailMarketing/>} />
             <Route path='/services/digital-marketing/content-marketing' element={<ContentMarketing />} />
-            <Route path='/services/digital-marketing/socialmedia-marketing' element={<SocialMediaMarketing/>} />
+            <Route path='/services/digital-marketing/social-media' element={<SocialMediaMarketing/>} />
             <Route path='/services/digital-marketing/meta-ads' element={<MetaAds/>} />
-            <Route path='/services/digital-marketing/google-campign' element={<GoogleCampign/>} />
+            <Route path='/services/digital-marketing/google-campaigns' element={<GoogleCampign/>} />
           </Routes>
           <Footer />
         </BrowserRouter>

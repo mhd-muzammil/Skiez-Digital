@@ -113,13 +113,13 @@ export default function UIUX() {
           transition={{ duration: 0.7 }}
           className="relative z-10 max-w-5xl mx-auto px-6 text-center"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-white mb-4">
-            UI / UX Design that converts & delights
+          <h1 className="text-3xl md:text-5xl lg:text-3xl font-extrabold leading-tight text-white mb-4">
+            UI / UX DESIGN
           </h1>
           <p className="text-gray-200 max-w-2xl mx-auto text-base md:text-lg mb-6">
-            We design intuitive products and interfaces focused on usability,
-            accessibility and measurable business outcomes — research,
-            prototype, and deliver.
+            UI/UX design services that create stunning, user-friendly, and
+            conversion-driven digital experiences to elevate your brand and
+            boost online engagement.
           </p>
 
           <div className="flex items-center justify-center gap-4">
@@ -482,44 +482,92 @@ export default function UIUX() {
 
       {/* TECH STACKS */}
 
-      <section className="py-12 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <h4 className="text-sm text-gray-600 uppercase tracking-wider mb-6">
-            Our Tooling
+      <section className="py-16 border-t border-gray-100 bg-white overflow-hidden relative">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
+          <h4 className="text-lg font-bold text-gray-700 uppercase tracking-wider mb-10">
+            Our Tooling & Tech Stack
           </h4>
 
-          <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
-            initial={{ opacity: 0, y: 6 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            {tech.map((t, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transform transition hover:scale-[1.03]"
-                title={t.name}
-              >
-                <img
-                  src={t.logo}
-                  alt={t.name}
-                  className="h-8 w-8 object-contain"
-                  loading="lazy"
-                  onError={(e) => {
-                    // safe inline fallback — tiny gray SVG dataURI
-                    e.currentTarget.onerror = null;
-                    e.currentTarget.src =
-                      "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24'><rect width='24' height='24' fill='%23f3f4f6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='8' fill='%239ca3af'>icon</text></svg>";
-                  }}
-                />
-                <span className="text-sm font-medium text-gray-700">
-                  {t.name}
-                </span>
-              </div>
-            ))}
-          </motion.div>
+          {/* Gradient fade edges for depth */}
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
+
+          {/* Row 1 - Left to Right */}
+          <div className="relative flex overflow-hidden mb-10">
+            <div
+              className="flex gap-10 animate-marquee whitespace-nowrap"
+              style={{ animationDuration: "40s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row1-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 - Right to Left */}
+          <div className="relative flex overflow-hidden">
+            <div
+              className="flex gap-10 animate-marquee-reverse whitespace-nowrap"
+              style={{ animationDuration: "42s" }}
+            >
+              {tech.concat(tech).map((t, i) => (
+                <div
+                  key={`row2-${i}`}
+                  className="flex flex-col items-center justify-center transition-transform hover:scale-110"
+                >
+                  <img
+                    src={t.logo}
+                    alt={t.name}
+                    className="h-10 w-auto object-contain drop-shadow-md"
+                    loading="lazy"
+                  />
+                  <span className="text-xs font-semibold text-gray-600 mt-2">
+                    {t.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+
+        {/* Animations */}
+        <style>
+          {`
+    @keyframes marquee {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes marquee-reverse {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      animation: marquee linear infinite;
+    }
+    .animate-marquee-reverse {
+      display: flex;
+      animation: marquee-reverse linear infinite;
+    }
+    .animate-marquee:hover,
+    .animate-marquee-reverse:hover {
+      animation-play-state: paused;
+    }
+    `}
+        </style>
       </section>
 
       {/* FAQ */}

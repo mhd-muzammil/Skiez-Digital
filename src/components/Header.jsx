@@ -46,6 +46,7 @@ const LINKS = [
     ],
   },
   { label: "About", href: "/about" },
+  { label: "Careers", href:"/careers"},
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
