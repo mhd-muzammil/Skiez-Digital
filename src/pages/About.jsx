@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import CardGrid from '@/components/ui/CyberCard';
 
 const About = () => {
   return (
-    <div>About</div>
+    <div><CardGrid /></div>
   )
 }
 

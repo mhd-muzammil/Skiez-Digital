@@ -2,8 +2,7 @@ import React from "react";
 import Hero from "../components/Hero";
 import CardContainer from "../components/CardContainer";
 import StackHome from "../components/StackHome";
-import Footer from "@/components/Footer";
-import CyberCardGrid from "@/components/ui/CyberCard";
+
 
 
 const Home = () => {
@@ -12,8 +11,8 @@ const Home = () => {
       <Hero />
       <CardContainer />
       <StackHome />
-      <CyberCardGrid/>
-      <Footer/>
+      
+      
     </>
   );
 };

@@ -12,7 +12,7 @@ const Footer = () => {
             <img
               src="/src/assets/Skiez-logo.png"
               alt="Your Logo"
-              className="h-14 w-22 mb-5"
+              className="h-14 w-22 mb-5 rounded-lg"
             />
 
             <p className="text-gray-400 leading-relaxed mb-6">

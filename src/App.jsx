@@ -7,25 +7,50 @@ import Contact from './pages/Contact'
 import Header from './components/Header'
 import About from './pages/About'
 import CanvasCursor from './components/Cursor'
+import WebDevelopment from './pages/services/WebDevelopment'
+import UiUxDesign from './pages/services/UiUxDesign'
+import MobileApps from './pages/services/MobileApps'
+import SeoMarketing from './pages/services/DigitalMarketing'
+import Footer from './components/Footer'
+import Seo from './pages/DigitalMarketing/Seo'
+import EmailMarketing from './pages/DigitalMarketing/EmailMarketing'
+import ContentMarketing from './pages/DigitalMarketing/ContentMarketing'
+import SocialMediaMarketing from './pages/DigitalMarketing/SocialMediaMarketing'
+import MetaAds from './pages/DigitalMarketing/MetaAds'
+import GoogleCampign from './pages/DigitalMarketing/GoogleCampign'
 
 const App = () => {
   return (
     <>
       <div>
         <BrowserRouter>
-          <CanvasCursor/>
+          <CanvasCursor />
           <Header />
           <Routes>
-            <Route path='/' element={ <Home />} />
-            <Route path='/services' element={ <Services />} />
-            <Route path='/about' element={ <About />} />
-            <Route path='/blog' element={ <Blog/>} />
-            <Route path='/contact' element={ <Contact/>} />
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route
+              path="/services/web-development"
+              element={<WebDevelopment />}
+            />
+            <Route path="/services/ui-ux" element={<UiUxDesign />} />
+            <Route path="/services/mobile-apps" element={<MobileApps />} />
+            <Route path="/services/seo-marketing" element={<SeoMarketing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path='/services/digital-marketing/seo' element={<Seo/>} />
+            <Route path='/services/digital-marketing/email-marketing' element={<EmailMarketing/>} />
+            <Route path='/services/digital-marketing/content-marketing' element={<ContentMarketing />} />
+            <Route path='/services/digital-marketing/socialmedia-marketing' element={<SocialMediaMarketing/>} />
+            <Route path='/services/digital-marketing/meta-ads' element={<MetaAds/>} />
+            <Route path='/services/digital-marketing/google-campign' element={<GoogleCampign/>} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </>
-  )
+  );
 }
 
 export default App

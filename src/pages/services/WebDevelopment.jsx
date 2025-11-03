@@ -1,0 +1,604 @@
+// src/pages/services/WebDevelopment.jsx
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+export default function WebDevelopment() {
+  const features = [
+    {
+      title: "Custom Web Applications",
+      text: "Bespoke apps built to your requirements with scalable architecture and clean APIs.",
+      icon: "🧩",
+    },
+    {
+      title: "E-commerce Platforms",
+      text: "High-converting online stores with secure payments, inventory & analytics.",
+      icon: "🛒",
+    },
+    {
+      title: "Performance Optimization",
+      text: "Core Web Vitals improvements, image optimization and caching for lightning speed.",
+      icon: "⚡",
+    },
+  ];
+
+  const stats = [
+    { label: "Projects Delivered", value: "120+" },
+    { label: "Average Speed Gain", value: "3x" },
+    { label: "Avg Conversion Lift", value: "27%" },
+    { label: "Support Hours", value: "24/7" },
+  ];
+
+  const caseStudies = [
+    {
+      title: "Retail E-commerce Rebuild",
+      summary: "Migrated to a headless stack — +48% revenue in 6 months.",
+      img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "SaaS Product Launch",
+      summary:
+        "MVP to market in 8 weeks with subscription payments and analytics.",
+      img: "https://images.unsplash.com/photo-1526378720562-5c0f7b4b8b71?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+      title: "Lead Gen Website",
+      summary: "SEO + CRO improvements — organic traffic up 92%.",
+      img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    },
+  ];
+
+  // 🧠 Replace your existing `const tech = [...]` with this:
+  const tech = [
+    // Core Web
+    {
+      name: "HTML5",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+    },
+    {
+      name: "CSS3",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+    },
+    {
+      name: "JavaScript",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    },
+    {
+      name: "TypeScript",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    },
+
+    // Libraries & Frameworks
+    {
+      name: "React",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+    },
+    {
+      name: "Next.js",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      name: "Vue.js",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg",
+    },
+    {
+      name: "Angular",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
+    },
+    {
+      name: "Svelte",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/svelte/svelte-original.svg",
+    },
+
+    // Styling & UI
+    {
+      name: "Tailwind CSS",
+      logo: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+    },
+    {
+      name: "Bootstrap",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original-wordmark.svg",
+    },
+    {
+      name: "Sass",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+    },
+    {
+      name: "Material UI",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg",
+    },
+
+    // Build Tools
+    {
+      name: "Vite",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vite/vite-original.svg",
+    },
+    {
+      name: "Webpack",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/webpack/webpack-original.svg",
+    },
+    {
+      name: "Babel",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/babel/babel-original.svg",
+    },
+    {
+      name: "ESLint",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/eslint/eslint-original.svg",
+    },
+
+    // State Management
+    {
+      name: "Redux",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+    },
+    {
+      name: "Zustand",
+      logo: "https://avatars.githubusercontent.com/u/105983615?s=200&v=4",
+    },
+
+    // Utilities / Deployment
+    {
+      name: "Git",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+    },
+    {
+      name: "GitHub",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+    },
+    {
+      name: "Figma",
+      logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg",
+    },
+  ];
+
+  return (
+    <main className="bg-white text-gray-900">
+      {/* HERO */}
+      <section
+        className="relative flex items-center justify-center text-center h-[480px] md:h-[600px] bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1523475496153-3d6cc0b3ed3c?auto=format&fit=crop&w=1800&q=80')",
+        }}
+        aria-label="Web development hero"
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative z-10 px-6 max-w-4xl"
+        >
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
+            <span className="bg-gradient-to-r from-teal-400 via-cyan-300 to-gray-200 bg-clip-text text-transparent">
+              Web Development & Design
+            </span>
+          </h1>
+          <p className="text-gray-200 text-lg md:text-xl mb-6">
+            Build intuitive, fast and search-friendly websites that convert
+            visitors into customers.
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <Link
+              to="/contact"
+              className="inline-block bg-gradient-to-r from-teal-500 to-gray-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition"
+            >
+              Get a Free Consultation
+            </Link>
+            <a
+              href="tel:+919876543210"
+              className="text-gray-200 hover:text-white"
+            >
+              Or call: +91 98765 43210
+            </a>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* KEY SERVICES — 3 columns */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-8"
+        >
+          Key Capabilities
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {features.map((f, idx) => (
+            <motion.article
+              key={idx}
+              initial={{ opacity: 0, y: 8 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="p-6 bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition"
+            >
+              <div className="text-3xl">{f.icon}</div>
+              <h3 className="text-xl font-semibold mt-4 mb-2">{f.title}</h3>
+              <p className="text-gray-600">{f.text}</p>
+              <div className="mt-4">
+                <Link
+                  to="/contact"
+                  className="text-teal-600 font-medium hover:underline"
+                >
+                  Talk to an expert →
+                </Link>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      {/* IMPACT STATS */}
+      <section className="bg-gradient-to-r from-teal-50 to-white py-12">
+        <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {stats.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 6 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="p-6 bg-white rounded-xl shadow-sm border border-gray-100"
+            >
+              <div className="text-3xl font-extrabold text-teal-600">
+                {s.value}
+              </div>
+              <div className="text-sm text-gray-600 mt-1">{s.label}</div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* CASE STUDIES */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold text-center mb-8"
+        >
+          Case Studies
+        </motion.h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {caseStudies.map((c, idx) => (
+            <motion.article
+              key={idx}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: idx * 0.08 }}
+              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+            >
+              <div className="h-44 bg-gray-200">
+                <img
+                  src={c.img}
+                  alt={c.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6 bg-white">
+                <h3 className="text-lg font-semibold mb-2">{c.title}</h3>
+                <p className="text-gray-600 mb-4">{c.summary}</p>
+                <Link
+                  to="/contact"
+                  className="text-teal-600 font-medium hover:underline"
+                >
+                  Read case study / Contact →
+                </Link>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+      </section>
+
+      {/* TECH STACK */}
+      <section className="py-12 border-t border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <h4 className="text-sm text-gray-600 uppercase tracking-wider mb-6">
+            Our Tooling
+          </h4>
+          <div className="flex items-center gap-6 flex-wrap">
+            {tech.map((t, i) => (
+              <div
+                key={i}
+                className="flex items-center gap-3 bg-white p-3 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-transform hover:scale-105"
+              >
+                <img src={t.logo} alt={t.name} className="h-8 w-auto" />
+                <span className="text-sm font-medium text-gray-700">
+                  {t.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS (compact) */}
+      {/* HOW WE WORK — professional timeline */}
+      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900"
+        >
+          How we work
+        </motion.h2>
+
+        <div className="relative max-w-3xl mx-auto">
+          {/* Vertical line */}
+          <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200 hidden md:block" />
+
+          <div className="space-y-8">
+            {[
+              {
+                step: "1",
+                title: "Discovery",
+                desc: "Workshops, stakeholder interviews and market research to define goals & KPIs.",
+                accent: "Research",
+              },
+              {
+                step: "2",
+                title: "Design",
+                desc: "Interactive prototypes, user testing and UI systems for rapid feedback cycles.",
+                accent: "Prototyping",
+              },
+              {
+                step: "3",
+                title: "Build",
+                desc: "Component-driven development, automated tests, and CI/CD for reliable releases.",
+                accent: "Engineering",
+              },
+              {
+                step: "4",
+                title: "Launch & Support",
+                desc: "Monitoring, performance optimisations and iterative improvements after launch.",
+                accent: "Growth",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: idx * 0.08 }}
+                className="flex items-start gap-6"
+                aria-labelledby={`process-${item.step}-title`}
+              >
+                {/* Step indicator */}
+                <div className="relative flex-shrink-0">
+                  <div className="md:absolute md:-left-[44px] md:top-0 flex items-center justify-center w-12 h-12 rounded-full bg-teal-600 text-white font-semibold shadow-lg">
+                    {item.step}
+                  </div>
+
+                  {/* small accent chip for mobile (visible on small screens) */}
+                  <div className="block md:hidden">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold">
+                        {item.step}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Content card */}
+                <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <h3
+                        id={`process-${item.step}-title`}
+                        className="text-lg font-semibold text-gray-900"
+                      >
+                        {item.title}
+                      </h3>
+                      <div className="text-sm text-teal-600 font-medium mt-1">
+                        {item.accent}
+                      </div>
+                    </div>
+                    {/* subtle arrow / icon */}
+                    <svg
+                      className="w-6 h-6 text-gray-300"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </div>
+
+                  <p className="mt-3 text-gray-600 leading-relaxed">
+                    {item.desc}
+                  </p>
+
+                  {/* optional micro-CTA */}
+                  <div className="mt-4">
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 hover:underline"
+                    >
+                      Talk to an expert
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 12h14M12 5l7 7-7 7"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      {/* WHY CLIENTS PICK SKIEZ DIGITAL */}
+      <section className="relative py-24 bg-gradient-to-r from-[#f7fffc] via-white to-[#f8ffff] overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+          {/* Left: Text + Highlights */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-gray-900 leading-tight">
+              Why clients choose{" "}
+              <span className="bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent">
+                Skiez Digital
+              </span>
+            </h2>
+
+            <ul className="space-y-5">
+              {[
+                {
+                  icon: "👨‍💼",
+                  text: "Dedicated project manager & weekly progress milestones.",
+                },
+                {
+                  icon: "⚡",
+                  text: "Focus on performance, SEO, and measurable conversions.",
+                },
+                {
+                  icon: "💡",
+                  text: "Transparent pricing and clear delivery timelines.",
+                },
+                {
+                  icon: "🔍",
+                  text: "Data-driven design decisions backed by analytics insights.",
+                },
+              ].map((item, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  className="flex items-start gap-3 text-gray-700"
+                >
+                  <div className="flex items-center justify-center w-9 h-9 rounded-full bg-teal-100 text-teal-600 text-lg">
+                    {item.icon}
+                  </div>
+                  <p className="leading-relaxed">{item.text}</p>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Right: Description + CTA */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                We don’t just build websites we craft digital experiences that
+                perform. From UX strategy to conversion optimization, our goal
+                is to turn visitors into loyal customers through data-backed
+                design and precision development.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-block bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
+              >
+                Start your project →
+              </Link>
+            </div>
+
+            {/* Background accent blob */}
+            <div className="absolute -z-10 -top-10 -right-10 w-48 h-48 bg-gradient-to-tr from-teal-200/40 to-cyan-100/30 rounded-full blur-2xl" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      {/* FINAL CTA SECTION */}
+      <section className="relative py-28 bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700 text-white overflow-hidden">
+        {/* Decorative gradient orbs */}
+        <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 right-0 w-52 h-52 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+
+        <div className="relative max-w-4xl mx-auto text-center px-6 z-10">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-4xl md:text-5xl font-extrabold leading-tight mb-6"
+          >
+            Ready to build a{" "}
+            <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
+              fast, secure
+            </span>{" "}
+            & high-converting website?
+          </motion.h3>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-lg text-white/90 mb-10 max-w-2xl mx-auto"
+          >
+            Let’s turn your ideas into a powerful online experience that drives
+            real business growth. Our experts will guide you through every step.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 bg-white text-teal-700 px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M8 10h.01M12 10h.01M16 10h.01M21 16a2 2 0 01-2 2H5l-2 2V6a2 2 0 012-2h14a2 2 0 012 2v10z"
+                />
+              </svg>
+              Schedule a Call
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+    </main>
+  );
+}
