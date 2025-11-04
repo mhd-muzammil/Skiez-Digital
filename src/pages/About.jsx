@@ -303,40 +303,42 @@ function ServicesDoc() {
 
 function ProofDoc() {
   return (
-    <section className="mt-12 bg-gradient-to-r from-teal-50 to-white rounded-xl p-6 border border-gray-100">
+    <section className="mt-12 bg-gradient-to-r from-teal-300 to-white rounded-xl p-6 border border-gray-100">
       <div className="grid lg:grid-cols-2 gap-8 items-center">
         <div>
-          <h3 className="text-2xl font-bold">Why Choose Skiez Digital?</h3>
-          <div className="mt-3 text-gray-700 max-w-xl space-y-3">
+          <h3 className="text-3xl font-bold tracking-wide text-gray-900">
+            Why Choose Skiez Digital?
+          </h3>
+          <div className="mt-4 text-gray-700 max-w-xl space-y-8 leading-relaxed tracking-wide">
             <p>
               We’ve earned clients' trust by consistently delivering results and
               maintaining complete transparency. Here’s what sets us apart:
             </p>
-            <ul className="text-sm text-gray-600 list-disc list-inside space-y-1">
+            <ul className="text-[15px] text-gray-700 list-disc list-inside space-y-4 leading-relaxed">
               <li>
-                <strong>Proven Results:</strong> We’ve helped businesses across
-                industries grow traffic, leads, and revenue with strategies that
-                work.
+                <strong className="text-xl">Proven Results:</strong> We’ve
+                helped businesses across industries grow traffic, leads, and
+                revenue with strategies that work.
               </li>
               <li>
-                <strong>Transparency:</strong> You’ll always know what’s
-                happening. We provide detailed reports, honest insights, and
-                clear communication throughout every project.
+                <strong className="text-xl">Transparency:</strong> You’ll always
+                know what’s happening. We provide detailed reports, honest
+                insights, and clear communication throughout every project.
               </li>
               <li>
-                <strong>Client-First Approach:</strong> Every strategy is built
-                around your goals. We tailor our plans to match your brand’s
-                needs for maximum impact.
+                <strong className="text-xl">Client-First Approach:</strong>{" "}
+                Every strategy is built around your goals. We tailor our plans
+                to match your brand’s needs for maximum impact.
               </li>
               <li>
-                <strong>Experienced Team:</strong> Our digital experts stay up
-                to date with the latest trends, ensuring your brand benefits
-                from modern tools and proven practices.
+                <strong className="text-xl">Experienced Team:</strong> Our
+                digital experts stay up to date with the latest trends, ensuring
+                your brand benefits from modern tools and proven practices.
               </li>
               <li>
-                <strong>Ethical Standards:</strong> We follow white-hat methods
-                and genuine marketing practices that protect your brand’s
-                credibility and ensure sustainable success.
+                <strong className="text-xl">Ethical Standards:</strong> We
+                follow white-hat methods and genuine marketing practices that
+                protect your brand’s credibility and ensure sustainable success.
               </li>
             </ul>
           </div>
@@ -354,6 +356,7 @@ function ProofDoc() {
     </section>
   );
 }
+
 
 /* ----------------- Approach & Commitment ----------------- */
 

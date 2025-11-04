@@ -51,12 +51,12 @@ export default function Hero() {
               variants={fadeUp}
               className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-4"
             >
-              We craft beautiful digital experiences that{" "}
+              Best Digital Marketing in Chennai{" "}
               <span className="inline-block align-baseline ml-2">
                 <HeroFont
-                  text="GROW BRANDS"
+                  text="SKIEZ&nbsp;DIGITAL"
                   inline={true}
-                  minFontSize={40}
+                  minFontSize={50}
                   textColor="#06B7A0"
                   scale={false}
                 />
@@ -67,40 +67,22 @@ export default function Hero() {
               variants={fadeUp}
               className="text-slate-600 max-w-xl leading-relaxed"
             >
-              Agency-grade web design & development fast, conversion focused,
-              and pixel-perfect. We help SaaS and e-commerce scale with modern
-              UX.
+              Grow your business with Skiez Digital Chennai’s top digital
+              marketing agency for SEO, social media marketing, website
+              development, and app solutions.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
               <InteractiveHoverButton
                 href="/Services"
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-lg bg-teal-500 text-white font-semibold shadow hover:brightness-95 transition"
+                className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-teal-500 text-white font-semibold shadow hover:brightness-95 transition"
               >
                 Our Services
               </InteractiveHoverButton>
-              <GlowButton
-                href="#showcase"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-300 text-slate-700 hover:bg-teal-500 transition"
-              >
-                Our Work
-              </GlowButton>
+      
             </motion.div>
 
-            <motion.div
-              variants={fadeUp}
-              className="mt-8 text-sm text-slate-500"
-            >
-              <span>Trusted by </span>
-              <span className="ml-3 inline-flex gap-3">
-                <span className="px-3 py-1 bg-white shadow rounded">
-                  Brand A
-                </span>
-                <span className="px-3 py-1 bg-white shadow rounded">
-                  Brand B
-                </span>
-              </span>
-            </motion.div>
+            
           </motion.div>
 
           {/* RIGHT SIDE - IMAGE + shadow grouped so both hover together */}

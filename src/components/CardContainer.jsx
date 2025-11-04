@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import BorderButton from "./ui/border-button";
 
 /* -------------------------
-   Data (must be above component)
+   Data
    ------------------------- */
 const gradients = [
   "linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb)",
@@ -19,16 +18,46 @@ const gradients = [
 ];
 
 const cardInfo = [
-  { title: "UI / UX Design", name: "mikeandrewdesigner" },
-  { title: "Web Development", name: "ghostdev" },
-  { title: "Mobile App Development", name: "alexcode" },
-  { title: "Full Stack Development", name: "sofiaworks" },
-  { title: "SEO", name: "karanbuilds" },
-  { title: "Content Marketing", name: "rajtech" },
-  { title: "E-mail Marketing", name: "sneha.ai" },
-  { title: "Social Media Marketing", name: "junomotion" },
-  { title: "Meta ads", name: "claire.designs" },
-  { title: "Google Campaign", name: "noahcreates" },
+  {
+    title: "UI / UX Design",
+    name: "Designing intuitive, engaging, and seamless user experiences and interfaces.",
+  },
+  {
+    title: "Web Development",
+    name: "Web development builds fast, secure, and responsive websites combining creative design, coding, and seamless user experience.",
+  },
+  {
+    title: "Mobile App Development",
+    name: "Mobile development creates high-performing, user-friendly apps with intuitive design, smooth navigation, and cross-platform compatibility.",
+  },
+  {
+    title: "Full Stack Development",
+    name: "Full-stack development builds complete web solutions managing both front-end interfaces and back-end servers for seamless performance.",
+  },
+  {
+    title: "SEO",
+    name: "SEO enhances website visibility on search engines through optimized content, keywords, performance, and user experience",
+  },
+  {
+    title: "Content Marketing",
+    name: "Content marketing builds trust and engagement through valuable, consistent, and audience-focused digital storytelling.",
+  },
+  {
+    title: "E-mail Marketing",
+    name: "Email marketing builds relationships through personalized messages that engage, nurture trust, and drive conversions",
+  },
+  {
+    title: "Social Media Marketing",
+    name: "Social media marketing boosts brand visibility and engagement through creative content, ads, and authentic audience interaction.",
+  },
+  {
+    title: "Meta ads",
+    name: "Meta Ads drive targeted engagement and sales through personalized campaigns across Facebook, Instagram, and other Meta platforms",
+  },
+  {
+    title: "Google Campaign",
+    name: "Google Campaigns promote brands through targeted ads across Search, YouTube, and Display Networks to drive results.",
+  },
 ];
 
 /* -------------------------
@@ -37,67 +66,51 @@ const cardInfo = [
 const CardContainer = () => {
   return (
     <Section>
-      <h2 className="section-title" >
-        Our Services
-      </h2>
+      <h2 className="section-title">Our Services</h2>
 
-      {/* MARQUEE: track holds two copies of the card row for seamless loop */}
       <MarqueeContainer>
         <MarqueeTrack>
-          {/* original set */}
+          {/* Original row */}
           <CardRow>
-            {gradients.map((bg, i) => (
-              <Card key={`c-${i}`} gradient={bg}>
-                <div className="e-card playing">
+            {cardInfo.map((item, i) => (
+              <Card key={`c-${i}`} gradient={gradients[i % gradients.length]}>
+                <div className="e-card">
                   <div className="wave" />
                   <div className="wave" />
                   <div className="wave" />
-                  <div className="infotop">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="icon"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862Z"
-                      />
-                    </svg>
-                    <br />
-                    {cardInfo[i]?.title}
-                    <br />
-                    <div className="name">{cardInfo[i]?.name}</div>
+
+                  <div className="cardInner">
+                    {/* FRONT: title */}
+                    <div className="cardFace front">
+                      <div className="infotop">{item.title}</div>
+                    </div>
+
+                    {/* BACK: name */}
+                    <div className="cardFace back">
+                      <div className="backOnlyName">{item.name}</div>
+                    </div>
                   </div>
                 </div>
               </Card>
             ))}
           </CardRow>
 
-          {/* duplicated set (for seamless looping) */}
+          {/* Duplicate row for smooth looping */}
           <CardRow aria-hidden="true">
-            {gradients.map((bg, i) => (
-              <Card key={`dup-${i}`} gradient={bg}>
-                <div className="e-card playing">
+            {cardInfo.map((item, i) => (
+              <Card key={`dup-${i}`} gradient={gradients[i % gradients.length]}>
+                <div className="e-card">
                   <div className="wave" />
                   <div className="wave" />
                   <div className="wave" />
-                  <div className="infotop">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      className="icon"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M19.4133 4.89862L14.5863 2.17544C12.9911 1.27485 11.0089 1.27485 9.41368 2.17544L4.58674 4.89862C2.99153 5.7992 2 7.47596 2 9.2763V14.7235C2 16.5238 2.99153 18.2014 4.58674 19.1012L9.41368 21.8252C10.2079 22.2734 11.105 22.5 12.0046 22.5C12.6952 22.5 13.3874 22.3657 14.0349 22.0954C14.2204 22.018 14.4059 21.9273 14.5872 21.8252L19.4141 19.1012C19.9765 18.7831 20.4655 18.3728 20.8651 17.8825C21.597 16.9894 22 15.8671 22 14.7243V9.27713C22 7.47678 21.0085 5.7992 19.4133 4.89862Z"
-                      />
-                    </svg>
-                    <br />
-                    {cardInfo[i]?.title}
-                    <br />
-                    <div className="name">{cardInfo[i]?.name}</div>
+
+                  <div className="cardInner">
+                    <div className="cardFace front">
+                      <div className="infotop">{item.title}</div>
+                    </div>
+                    <div className="cardFace back">
+                      <div className="backOnlyName">{item.name}</div>
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -120,12 +133,12 @@ const Section = styled.section`
   .section-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
     color: #111827;
   }
 `;
 
-/* Outer container — mask area */
 const MarqueeContainer = styled.div`
   width: 100%;
   overflow: hidden;
@@ -133,17 +146,15 @@ const MarqueeContainer = styled.div`
   margin: 40px 0;
 `;
 
-/* Track — moves horizontally infinitely */
+
 const MarqueeTrack = styled.div`
   display: flex;
   flex-wrap: nowrap;
-  animation: scroll 18s linear infinite; /* 🔥 adjust speed here */
-  width: max-content; /* ensures it can extend beyond viewport */
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
+  animation: scroll 30s linear infinite;
+  width: max-content;
 
   &:hover {
-    animation-play-state: paused; /* optional pause */
+    animation-play-state: paused;
   }
 
   @keyframes scroll {
@@ -151,24 +162,22 @@ const MarqueeTrack = styled.div`
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%); /* move by exactly one row’s width */
+      transform: translateX(-50%);
     }
   }
 `;
 
-/* Single row of cards */
 const CardRow = styled.div`
   display: flex;
-  flex-wrap: nowrap;
   gap: 40px;
   padding: 12px 32px;
-  flex: 0 0 auto; /* prevents shrinkage */
+  flex: 0 0 auto;
 `;
 
-/* individual card wrapper for layout control */
 const Card = styled.div`
-  width: 260px; /* slightly larger for spacing — adjust as you like */
-  flex: 0 0 auto; /* prevents shrinking/growing */
+  width: 260px;
+  flex: 0 0 auto;
+
   .e-card {
     background: transparent;
     box-shadow: 0px 10px 26px rgba(0, 0, 0, 0.08);
@@ -191,6 +200,7 @@ const Card = styled.div`
     background: ${({ gradient }) => gradient};
     border-radius: 40%;
     animation: wave 55s infinite linear;
+    z-index: 0;
   }
 
   .wave:nth-child(2),
@@ -207,57 +217,54 @@ const Card = styled.div`
     }
   }
 
-  .icon {
-    width: 2.6em;
-    margin-top: -1em;
-    padding-bottom: 1em;
+  /* --- Flip Animation --- */
+  .cardInner {
+    position: absolute;
+    inset: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+
+  &:hover .cardInner {
+    transform: rotateY(180deg);
+  }
+
+  .cardFace {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .cardFace.back {
+    transform: rotateY(180deg);
   }
 
   .infotop {
-    text-align: center;
-    font-size: 20px;
-    position: absolute;
-    top: 6.4em;
-    left: 0;
-    right: 0;
-    color: white;
-    font-weight: 700;
+    z-index: 2;
   }
 
-  .name {
-    font-size: 14px;
-    font-weight: 300;
-    position: relative;
-    top: 14px;
-    text-transform: lowercase;
+  .backOnlyName {
+    z-index: 2;
   }
-`;
 
-/* Responsiveness: reduce speed and card sizes on smaller screens */
-const media = {
-  md: "@media(max-width: 900px)",
-  sm: "@media(max-width: 600px)",
-};
-
-Card.displayName = "Card";
-Card.defaultProps = {};
-
-const ResponsiveCard = styled(Card)`
-  ${media.md} {
+  @media (max-width: 900px) {
     width: 220px;
     .e-card {
       height: 320px;
     }
   }
-
-  ${media.sm} {
+  @media (max-width: 600px) {
     width: 180px;
     .e-card {
       height: 270px;
     }
   }
 `;
-
-/* If you prefer to use ResponsiveCard in the JSX, replace <Card ...> with <ResponsiveCard ...> */
 
 export default CardContainer;
