@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import FlipCardUIUX from '@/components/ui/FlipCardUIUX'
 
 
 /**
@@ -10,23 +11,39 @@ import { motion } from 'framer-motion';
  * Tailwind CSS + framer-motion expected in project
  */
 
-const portfolio = [
+const deliverables = [
   {
-    title: "SaaS Dashboard Redesign",
-    desc: "Cleaner data visualizations, improved task flows and mobile-first interactions.",
-    img: "https://images.unsplash.com/photo-1526378720562-5c0f7b4b8b71?auto=format&fit=crop&w=1200&q=80",
+    title: "Web Design & Development",
+    desc: "We create visually stunning, responsive, and high-performance websites that align with your brand and convert visitors into customers.",
+    img: "https://images.unsplash.com/photo-1502882700052-16828f04b02e?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "E-commerce UX Overhaul",
-    desc: "Checkout conversion optimization and product discovery improvements.",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+    title: "Brand Identity & Strategy",
+    desc: "From logo design to tone of voice, we build cohesive brand identities that connect emotionally and make you unforgettable.",
+    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Mobile App Prototype",
-    desc: "User-tested prototype with clear onboarding and retention-focused flows.",
-    img: "https://images.unsplash.com/photo-1581073694683-8b63b7b3fa9a?auto=format&fit=crop&w=1200&q=80",
+    title: "Mobile App Design & Prototyping",
+    desc: "We design and prototype user-focused mobile experiences that combine aesthetics with functionality to enhance user engagement.",
+    img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "SEO & Digital Marketing",
+    desc: "Boost your online visibility and engagement through tailored SEO strategies, paid campaigns, and result-driven marketing.",
+    img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "UI/UX Research & Testing",
+    desc: "We apply user research, usability testing, and data-driven design to craft intuitive and impactful digital experiences.",
+    img: "https://images.unsplash.com/photo-1581090464956-7e4f29c34b92?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "Content & Social Media Management",
+    desc: "Engage your audience with creative storytelling and data-backed content strategies across all major social platforms.",
+    img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80",
   },
 ];
+
 
   const tech = [
     /* Design & Research */
@@ -88,7 +105,21 @@ const portfolio = [
       name: "Jira",
       logo: "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/jira.svg",
     },
-  ];
+];
+  
+const points = [
+  // split from your original H4 content into scan-friendly checklist items
+  "UI/UX Design: This is short for User Interface and User Experience two of the most vital elements responsible for defining the way users interact with any digital platform, such as websites, mobile apps, and software.",
+  "Together, they ensure that every digital product is visually appealing, simple, engaging, and enjoyable to use.",
+  "UI Design is about the look and interaction of a product (layouts, color selection, icon design, and typography) ensuring small elements like buttons reflect brand identity while maintaining consistency, balance, and clarity.",
+  "UX Design focuses on the user's journey and satisfaction: research, behavior study, navigation patterns and designing flows that help users reach goals without effort.",
+  "UI/UX Design is where creativity meets usability fusing artistic design with strategic thinking to create digital experiences that are stunning, natural to use, and meaningful.",
+  "At Skiez Digital, our UX/UI design philosophy revolves around understanding users, their needs, and how they interact with digital products we focus on emotion, usability, and measurable impact.",
+  "As a creative UI/UX Design Agency, we blend innovative design thinking with business goals to deliver results that delight and engage.",
+  "Our UI UX Design Service designs intuitive, engaging, and visually appealing interfaces that make products both beautiful and functional across websites, mobile apps, and enterprise platforms.",
+  "We handle every step of the UI & UX design process user research, journey mapping, wireframing, prototyping, and usability testing to ensure interactions feel effortless and memorable.",
+  "As a leading UI/UX Design Agency, we don’t just design — we innovate. Our UX designers enhance journeys while UI designers craft layouts that captivate and convert.",
+];
 
 export default function UIUX() {
   return (
@@ -113,7 +144,7 @@ export default function UIUX() {
           transition={{ duration: 0.7 }}
           className="relative z-10 max-w-5xl mx-auto px-6 text-center"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-3xl font-extrabold leading-tight text-white mb-4">
+          <h1 className="text-3xl md:text-5xl lg:text-3xl font-extrabold leading-tight text-teal-400 mb-4">
             UI / UX DESIGN
           </h1>
           <p className="text-gray-200 max-w-2xl mx-auto text-base md:text-lg mb-6">
@@ -129,223 +160,112 @@ export default function UIUX() {
             >
               Book a UX Audit
             </Link>
-            <a
-              href="#process"
-              className="text-gray-200 underline hover:text-white"
-            >
+            <a href="#process" className="text-gray-200 hover:text-white">
               See our process
             </a>
           </div>
         </motion.div>
       </section>
 
+      <section className="py-16 bg-white">
+  <div className="max-w-5xl mx-auto px-6 md:px-10">
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-center"
+    >
+      {/* Heading */}
+      <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+        What is <span className="text-teal-600">UI / UX Design</span>?
+      </h2>
+
+      {/* Intro */}
+      <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10 text-justify">
+        UI/UX Design combines creativity and usability to build digital experiences that are visually appealing and effortless to use.  
+        At <span className="text-teal-600 font-semibold">Skiez Digital</span>, we blend research, strategy, and aesthetics to design interfaces that engage, convert, and inspire.
+      </p>
+
+      {/* Checklist */}
+      <ul className="max-w-4xl mx-auto text-justify">
+        {points.map((text, idx) => (
+          <li
+            key={idx}
+            className="flex items-start py-3 gap-4 hover:bg-teal-50/40 rounded-xl px-3 transition-all duration-200"
+          >
+            <span className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center mt-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5 text-teal-600"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </span>
+
+            <p className="text-gray-800 leading-relaxed text-[16px] font-medium">
+              {text}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  </div>
+</section>
+
+
       {/* VALUE PROPOSITIONS */}
       {/* UI/UX — Professional feature trio */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 py-24">
-        <motion.header
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">
-            Why our UI / UX service stands out
-          </h2>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
-            Research-led design, rapid validation and conversion-focused UX —
-            built to scale.
-          </p>
-        </motion.header>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              id: "research",
-              title: "Research-led Design",
-              desc: "We pair qualitative interviews with quantitative analytics to identify real user needs and measurable opportunities.",
-              // magnifier
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M21 21l-4.35-4.35"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle
-                    cx="11"
-                    cy="11"
-                    r="5"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                </svg>
-              ),
-            },
-            {
-              id: "prototype",
-              title: "Rapid Prototyping",
-              desc: "Clickable prototypes and moderated tests accelerate decision-making — saving dev time and reducing risk.",
-              // cursor/hand
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M3 12h7l3 9 4-16 4 8"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-            },
-            {
-              id: "conversion",
-              title: "Conversion Focused",
-              desc: "We design funnels and micro-interactions that guide users to activation, retention and measurable business outcomes.",
-              // rocket/arrow
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M12 3c3 1 6 4 8 8l-9 9-9-9C6 7 9 4 12 3z"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M12 8v5"
-                    stroke="currentColor"
-                    strokeWidth="1.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-            },
-          ].map((card, i) => (
-            <motion.article
-              key={card.id}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.07 }}
-              whileHover={{ translateY: -6 }}
-              className="relative bg-teal-400 border border-gray-600 rounded-2xl p-6 shadow-sm hover:shadow-md transition-transform duration-300 focus-within:shadow-lg"
-              aria-labelledby={`${card.id}-title`}
-              tabIndex={0}
-            >
-              {/* thin top accent */}
-              <div className="absolute inset-x-6 -top-3 flex justify-start">
-                <div className="w-14 h-0.5 rounded bg-gradient-to-r from-teal-400 to-cyan-400" />
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-teal-50 to-cyan-50 text-teal-600 shadow-sm ring-1 ring-white/60">
-                    {card.icon}
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <h3
-                    id={`${card.id}-title`}
-                    className="text-xl font-semibold text-gray-700"
-                  >
-                    {card.title}
-                  </h3>
-                  <p className="mt-2 text-gray-900 leading-relaxed">
-                    {card.desc}
-                  </p>
-
-                  <div className="mt-4 flex items-center justify-between">
-                    <a
-                      href="/contact"
-                      className="inline-flex items-center gap-2 text-sm font-medium text-teal-50 hover:underline focus:outline-none focus:ring-2 focus:ring-teal-200 rounded"
-                      aria-label={`Learn more about ${card.title}`}
-                    >
-                      Learn how
-                      <svg
-                        className="w-4 h-4"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        aria-hidden
-                      >
-                        <path
-                          d="M5 12h14M12 5l7 7-7 7"
-                          stroke="currentColor"
-                          strokeWidth="1.4"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </a>
-
-                    <span className="text-xs text-teal-50 tracking-wide">
-                      Proven process
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </section>
+      <FlipCardUIUX />
 
       {/* PORTFOLIO HIGHLIGHTS */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold mb-8"
+          className="text-3xl md:text-4xl font-bold mb-8 text-gray-900"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Selected work
+          What We Deliver
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {portfolio.map((p, idx) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {deliverables.map((d, idx) => (
             <motion.article
               key={idx}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-transform duration-300 hover:-translate-y-1 bg-white"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: idx * 0.06 }}
             >
+              {/* Image Section */}
               <div className="h-56 bg-gray-100">
                 <img
-                  src={p.img}
-                  alt={p.title}
+                  src={d.img}
+                  alt={d.title}
                   loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-5 bg-white">
-                <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{p.desc}</p>
+
+              {/* Content Section */}
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900">
+                  {d.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                  {d.desc}
+                </p>
                 <Link
                   to="/contact"
                   className="text-teal-600 font-medium hover:underline"
                 >
-                  Talk to our designers →
+                  Talk to our experts →
                 </Link>
               </div>
             </motion.article>
@@ -573,64 +493,172 @@ export default function UIUX() {
       {/* FAQ */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h3 className="text-2xl font-bold text-center mb-6">
-            Frequently asked
-          </h3>
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
 
+          {/* FAQ List */}
           <div className="space-y-6">
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                How long does a UI/UX project take?
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What is the main difference between User Interface (UI) design
+                and User Experience (UX) design, and why do projects need both?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Small projects: 2–4 weeks. Medium: 6–8 weeks. Large enterprise:
-                depends on scope.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                UI design focuses on visuals buttons, typography, and color
+                schemes — while UX ensures that the journey is smooth, logical,
+                and satisfying. Both are essential to create digital products
+                that look beautiful{" "}
+                <span className="text-teal-600 font-medium">and</span> function
+                intuitively.
               </div>
             </details>
 
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                Do you provide design handoff assets?
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What steps are involved in a standard UI/UX design process, and
+                how are client goals integrated throughout the project?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Yes — we deliver Figma files, spec documentation, and
-                ready-to-implement assets for developers.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Our process includes research, wireframes, prototypes, user
+                testing, and iteration. Client goals stay at the center — we
+                collaborate continuously to ensure the final design aligns with
+                your vision and delivers measurable results.
               </div>
             </details>
 
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                Can you work with my existing dev team?
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What measures do you take to guarantee the originality of my
+                design and avoid plagiarism, while still using proven design
+                principles?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Absolutely — we collaborate during handoff, support design QA,
-                and offer dev-facing documentation.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Every design we create is 100% custom for your brand — we never
+                copy from others. We combine ethical design practices with
+                proven frameworks, ensuring your visuals are both unique and
+                effective.
               </div>
             </details>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4">
-            Ready to improve conversion with better UX?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            Book a UX audit and get a prioritized roadmap of improvements.
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <Link
-              to="/contact"
-              className="inline-block bg-gradient-to-r from-teal-500 to-gray-700 text-white px-6 py-3 rounded-full font-semibold shadow"
-            >
-              Book audit
-            </Link>
-            <a href="tel:+919876543210" className="text-gray-700">
-              Or call +91 98765 43210
-            </a>
-          </div>
+      {/* FAQ */}
+
+      <section className="py-20 bg-teal-300">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-xl border border-gray-100 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+              Ready to improve conversion with better UX?
+            </h2>
+
+            <p className="text-gray-600 text-base md:text-lg mb-6 max-w-2xl mx-auto">
+              Book a UX audit and get a prioritized roadmap of improvements that
+              increase conversions and reduce friction — fast.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <Link
+                  to="/contact"
+                  aria-label="Book a UX audit"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:brightness-105 focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-200"
+                >
+                  {/* calendar / audit icon */}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8 7V3m8 4V3M3 11h18M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Book audit
+                </Link>
+              </motion.div>
+
+              <motion.a
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                href="tel:+919876543210"
+                aria-label="Call to book UX audit"
+                className="inline-flex items-center gap-2 text-gray-800 px-4 py-3 rounded-full font-medium hover:text-teal-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-200"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 text-gray-700"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2 3h4l2 5-2 2a11 11 0 005 5l2-2 5 2v4a2 2 0 01-2 2c-10.493 0-19-8.507-19-19 0-1.105.895-2 2-2z"
+                  />
+                </svg>
+                Or call +91 98765 43210
+              </motion.a>
+            </div>
+
+            {/* Benefit / trust row */}
+            <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3 text-sm text-gray-600">
+              <span className="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-3 py-1 rounded-full font-medium">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  aria-hidden
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12l2 2 4-4"
+                  />
+                </svg>
+                Free 30-minute audit
+              </span>
+
+              <span className="text-gray-400">•</span>
+
+              <span className="text-gray-600">
+                Trusted by startups & enterprises
+              </span>
+            </div>
+          </motion.div>
         </div>
       </section>
     </main>

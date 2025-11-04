@@ -53,17 +53,18 @@ export default function Services() {
 
         {/* Text content */}
         <div className="relative z-10 px-6">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white leading-tight">
+          <h1 className="text-4xl md:text-4xl font-extrabold mb-4 text-white leading-tight">
             <span className="bg-gradient-to-r from-teal-400 to-gray-200 bg-clip-text text-transparent">
-              Let’s Build Something Amazing
+              THE BEST DIGITAL MARKETING COMPANY IN CHENNAI
             </span>
           </h1>
 
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-6">
-            At{" "}
+            {" "}
             <span className="text-teal-400 font-semibold">Skiez Digital</span>,
-            we transform ideas into reality through innovation, creativity, and
-            technology.
+            offers expert digital marketing, UI/UX design, SEO, web development,
+            and social media services to boost visibility and grow your brand
+            online.
           </p>
 
           <a
@@ -73,6 +74,37 @@ export default function Services() {
             Get a Free Consultation →
           </a>
         </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 md:px-12 text-center md:text-left mb-20">
+        <h2 className="text-4xl font-bold mb-6 text-center md:text-left bg-gradient-to-r from-teal-500 to-gray-700 bg-clip-text text-transparent">
+          Who We Are
+        </h2>
+        <h4 className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
+          <span className="font-semibold text-teal-600">Skiez Digital</span>, we
+          don’t just create an online presence we build digital experiences that
+          connect, engage, and convert. In today’s competitive digital
+          landscape, your brand’s online identity defines how customers perceive
+          and trust you. That’s why we focus on designing meaningful,
+          performance-driven digital strategies that deliver real growth and
+          measurable results.
+          <br />
+          <br />
+          As a full-service digital marketing agency in Chengalpattu,{" "}
+          <span className="font-semibold text-teal-600">
+            Skiez Digital
+          </span>{" "}
+          blends creativity, strategy, and technology to help businesses grow
+          smarter and stronger. We create customized marketing plans tailored to
+          your brand goals, combining the best of design, development, and
+          optimization to deliver impactful outcomes.
+          <br />
+          <br />
+          Our expertise covers a wide range of services from digital marketing,
+          web development, app development, and UI/UX design. Each service is
+          crafted with one goal in mind to help your business stand out, attract
+          customers, and build lasting relationships.
+        </h4>
       </section>
 
       {/* 🧩 Zig-Zag Service Sections */}

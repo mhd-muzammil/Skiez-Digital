@@ -23,7 +23,7 @@ export default function WebDevelopment() {
   ];
 
   const stats = [
-    { label: "Projects Delivered", value: "120+" },
+    { label: "Projects Delivered", value: "12+" },
     { label: "Average Speed Gain", value: "3x" },
     { label: "Avg Conversion Lift", value: "27%" },
     { label: "Support Hours", value: "24/7" },
@@ -31,20 +31,19 @@ export default function WebDevelopment() {
 
   const caseStudies = [
     {
-      title: "Retail E-commerce Rebuild",
-      summary: "Migrated to a headless stack — +48% revenue in 6 months.",
-      img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80",
+      title: "Data-Driven Growth",
+      summary: "We combine analytics and creative strategies to help brands achieve measurable results and scalable growth.",
+      img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80",
     },
     {
-      title: "SaaS Product Launch",
-      summary:
-        "MVP to market in 8 weeks with subscription payments and analytics.",
-      img: "https://images.unsplash.com/photo-1526378720562-5c0f7b4b8b71?auto=format&fit=crop&w=1200&q=80",
+      title: "Seamless User Experience",
+      summary: "Our design-first approach ensures intuitive navigation, faster performance, and meaningful user engagement across all devices.",
+      img: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1000&q=80",
     },
     {
-      title: "Lead Gen Website",
-      summary: "SEO + CRO improvements — organic traffic up 92%.",
-      img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
+      title: "Integrated Marketing Solutions",
+      summary: "From SEO and content to ads and automation, we deliver a unified digital ecosystem for consistent brand performance.",
+      img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80",
     },
   ];
 
@@ -64,6 +63,7 @@ export default function WebDevelopment() {
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
     },
     {
+
       name: "TypeScript",
       logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
     },
@@ -262,7 +262,7 @@ export default function WebDevelopment() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-center mb-8"
         >
-          Case Studies
+          What We Deliver
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-6">
@@ -285,12 +285,7 @@ export default function WebDevelopment() {
               <div className="p-6 bg-white">
                 <h3 className="text-lg font-semibold mb-2">{c.title}</h3>
                 <p className="text-gray-600 mb-4">{c.summary}</p>
-                <Link
-                  to="/contact"
-                  className="text-teal-600 font-medium hover:underline"
-                >
-                  Read case study / Contact →
-                </Link>
+              
               </div>
             </motion.article>
           ))}
