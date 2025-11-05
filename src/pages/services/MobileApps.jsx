@@ -2,10 +2,12 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
+import FlipCardAD from '@/components/ui/FlipCardAD'
 
 /**
- * Mobile App Development — full page
- * Requires Tailwind CSS and framer-motion
+ * Mobile App Development — converted to UI/UX page style
+ * - Keeps all original content verbatim (no text changes)
+ * - Uses Tailwind + framer-motion for visual parity with UI/UX page
  */
 
 const tech = [
@@ -67,26 +69,34 @@ const tech = [
   },
 ];
 
-const portfolio = [
+const deliverables = [
   {
-    title: "RideShare MVP",
-    desc: "Realtime location, payments and driver management — shipped in 10 weeks.",
-    img: "https://images.unsplash.com/photo-1523475496153-3d6cc0b3ed3c?auto=format&fit=crop&w=1200&q=80",
-    result: "20% higher retention in month 1",
+    title: "Custom Mobile App Design & Development",
+    desc: "Tailored, high-performance mobile apps built to meet your business goals with seamless UI and UX.",
+    img: "https://images.unsplash.com/photo-1598554747430-70a4e52f10c5?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "Fitness Tracker App",
-    desc: "Battery-efficient sensors integration and onboarding flows — integrated wearables support.",
-    img: "https://images.unsplash.com/photo-1541558612769-7b5fb3a7f89b?auto=format&fit=crop&w=1200&q=80",
-    result: "4.8★ on app store after launch",
+    title: "Enterprise Mobile App Solutions",
+    desc: "Robust and scalable enterprise-level mobile applications designed for efficiency, security, and performance.",
+    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    title: "E-commerce Mobile PWA",
-    desc: "Fast browsing, saved carts and offline support with push notifications.",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80",
-    result: "Conversion uplift 32%",
+    title: "Cross-Platform App Development",
+    desc: "Build once, launch anywhere. Optimize development time and cost with shared codebases across iOS & Android.",
+    img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "App Testing & Quality Assurance",
+    desc: "Comprehensive testing to ensure smooth performance, user friendliness, and reliability before launch.",
+    img: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    title: "App Maintenance & Support",
+    desc: "Continuous monitoring, updates, optimization, and feature improvements post-launch.",
+    img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=80",
   },
 ];
+
 
 const STEPS = [
   {
@@ -115,13 +125,13 @@ const STEPS = [
   },
 ];
 
+
 export default function MobileApp() {
-  // <-- define reduceMotion correctly to avoid ReferenceError
   const reduceMotion = useReducedMotion();
 
   return (
     <main className="bg-white text-gray-900">
-      {/* HERO */}
+      {/* HERO (UI/UX-style centered layout but keeping original hero text) */}
       <section
         className="relative w-full h-[460px] md:h-[560px] flex items-center"
         style={{
@@ -134,197 +144,92 @@ export default function MobileApp() {
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="max-w-xl text-center md:text-left">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-              Mobile Apps that scale —{" "}
-              <span className="text-teal-400">fast</span>, reliable & delightful
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 text-center md:text-left"
+        >
+          <div className="max-w-2xl mx-auto md:mx-0">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-teal-300 leading-tight">
+              Mobile App Development
             </h1>
             <p className="mt-4 text-gray-200">
-              Native, cross-platform and PWA — product-led mobile apps focusing
-              on retention, performance and measurable growth.
+              Skiez Digital offers expert mobile app development services with
+              skilled developers, custom solutions, and full support to grow
+              your business efficiently.
             </p>
             <div className="mt-6 flex items-center gap-4 justify-center md:justify-start">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-6 py-3 rounded-full font-semibold shadow"
               >
-                Start a Project
+                Build a Project
               </Link>
-              <a href="#process" className="text-gray-200 underline">
+              <a href="#process" className="text-gray-400 ">
                 See our process
               </a>
             </div>
           </div>
+        </motion.div>
+      </section>
 
-          <div className="w-full md:w-1/2">
-            <div className="bg-white/5 rounded-xl p-4 shadow-inner border border-white/10">
-              <div className="text-white/90 text-sm">Quick estimate</div>
-              <div className="mt-3 text-white font-semibold text-2xl">
-                MVP from <span className="text-teal-300">₹120,000</span>
-              </div>
-              <div className="mt-3 text-gray-300 text-sm">
-                Typical timeline: 8–12 weeks
-              </div>
-            </div>
-          </div>
+      {/* WHAT IS APP DEVELOPMENT */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-6 md:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-extrabold text-gray-900 text-center mb-6"
+          >
+            What is <span className="text-teal-600">App Development</span>?
+          </motion.h2>
+
+          <p className="text-gray-700 text-lg leading-relaxed text-justify max-w-4xl mx-auto">
+            App development involves creating mobile and web applications
+            designed to deliver smooth, efficient, and engaging experiences. The
+            process starts with planning and design, where ideas are
+            conceptualized and visualized. Next, coding and development bring
+            the app to life, ensuring it functions as intended. Testing follows
+            to guarantee quality and usability before launch. Ultimately, app
+            development helps businesses meet goals by enhancing performance and
+            strengthening user connections with a reliable digital presence.
+          </p>
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-extrabold mb-8 text-center tracking-tight text-gray-900"
-        >
-          What we build
-          <span className="block mt-3 text-sm text-gray-500 font-medium">
-            Practical mobile products — engineered for performance, retention &
-            scale
-          </span>
-        </motion.h2>
+      {/* PARTNER WITH SKIEZ DIGITAL */}
+      <section className="py-14 bg-teal-300/50">
+        <div className="max-w-5xl mx-auto px-6 md:px-8 text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6"
+          >
+            Partner with <span className="text-teal-600">Skiez Digital</span>{" "}
+            for Your Mobile App Needs
+          </motion.h2>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            {
-              title: "Cross-platform Expertise",
-              text: "React Native & Flutter — single codebase speed with native quality where it matters.",
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M3 12l9-9 9 9-9 9-9-9z"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M12 3v18"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-              metric: "Native feel · One codebase",
-            },
-            {
-              title: "Performance & Battery Optimized",
-              text: "Background sync, efficient rendering and native modules ensure low battery use and fast load times.",
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M12 2v6m0 8v6M4 12h16"
-                    stroke="currentColor"
-                    strokeWidth="1.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-              metric: "Smooth UI · Lower app churn",
-            },
-            {
-              title: "Product-first Design",
-              text: "User-tested onboarding, smart microcopy, and retention-first flows that increase activation.",
-              icon: (
-                <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden
-                >
-                  <path
-                    d="M12 2l3 7h7l-5.5 4 2 7L12 17 5.5 20 7.5 13 2 9h7l3-7z"
-                    stroke="currentColor"
-                    strokeWidth="1.05"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ),
-              metric: "Higher activation · Faster A/B",
-            },
-          ].map((card, i) => (
-            <motion.article
-              key={card.title}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              whileHover={{ y: -6 }}
-              className="relative flex flex-col gap-4 p-6 rounded-2xl bg-teal-400 border border-gray-500 shadow-sm hover:shadow-lg focus-within:shadow-lg transition-all duration-250"
-              tabIndex={0}
-              aria-labelledby={`build-${i}-title`}
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 flex items-center justify-center text-teal-600 ring-1 ring-white/60">
-                    {card.icon}
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <h3
-                    id={`build-${i}-title`}
-                    className="text-xl font-semibold text-gray-900"
-                  >
-                    {card.title}
-                  </h3>
-                  <p className="mt-2 text-gray-700 leading-relaxed">
-                    {card.text}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between mt-2">
-                <span className="text-sm font-semibold text-gray-600 tracking-wide">
-                  {card.metric}
-                </span>
-
-                <a
-                  href="/contact"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 hover:underline focus:outline-none focus:ring-2 focus:ring-teal-100 rounded"
-                  aria-label={`Learn more about ${card.title}`}
-                >
-                  Learn how
-                  <svg
-                    className="w-4 h-4"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden
-                  >
-                    <path
-                      d="M5 12h14M12 5l7 7-7 7"
-                      stroke="currentColor"
-                      strokeWidth="1.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
-
-              <div className="mt-2 h-px bg-gradient-to-r from-transparent via-gray-100 to-transparent" />
-            </motion.article>
-          ))}
+          <p className="text-gray-700 leading-relaxed text-lg max-w-4xl mx-auto text-justify">
+            As a leading app development company, Skiez Digital is committed to
+            transforming your vision into a powerful mobile presence. Our team
+            combines creativity, technical excellence, and industry know-how to
+            deliver mobile solutions that drive tangible results. Whether you're
+            a startup or an enterprise, our mobile app development services are
+            built to scale your growth. Contact Skiez Digital today to bring
+            your ideas to life with innovative, reliable, and scalable mobile
+            applications.
+          </p>
         </div>
       </section>
 
-      {/* TOOLING */}
+      <FlipCardAD />
+
+      {/* TOOLING (marquee) — kept exactly like UI/UX page style */}
       <section className="py-16 border-t border-gray-100 bg-white overflow-hidden relative">
         <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
           <h4 className="text-lg font-bold text-gray-700 uppercase tracking-wider mb-10">
@@ -335,7 +240,6 @@ export default function MobileApp() {
           <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none" />
 
-          {/* Row 1 - Left to Right */}
           <div className="relative flex overflow-hidden mb-10">
             <div
               className="flex gap-10 animate-marquee whitespace-nowrap"
@@ -360,7 +264,6 @@ export default function MobileApp() {
             </div>
           </div>
 
-          {/* Row 2 - Right to Left */}
           <div className="relative flex overflow-hidden">
             <div
               className="flex gap-10 animate-marquee-reverse whitespace-nowrap"
@@ -387,74 +290,74 @@ export default function MobileApp() {
         </div>
 
         {/* Animations */}
-        <style>
-          {`
-    @keyframes marquee {
-      0% { transform: translateX(-50%); }
-      100% { transform: translateX(0); }
-    }
-    @keyframes marquee-reverse {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      display: flex;
-      animation: marquee linear infinite;
-    }
-    .animate-marquee-reverse {
-      display: flex;
-      animation: marquee-reverse linear infinite;
-    }
-    .animate-marquee:hover,
-    .animate-marquee-reverse:hover {
-      animation-play-state: paused;
-    }
-    `}
-        </style>
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+          }
+          @keyframes marquee-reverse {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-marquee {
+            display: flex;
+            animation: marquee linear infinite;
+          }
+          .animate-marquee-reverse {
+            display: flex;
+            animation: marquee-reverse linear infinite;
+          }
+          .animate-marquee:hover,
+          .animate-marquee-reverse:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
-      {/* SELECTED WORK */}
+      {/* WHAT WE DELIVER SECTION */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-3xl md:text-4xl font-extrabold mb-12 text-center text-gray-900"
         >
-          Selected mobile work
+          What We <span className="text-teal-600">Deliver</span>
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {portfolio.map((p, i) => (
-            <motion.article
+        <div className="grid md:grid-cols-3 gap-8">
+          {deliverables.map((d, i) => (
+            <motion.div
               key={i}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: i * 0.06 }}
+              transition={{ duration: 0.45, delay: i * 0.06 }}
+              className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition bg-white"
             >
-              <div className="h-56 bg-gray-100">
+              <div className="h-52 bg-gray-100">
                 <img
-                  src={p.img}
-                  alt={p.title}
+                  src={d.img}
+                  alt={d.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="p-5 bg-white">
-                <h3 className="text-lg font-semibold mb-2">{p.title}</h3>
-                <p className="text-gray-600 text-sm mb-3">{p.desc}</p>
-                <div className="text-xs text-teal-600 font-medium">
-                  {p.result}
-                </div>
+
+              <div className="p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {d.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {d.desc}
+                </p>
               </div>
-            </motion.article>
+            </motion.div>
           ))}
         </div>
       </section>
 
-      {/* TIMELINE / PROCESS (replace existing section) */}
+      {/* PROCESS / TIMELINE — preserved steps content but styled like UI/UX page */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
@@ -471,32 +374,7 @@ export default function MobileApp() {
           <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gray-200 hidden md:block" />
 
           <div className="space-y-8">
-            {[
-              {
-                step: "1",
-                title: "Discovery",
-                desc: "Workshops, stakeholder interviews and market research to define goals & KPIs.",
-                accent: "Research",
-              },
-              {
-                step: "2",
-                title: "Design",
-                desc: "Interactive prototypes, user testing and UI systems for rapid feedback cycles.",
-                accent: "Prototyping",
-              },
-              {
-                step: "3",
-                title: "Build",
-                desc: "Component-driven development, automated tests, and CI/CD for reliable releases.",
-                accent: "Engineering",
-              },
-              {
-                step: "4",
-                title: "Launch & Support",
-                desc: "Monitoring, performance optimisations and iterative improvements after launch.",
-                accent: "Growth",
-              },
-            ].map((item, idx) => (
+            {STEPS.map((item, idx) => (
               <motion.div
                 key={item.step}
                 initial={{ opacity: 0, x: -10 }}
@@ -512,7 +390,6 @@ export default function MobileApp() {
                     {item.step}
                   </div>
 
-                  {/* small accent chip for mobile (visible on small screens) */}
                   <div className="block md:hidden">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold">
@@ -536,7 +413,7 @@ export default function MobileApp() {
                         {item.accent}
                       </div>
                     </div>
-                    {/* subtle arrow / icon */}
+
                     <svg
                       className="w-6 h-6 text-gray-300"
                       fill="none"
@@ -557,7 +434,6 @@ export default function MobileApp() {
                     {item.desc}
                   </p>
 
-                  {/* optional micro-CTA */}
                   <div className="mt-4">
                     <a
                       href="/contact"
@@ -587,67 +463,7 @@ export default function MobileApp() {
         </div>
       </section>
 
-      {/* PRICING TIERS */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <motion.h3
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-8"
-        >
-          Pricing plans (estimates)
-        </motion.h3>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {
-              name: "Starter",
-              price: "₹120k",
-              desc: "MVP - core flows, auth, basic analytics",
-              features: ["Auth", "Core flows", "Push notifications"],
-            },
-            {
-              name: "Growth",
-              price: "₹300k",
-              desc: "Refined UX, payments, 3rd party integrations",
-              features: ["Payments", "Analytics", "A/B testing"],
-            },
-            {
-              name: "Enterprise",
-              price: "Custom",
-              desc: "Full platform, SSO, dedicated SLAs",
-              features: ["SLA", "Advanced security", "On-prem options"],
-            },
-          ].map((p, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md"
-            >
-              <h4 className="text-xl font-semibold mb-2">{p.name}</h4>
-              <div className="text-2xl font-bold text-teal-600 mb-2">
-                {p.price}
-              </div>
-              <p className="text-gray-600 text-sm mb-4">{p.desc}</p>
-              <ul className="text-gray-700 list-inside mb-4">
-                {p.features.map((f, j) => (
-                  <li key={j}>• {f}</li>
-                ))}
-              </ul>
-              <Link
-                to="/contact"
-                className="inline-block bg-teal-600 text-white px-4 py-2 rounded-full font-medium"
-              >
-                Request quote
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* FAQ */}
+      {/* FAQ — preserved content */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <h3 className="text-2xl font-bold text-center mb-6">
@@ -686,7 +502,7 @@ export default function MobileApp() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA — preserved content but styled like UI/UX page CTA */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">

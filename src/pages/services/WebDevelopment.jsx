@@ -3,6 +3,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import webdev from "@/assets/web-development.jpg"
+import FlipCardWD from '@/components/ui/FlipCardWD'
+
 export default function WebDevelopment() {
   const features = [
     {
@@ -151,6 +153,14 @@ export default function WebDevelopment() {
     },
   ];
 
+  const points = [
+    "Custom website design that aligns with your brand identity",
+    "Robust web application development for dynamic user experiences",
+    "E-commerce development to boost your online sales",
+    "Maintenance and support to keep your site optimized and secure",
+    "SEO-friendly development practices for improved search rankings",
+  ];
+
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
@@ -170,12 +180,12 @@ export default function WebDevelopment() {
         >
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight text-white">
             <span className="bg-gradient-to-r from-teal-400 via-cyan-300 to-gray-200 bg-clip-text text-transparent">
-              Web Development & Design
+              Web Development
             </span>
           </h1>
           <p className="text-gray-200 text-lg md:text-xl mb-6">
-            Build intuitive, fast and search-friendly websites that convert
-            visitors into customers.
+            Skiez Digital: Premier Web Development Company Elevating Your Online
+            Presence
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
@@ -193,6 +203,77 @@ export default function WebDevelopment() {
           </div>
         </motion.div>
       </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-6 md:px-10">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+              Why Web Development in{" "}
+              <span className="text-teal-400"> Skiez Digital</span>?
+            </h2>
+
+            {/* Intro */}
+            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10 text-justify">
+              Skiez Digital, a leading web development company dedicated to
+              transforming your digital vision into reality. Our comprehensive
+              web development services combine creativity, technology, and
+              strategy to build custom websites and applications that drive
+              business growth. As a top web development agency, we specialize in
+              delivering innovative web design and development solutions
+              tailored to your unique needs.<br></br><br></br>
+              <span className="text-teal-600 font-semibold">Skiez Digital</span>
+              , Web development involves building and maintaining websites and
+              web apps accessible online. It combines designing the site’s
+              structure, coding its features, and ensuring smooth user
+              interaction. This field covers both front-end work (what users
+              see) and back-end processes (server, database management). Common
+              languages used include HTML, CSS, and JavaScript to create
+              responsive and interactive sites. Overall, web development turns
+              digital concepts into practical and engaging online experiences
+            </p>
+
+            {/* Checklist */}
+            <ul className="max-w-4xl mx-auto text-justify">
+              {points.map((text, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start py-3 gap-4 hover:bg-teal-50/40 rounded-xl px-3 transition-all duration-200"
+                >
+                  <span className="flex-shrink-0 w-10 h-10 rounded-full bg-teal-50 border border-teal-100 flex items-center justify-center mt-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="w-5 h-5 text-teal-600"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+
+                  <p className="text-gray-800 leading-relaxed text-[16px] font-medium">
+                    {text}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      <FlipCardWD/>
 
       {/* KEY SERVICES — 3 columns */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
@@ -285,7 +366,6 @@ export default function WebDevelopment() {
               <div className="p-6 bg-white">
                 <h3 className="text-lg font-semibold mb-2">{c.title}</h3>
                 <p className="text-gray-600 mb-4">{c.summary}</p>
-              
               </div>
             </motion.article>
           ))}
