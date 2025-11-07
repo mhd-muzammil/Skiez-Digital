@@ -20,6 +20,9 @@ import MetaAds from "./pages/DigitalMarketing/MetaAds";
 import GoogleCampign from "./pages/DigitalMarketing/GoogleCampign";
 import Careers from "./pages/Careers";
 import ScrollTop from "@/components/ui/ScrollTop";
+import Privacy from '@/pages/Privacy';
+import Terms from './pages/Terms';
+import FloatingWhatsapp from "./components/FloatingWatsapp";
 
 // ✅ Import Toaster
 import { Toaster } from "react-hot-toast";
@@ -44,10 +47,10 @@ const App = () => {
         <CanvasCursor />
         <Header />
 
-        <div className="h-16 md:h-20"></div>
-
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms-and-conditions" element={<Terms />} />
           <Route path="/services" element={<Services />} />
           <Route
             path="/services/web-development"
@@ -83,6 +86,7 @@ const App = () => {
           />
         </Routes>
 
+        
         <Footer />
       </BrowserRouter>
     </>
