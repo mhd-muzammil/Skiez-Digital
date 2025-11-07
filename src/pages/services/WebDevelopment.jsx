@@ -34,17 +34,20 @@ export default function WebDevelopment() {
   const caseStudies = [
     {
       title: "Data-Driven Growth",
-      summary: "We combine analytics and creative strategies to help brands achieve measurable results and scalable growth.",
+      summary:
+        "We combine analytics and creative strategies to help brands achieve measurable results and scalable growth.",
       img: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80",
     },
     {
       title: "Seamless User Experience",
-      summary: "Our design-first approach ensures intuitive navigation, faster performance, and meaningful user engagement across all devices.",
-      img: "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1000&q=80",
+      summary:
+        "Our design-first approach ensures intuitive navigation, faster performance, and meaningful user engagement across all devices.",
+      img: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dXNlciUyMGV4cGVyaWVuY2V8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     },
     {
       title: "Integrated Marketing Solutions",
-      summary: "From SEO and content to ads and automation, we deliver a unified digital ecosystem for consistent brand performance.",
+      summary:
+        "From SEO and content to ads and automation, we deliver a unified digital ecosystem for consistent brand performance.",
       img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1000&q=80",
     },
   ];
@@ -227,7 +230,8 @@ export default function WebDevelopment() {
               strategy to build custom websites and applications that drive
               business growth. As a top web development agency, we specialize in
               delivering innovative web design and development solutions
-              tailored to your unique needs.<br></br><br></br>
+              tailored to your unique needs.<br></br>
+              <br></br>
               <span className="text-teal-600 font-semibold">Skiez Digital</span>
               , Web development involves building and maintaining websites and
               web apps accessible online. It combines designing the site’s
@@ -273,7 +277,7 @@ export default function WebDevelopment() {
         </div>
       </section>
 
-      <FlipCardWD/>
+      <FlipCardWD />
 
       {/* KEY SERVICES — 3 columns */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
@@ -675,6 +679,69 @@ export default function WebDevelopment() {
             {/* Background accent blob */}
             <div className="absolute -z-10 -top-10 -right-10 w-48 h-48 bg-gradient-to-tr from-teal-200/40 to-cyan-100/30 rounded-full blur-2xl" />
           </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What services does web development include?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Web development services cover designing websites, rendering,
+                integrating CMS, setting upe- commerce, and ongoing point
+                conservation
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What is the duration of build a website?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                The website development process can take anywhere from a
+                numerous weeks to several months based on its design complexity
+                and specific conditions.
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                Do you produce mobile- responsive websites?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Yes, all websites we develop are fully responsive, icing smooth
+                user experience across mobile, tablet, and desktop bias
+              </div>
+            </details>
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                Is website conservation included after launch?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Yes, we give ongoing conservation including regular updates,
+                security patches, backups, and performance optimizations post-
+                launch
+              </div>
+            </details>
+          </div>
         </div>
       </section>
 

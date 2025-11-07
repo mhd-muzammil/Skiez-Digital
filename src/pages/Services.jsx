@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ServiceHero from '@/assets/ServiceHero.jpg'
 
 const services = [
   {
@@ -25,7 +26,7 @@ const services = [
     link: "/services/mobile-apps",
   },
   {
-    title: "SEO & Marketing",
+    title: "Digital Marketing",
     desc: "Boost your brand visibility with our strategic SEO and digital marketing campaigns that deliver measurable growth.",
     image:
       "https://plus.unsplash.com/premium_photo-1684179639925-954643b21585?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFNFTyUyMGFuZCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
@@ -37,12 +38,11 @@ export default function Services() {
   return (
     <div className="relative overflow-hidden bg-white">
       {/* 🌄 Hero Section with Background Image */}
-      {/* 🌄 Hero Section — Background Image with Centered Text */}
       <section
         className="relative w-full h-[420px] md:h-[500px] flex mb-24 items-center justify-center text-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=1600&q=80')", // <-- Replace with your image URL
+            `url(${ServiceHero})`, // <-- image URL
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -191,7 +191,7 @@ export default function Services() {
                   d="M2 5.5A2.5 2.5 0 014.5 3h2A2.5 2.5 0 019 5.5V8a2.5 2.5 0 01-2.5 2.5H4.5A2.5 2.5 0 012 8V5.5zm0 10A2.5 2.5 0 014.5 13h2A2.5 2.5 0 019 15.5V18a2.5 2.5 0 01-2.5 2.5H4.5A2.5 2.5 0 012 18v-2.5zm12-10A2.5 2.5 0 0116.5 3h2A2.5 2.5 0 0121 5.5V8a2.5 2.5 0 01-2.5 2.5h-2A2.5 2.5 0 0114 8V5.5zm0 10A2.5 2.5 0 0116.5 13h2A2.5 2.5 0 0121 15.5V18a2.5 2.5 0 01-2.5 2.5h-2A2.5 2.5 0 0114 18v-2.5z"
                 />
               </svg>
-              +91 7550186096
+              +91 82200 43041
             </a>
           </div>
 

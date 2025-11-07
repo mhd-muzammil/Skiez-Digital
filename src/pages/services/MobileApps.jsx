@@ -3,7 +3,7 @@ import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import FlipCardAD from '@/components/ui/FlipCardAD'
-
+import MobileAppHero from '@/assets/MobileAppHero.jpg'
 /**
  * Mobile App Development — converted to UI/UX page style
  * - Keeps all original content verbatim (no text changes)
@@ -73,7 +73,7 @@ const deliverables = [
   {
     title: "Custom Mobile App Design & Development",
     desc: "Tailored, high-performance mobile apps built to meet your business goals with seamless UI and UX.",
-    img: "https://images.unsplash.com/photo-1598554747430-70a4e52f10c5?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1627757757997-369fb38812e1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y3VzdG9tJTIwbW9iaWxlJTIwYXBwcyUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
   },
   {
     title: "Enterprise Mobile App Solutions",
@@ -88,12 +88,12 @@ const deliverables = [
   {
     title: "App Testing & Quality Assurance",
     desc: "Comprehensive testing to ensure smooth performance, user friendliness, and reliability before launch.",
-    img: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=1200&q=80",
+    img: "https://media.istockphoto.com/id/2152919218/photo/mini-mobile-shop-with-setup-tools-strategies-to-improve-sales-and-profitability-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=1Iuu4zqV5jQnblaaWS6TtVZFYqhA7130sEJyvDGaf9A=",
   },
   {
     title: "App Maintenance & Support",
     desc: "Continuous monitoring, updates, optimization, and feature improvements post-launch.",
-    img: "https://images.unsplash.com/photo-1556155092-8707de31f9c4?auto=format&fit=crop&w=1200&q=80",
+    img: "https://media.istockphoto.com/id/2211911993/photo/isolated-smartphone-repair-service-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=8u6OOAuaL2rJqjbMav1-_O9oKBQ_q9Bmdn8ac9CjddQ=",
   },
 ];
 
@@ -136,13 +136,13 @@ export default function MobileApp() {
         className="relative w-full h-[460px] md:h-[560px] flex items-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80')",
+            `url(${MobileAppHero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="Mobile app development hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-transparent to-black/100" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -466,36 +466,58 @@ export default function MobileApp() {
       {/* FAQ — preserved content */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
-          <h3 className="text-2xl font-bold text-center mb-6">
-            Frequently asked
-          </h3>
-          <div className="space-y-4">
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                How long to build an MVP?
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What platforms do you develop mobile apps for?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Usually 8–12 weeks for a focused MVP depending on scope.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                We develop native apps for iOS and Android, plus cross-platform
+                apps using frameworks like React Native and Flutter.
               </div>
             </details>
 
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                Do you publish to stores?
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How long does app development typically take?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Yes — we handle App Store / Play Store submission and follow-up
-                fixes.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Development timelines vary from a few weeks to several months
+                depending on app complexity and feature requirements.
               </div>
             </details>
 
-            <details className="p-4 bg-white rounded-lg shadow-sm">
-              <summary className="font-medium cursor-pointer">
-                Can you work with an in-house team?
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What factors affect the cost of app development?
               </summary>
-              <div className="mt-2 text-gray-600">
-                Absolutely — we can integrate with your engineering team for a
-                smooth handoff.
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Costs depend on app complexity, design, features, platform
+                choice, and ongoing maintenance needs.
+              </div>
+            </details>
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                Do you provide support and updates after app launch?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                We offer ongoing maintenance and updates to keep your app
+                compatible, secure, and feature-rich post-launch.
               </div>
             </details>
           </div>
@@ -509,7 +531,7 @@ export default function MobileApp() {
             Ready to build a high-performing mobile app?
           </h3>
           <p className="text-gray-600 mb-6">
-            Book a free discovery call — we'll audit your idea and suggest a
+            Book a free discovery call we'll audit your idea and suggest a
             roadmap.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -520,7 +542,7 @@ export default function MobileApp() {
               Book discovery call
             </Link>
             <a href="tel:+917550186096" className="text-gray-700">
-              Or call +91 75501 86096
+              Or call +91 82200 43041
             </a>
           </div>
         </div>
