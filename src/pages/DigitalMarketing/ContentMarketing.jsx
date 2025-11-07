@@ -55,7 +55,7 @@ export default function ContentMarketing() {
     {
       key: "ahrefs",
       name: "Ahrefs",
-      logo: "https://cdn.worldvectorlogo.com/logos/ahrefs-1.svg",
+      logo: "https://www.svgrepo.com/show/535119/a.svg",
     },
     {
       key: "semrush",
@@ -108,11 +108,11 @@ export default function ContentMarketing() {
         className="relative flex items-center justify-center text-center h-[420px] md:h-[520px] bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://media.istockphoto.com/id/1700776179/photo/video-marketing-online-advertising-influencer-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=jlw7hkrsP3uU8b6mKRzxUcPCZ511gHmzCpzZyLROjRM=')",
         }}
         aria-label="Content marketing hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/70" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -125,7 +125,7 @@ export default function ContentMarketing() {
             </span>
           </h1>
           <p className="text-gray-200 text-lg md:text-xl mb-6">
-            Create content that ranks, engages and converts—backed by research
+            Create content that ranks, engages and converts backed by research
             and distribution playbooks.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -182,7 +182,7 @@ export default function ContentMarketing() {
       </section>
 
       {/* OUTCOMES */}
-      <section className="bg-gradient-to-r from-teal-50 to-white py-12">
+      <section className="bg-gradient-to-r from-teal-500 to-white py-12">
         <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {outcomes.map((o, i) => (
             <motion.div
@@ -286,39 +286,68 @@ export default function ContentMarketing() {
         `}</style>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-8"
-        >
-          What clients say
-        </motion.h2>
+      
 
-        <div className="relative">
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.blockquote
-                key={i}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
-              >
-                <div className="text-teal-600 text-2xl mb-3">
-                  <FaQuoteLeft />
-                </div>
-                <p className="text-gray-700 mb-4 leading-relaxed">
-                  "{t.quote}"
-                </p>
-                <div className="text-sm font-semibold text-gray-900">
-                  {t.name}
-                </div>
-              </motion.blockquote>
-            ))}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What services does a content marketing agency offer?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                A content marketing agency provides content planning, creation,
+                distribution, SEO optimization, and performance measurement
+                services tailored to your brand
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How do you develop an effective content marketing strategy?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Effective strategies include audience analysis, keyword
+                research, competitor study, content planning, and multi-channel
+                distribution to maximize impact
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What types of content are used in content marketing?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Content types range from blog posts, social media content, and
+                videos to infographics, e-books, and SEO-driven website copy,
+                designed to engage and educate
+              </div>
+            </details>
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How does content marketing improve search engine rankings?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                By creating SEO-friendly content with targeted keywords,
+                user-focused messaging, and quality backlinks, content marketing
+                boosts organic visibility and website traffic
+              </div>
+            </details>
           </div>
         </div>
       </section>

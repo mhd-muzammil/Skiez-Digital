@@ -2,8 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
+
 
 export default function SocialMediaMarketing() {
+  const [preview, setPreview] = useState(null);
+
   const services = [
     {
       title: "Strategy & Calendar",
@@ -23,17 +28,17 @@ export default function SocialMediaMarketing() {
     {
       title: "Paid Social",
       desc: "Campaign setup, creative testing and ROAS optimisation across Meta, X, and TikTok.",
-      img: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80",
+      img: "https://images.unsplash.com/photo-1740174459726-8c57d8366061?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFpZCUyMHNvY2lhbCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
     },
   ];
 
   const gallery = [
-    "https://images.unsplash.com/photo-1520975922784-3b36a5d3c1f6?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1509395062183-67c5ad6faff9?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1000&q=80",
+    "/public/postImages/postImg1.png",
+    "/public/postImages/postImg2.png",
+    "/public/postImages/postImg3.png",
+    "/public/postImages/postImg4.png",
+    "/public/postImages/postImg5.png",
+    "/public/postImages/postImg6.png",
   ];
 
   const highlights = [
@@ -87,44 +92,49 @@ export default function SocialMediaMarketing() {
       logo: "/src/assets/canva.png",
     },
     {
-      name: "Later",
-      logo: "https://seeklogo.com/images/L/later_logo_0D8A4C3D5E-seeklogo.com.png",
+      name: "Light Room",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/768px-Adobe_Photoshop_Lightroom_CC_logo.svg.png?20200616120137",
     },
     {
       name: "Meta Ads",
       logo: "https://www.vectorlogo.zone/logos/facebook/facebook-icon.svg",
     },
     {
-      name: "TikTok Ads",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/6e/TikTok_App_icon_%282018%E2%80%93present%29.svg",
+      name: "publer",
+      logo: "https://cdn.brandfetch.io/idt2HRhezv/w/180/h/180/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B",
     },
     {
       name: "Hootsuite",
-      logo: "https://cdn.worldvectorlogo.com/logos/hootsuite.svg",
+      logo: "https://cdn.brandfetch.io/id9Up4qFxi/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B",
     },
+    
   ];
 
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
       <section
-        className="relative h-[480px] md:h-[600px] bg-cover bg-center"
+        className="relative h-[480px] md:h-[600px] bg-cover bg-center flex items-center justify-center text-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1520975922784-3b36a5d3c1f6?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://images.unsplash.com/photo-1643503640904-75c1a2093570?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvY2lhbCUyMG1lZGlhJTIwbWFya2V0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600')",
         }}
         aria-label="Social media marketing hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/70" />
-        <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 text-center">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Content Centered */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6">
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="text-4xl md:text-6xl font-extrabold text-white"
           >
-            Social Media Marketing 
+            Social Media Marketing
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -134,6 +144,7 @@ export default function SocialMediaMarketing() {
             Creative-first social campaigns, audience building and paid
             amplification to drive measurable growth.
           </motion.p>
+
           <div className="mt-6 flex items-center justify-center gap-4">
             <Link
               to="/contact"
@@ -141,12 +152,8 @@ export default function SocialMediaMarketing() {
             >
               Start a Campaign
             </Link>
-            <a
-              href="/assets/smm-catalog.pdf"
-              className="text-gray-200 underline"
-            >
-              Download SMM Catalog
-            </a>
+
+            
           </div>
         </div>
       </section>
@@ -212,11 +219,26 @@ export default function SocialMediaMarketing() {
               <img
                 src={g}
                 alt={`gallery-${i}`}
-                className="w-full h-56 object-cover"
+                className="w-full h-56 object-cover cursor-pointer"
+                onClick={() => setPreview(g)}
               />
             </motion.div>
           ))}
         </div>
+
+        {/* ✅ Full Screen Preview */}
+        {preview && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            onClick={() => setPreview(null)}
+          >
+            <img
+              src={preview}
+              alt="preview"
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg"
+            />
+          </div>
+        )}
       </section>
 
       {/* SOCIAL MEDIA HIGHLIGHTS */}
@@ -249,61 +271,6 @@ export default function SocialMediaMarketing() {
         </div>
       </section>
 
-      {/* PACKAGES */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16 bg-gradient-to-b from-white to-teal-50">
-        <motion.h2
-          initial={{ opacity: 0, y: 18 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-8"
-        >
-          Packages
-        </motion.h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {packages.map((p, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 8 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.45, delay: i * 0.06 }}
-              className={`p-6 rounded-2xl border ${
-                p.featured
-                  ? "border-teal-300 shadow-xl"
-                  : "border-gray-100 shadow-sm"
-              } bg-white`}
-            >
-              {p.featured && (
-                <div className="inline-block px-3 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold mb-3">
-                  Popular
-                </div>
-              )}
-              <h4 className="text-lg font-semibold mb-2">{p.name}</h4>
-              <div className="text-2xl font-extrabold text-gray-900 mb-4">
-                {p.price}
-              </div>
-              <ul className="text-sm text-gray-600 space-y-2 mb-4">
-                {p.bullets.map((b, j) => (
-                  <li key={j}>• {b}</li>
-                ))}
-              </ul>
-              <Link
-                to="/contact"
-                className={`inline-block w-full text-center py-2 rounded-xl font-semibold ${
-                  p.featured
-                    ? "bg-teal-600 text-white"
-                    : "bg-white text-teal-700 border border-teal-600"
-                }`}
-              >
-                Start {p.name}
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* TOOLS */}
       <section className="py-12 border-t border-gray-100 bg-white overflow-hidden relative">
         <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
@@ -321,6 +288,71 @@ export default function SocialMediaMarketing() {
                 />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What's social media marketing and why is it important for my
+                business?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Social media marketing uses platforms like Facebook and
+                Instagram to increase brand mindfulness, engage cult, and drive
+                deals
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How do I choose the stylish social media marketing strategy?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                A acclimatized strategy depends on your pretensions, target
+                followership, and platform preferences. Research and analytics
+                help identify the right approach
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What social media marketing services should I invest in?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Invest in content creation, paid advertising, influencer
+                hookups, community operation, and analytics to maximize results.
+              </div>
+            </details>
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How does a social media marketing agency ameliorate my online
+                presence?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                An agency brings moxie, tools, and experience to produce
+                effective juggernauts that enhance reach, engagement, and
+                transformations
+              </div>
+            </details>
           </div>
         </div>
       </section>

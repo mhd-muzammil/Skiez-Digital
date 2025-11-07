@@ -8,43 +8,43 @@ const topics = [
     title: "SEO (Search Engine Optimization)",
     desc: "Improve organic visibility and drive qualified traffic with technical SEO, on-page optimization, and content strategies tailored to your niche.",
     image:
-      "https://images.unsplash.com/photo-1508385082359-e40b1b7d9b9a?auto=format&fit=crop&w=900&q=60",
-    link: "/services/seo",
+      "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
+    link: "/services/digital-marketing/seo",
   },
   {
     title: "Email Marketing",
     desc: "Build relationships and boost retention with targeted email flows, newsletters, and automated campaigns that convert prospects into repeat customers.",
     image:
-      "https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=900&q=60",
-    link: "/services/email-marketing",
+      "https://plus.unsplash.com/premium_photo-1682309572625-791e25352998?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RS1tYWlsJTIwbWFya2V0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
+    link: "/services/digital-marketing/email-marketing",
   },
   {
     title: "Content Marketing",
     desc: "Attract and educate your audience with SEO-friendly blog posts, guides, video scripts and content strategies that position your brand as an authority.",
     image:
-      "https://images.unsplash.com/photo-1496318663780-4f3b9a2b3d65?auto=format&fit=crop&w=900&q=60",
-    link: "/services/content-marketing",
+      "https://media.istockphoto.com/id/1186285220/photo/content-marketing-news-social-media-websites-and-advertising-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=mkkaR_giex0Li_-Jx9vJpF5HdlYgBnGTtGuunqT2G-o=",
+    link: "/services/digital-marketing/content-marketing",
   },
   {
     title: "Social Media Marketing",
     desc: "Grow brand awareness and engagement with platform-specific strategies, creative assets, and community management across Instagram, LinkedIn, X, and more.",
     image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=60",
-    link: "/services/social-media",
+      "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    link: "/services/digital-marketing/social-media",
   },
   {
     title: "Meta Ads (Facebook & Instagram)",
     desc: "Run conversion-focused Meta ad campaigns with precise audience targeting, creative testing, and ongoing optimization for maximum ROI.",
     image:
-      "https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=900&q=60",
-    link: "/services/meta-ads",
+      "https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=bo9P4L3HQM2cipWrh8W7_HwPYNnUdHKqucWnduQLge0=",
+    link: "/services/digital-marketing/meta-ads",
   },
   {
     title: "Google Campaigns (Search & Display)",
     desc: "Capture demand with Search Ads and build awareness with Display and YouTube campaigns — keyword strategy, bidding, and conversion tracking included.",
     image:
-      "https://images.unsplash.com/photo-1508385082359-e40b1b7d9b9a?auto=format&fit=crop&w=900&q=60",
-    link: "/services/google-ads",
+      "https://images.unsplash.com/vector-1745065955144-6d0d06905350?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z29vZ2xlJTIwY2FtcGFpZ24lMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
+    link: "/services/digital-marketing/google-campaigns",
   },
 ];
 
@@ -142,11 +142,11 @@ const faqs = [
   },
   {
     q: "Do you create ad creatives?",
-    a: "Yes — we handle creatives, copy, A/B testing, and landing pages end-to-end.",
+    a: "Yes we handle creatives, copy, A/B testing, and landing pages end-to-end.",
   },
   {
     q: "What’s the minimum budget?",
-    a: "We tailor to businesses of all sizes — we’ll recommend budgets based on objectives during the free strategy call.",
+    a: "We tailor to businesses of all sizes we’ll recommend budgets based on objectives during the free strategy call.",
   },
 ];
 
@@ -160,15 +160,15 @@ export default function DigitalMarketing() {
         className="relative w-full h-[420px] md:h-[480px] flex items-center justify-center text-center mb-20"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1507504031009-7333e1a9b1c6?auto=format&fit=crop&w=1600&q=80')",
+            "url('https://media.istockphoto.com/id/1652679812/photo/digital-marketing-business-technology-website-advertisement-email-social-media-network-seo.webp?a=1&b=1&s=612x612&w=0&k=20&c=J8PY0VM1n_Sw-iUFQOm5AHE57CGsfj_o4-M4AMEmygw=')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 px-6">
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-white leading-tight">
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-3 text-teal-500 leading-tight">
             Digital Marketing
           </h1>
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-6">
@@ -237,7 +237,7 @@ export default function DigitalMarketing() {
 
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
           We blend strategy, creativity, and technology to deliver measurable
-          digital growth — built for ambitious brands.
+          digital growth built for ambitious brands.
         </p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -283,7 +283,7 @@ export default function DigitalMarketing() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-900"
         >
-          Our Process — How We Deliver Growth
+          Our Process -  How We Deliver Growth
         </motion.h2>
 
         <div className="relative max-w-3xl mx-auto">
@@ -388,25 +388,7 @@ export default function DigitalMarketing() {
         <IndustriesStatsSection />
       </section>
 
-      {/* Testimonials */}
-      <section className="bg-gray-50 py-12">
-        <div className="max-w-5xl mx-auto px-6">
-          <h3 className="text-2xl font-extrabold mb-6">What Clients Say</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <motion.blockquote
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                className="bg-white p-6 rounded-xl border shadow-sm text-sm"
-              >
-                <p className="text-gray-700 mb-4">“{t.quote}”</p>
-                <footer className="text-xs text-gray-500">— {t.author}</footer>
-              </motion.blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
+    
 
       {/* FAQ */}
       <section className="max-w-6xl mx-auto px-6 md:px-12 py-12">

@@ -39,25 +39,7 @@ export default function SEO() {
     { label: "Keyword Analysis", value: "Top" },
   ];
 
-  const caseStudies = [
-    {
-      title: "E‑commerce SEO Win",
-      summary:
-        "On-site overhaul + content cluster — organic revenue up 62% in 5 months.",
-      img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "Local Biz — Local Pack",
-      summary: "GMB + citation campaign — moved to Local Pack for 8+ keywords.",
-      img: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80",
-    },
-    {
-      title: "SaaS Organic Launch",
-      summary:
-        "Content-first strategy + technical fixes — 3x organic MQLs in 4 months.",
-      img: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
-    },
-  ];
+  
 
   const tools = [
     {
@@ -95,11 +77,11 @@ export default function SEO() {
         className="relative flex items-center justify-center text-center h-[480px] md:h-[560px] bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1508385082359-f5f3b3c6f5a3?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://plus.unsplash.com/premium_vector-1682310920702-50669014da8f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VhcmNoJTIwZW5naW5lJTIwb3B0aW1pemF0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600')",
         }}
         aria-label="SEO hero"
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -126,7 +108,7 @@ export default function SEO() {
               href="tel:+919876543210"
               className="text-gray-200 hover:text-white"
             >
-              Or call: +91 98765 43210
+              Or call: +91 82200 40431
             </a>
           </div>
         </motion.div>
@@ -171,7 +153,7 @@ export default function SEO() {
       </section>
 
       {/* STATS */}
-      <section className="bg-gradient-to-r from-teal-50 to-white py-12">
+      <section className="bg-gradient-to-r from-teal-500 to-white py-12">
         <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((s, i) => (
             <motion.div
@@ -192,49 +174,7 @@ export default function SEO() {
       </section>
 
       {/* CASE STUDIES */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-8"
-        >
-          Selected Wins
-        </motion.h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {caseStudies.map((c, idx) => (
-            <motion.article
-              key={idx}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: idx * 0.08 }}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
-            >
-              <div className="h-44 bg-gray-200">
-                <img
-                  src={c.img}
-                  alt={c.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-6 bg-white">
-                <h3 className="text-lg font-semibold mb-2">{c.title}</h3>
-                <p className="text-gray-600 mb-4">{c.summary}</p>
-                <Link
-                  to="/contact"
-                  className="text-teal-600 font-medium hover:underline"
-                >
-                  Read case study / Contact →
-                </Link>
-              </div>
-            </motion.article>
-          ))}
-        </div>
-      </section>
-
+      
       {/* TOOLS MARQUEE */}
       <section className="py-16 border-t border-gray-100 bg-white overflow-hidden relative">
         <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
@@ -469,6 +409,71 @@ export default function SEO() {
         </div>
       </section>
 
+      {/* FAQ — preserved content */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What is SEO and why is it vital for my website?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                SEO, or Search Engine Optimization, improves your website’s
+                ranking on search engines, increasing organic traffic and
+                visibility.
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How long does it take to see results from SEO efforts?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                SEO results vary, but typically, noticeable improvements can
+                appear within 3-6 months, depending on competition and strategy
+                execution.
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What are the key differences between On-Page and Off-Page SEO?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                On-Page SEO involves optimizing content and structure, while
+                Off-Page focuses on backlinks and authority building beyond your
+                website.
+              </div>
+            </details>
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How do I choose the right SEO agency for my business?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Look for experience, proven results, transparent practices, and
+                a strategic approach aligned with your goals when selecting an
+                SEO partner.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
       <section className="relative py-24 bg-gradient-to-r from-teal-600 via-cyan-600 to-teal-700 text-white overflow-hidden">
         <div className="relative max-w-4xl mx-auto text-center px-6 z-10">
@@ -482,7 +487,7 @@ export default function SEO() {
             Ready to grow your organic traffic?
           </motion.h3>
           <p className="text-lg text-white/90 mb-10 max-w-2xl mx-auto">
-            Book a free audit and roadmap session — we’ll show quick wins and a
+            Book a free audit and roadmap session we’ll show quick wins and a
             6‑month plan to scale your visibility.
           </p>
 

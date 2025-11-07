@@ -65,12 +65,12 @@ export default function EmailMarketing() {
     {
       key: "klaviyo",
       name: "Klaviyo",
-      logo: "https://seeklogo.com/images/K/klaviyo-logo-4D7D8B0C16-seeklogo.com.png",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Klaviyo-primary-logo-charcoal.svg/1200px-Klaviyo-primary-logo-charcoal.svg.png?20240325140001",
     },
     {
       key: "postmark",
       name: "Postmark",
-      logo: "https://seeklogo.com/images/P/postmark-logo-8F0ABE5E81-seeklogo.com.png",
+      logo: "https://www.vectorlogo.zone/logos/postmarkapp/postmarkapp-icon.svg",
     },
   ];
 
@@ -102,7 +102,7 @@ export default function EmailMarketing() {
             </span>
           </h1>
           <p className="text-gray-200 text-lg md:text-xl mb-6">
-            Build revenue-driving email experiences — automated, personalised
+            Build revenue-driving email experiences automated, personalised
             and measurable.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -116,7 +116,7 @@ export default function EmailMarketing() {
               href="tel:+919876543210"
               className="text-gray-200 hover:text-white"
             >
-              Or call: +91 98765 43210
+              Or call: +91 82200 43041
             </a>
           </div>
         </motion.div>
@@ -271,6 +271,59 @@ export default function EmailMarketing() {
               Dashboarding, attribution and A/B testing to grow engagement and
               revenue.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Title */}
+          <motion.h3
+            className="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-900"
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Frequently Asked Questions
+          </motion.h3>
+
+          {/* FAQ List */}
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What types of campaigns can I run with email marketing?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                You can run promotions, product launches, event invitations,
+                feedback requests, and more to engage your audience effectively.
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                How does segmentation and automation improve email marketing?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                Segmentation and automation deliver personalized, timely content
+                to specific groups, increasing open rates and click-through
+                rates.
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
+              <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
+                What should be included in a winning email marketing strategy?
+              </summary>
+              <div className="mt-3 text-teal-600 leading-relaxed">
+                A strong strategy involves audience analysis, content creation,
+                automated workflows, and performance tracking.
+              </div>
+            </details>
+            
           </div>
         </div>
       </section>
