@@ -3,7 +3,8 @@ import React, { useMemo, useState } from "react";
 import jobsData from "../data/jobs.json";
 import internshipsData from "../data/internships.json";
 import traineeCoursesData from "../data/traineeCourses.json";
-import { Toaster, toast } from "react-hot-toast";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 export default function Careers() {
   const [activeTab, setActiveTab] = useState("jobs");
@@ -11,8 +12,8 @@ export default function Careers() {
   const [location, setLocation] = useState("All");
   const [selected, setSelected] = useState(null);
   const [applyOpen, setApplyOpen] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
-  // Form state
   const [form, setForm] = useState({
     name: "",
     phone: "",
@@ -71,18 +72,16 @@ export default function Careers() {
   const handleForm = (e) => {
     const { name, value, files } = e.target;
     if (name === "resumeFile") {
-      const file = files?.[0] || null;
-      setForm((p) => ({ ...p, resumeFile: file }));
+      setForm((p) => ({ ...p, resumeFile: files?.[0] || null }));
       return;
     }
     setForm((p) => ({ ...p, [name]: value }));
   };
 
-  // validation
   const isValidEmail = (v) => /\S+@\S+\.\S+/.test(v);
   const isValidPhone = (v) => /^[0-9+\-\s()]{7,15}$/.test(v);
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
     setErr("");
 
@@ -98,15 +97,11 @@ export default function Careers() {
       "application/msword",
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
     ];
-    if (!allowed.includes(form.resumeFile.type)) {
+    if (!allowed.includes(form.resumeFile.type))
       return setErr("Only PDF, DOC, or DOCX files are allowed.");
-    }
-    const maxBytes = 5 * 1024 * 1024;
-    if (form.resumeFile.size > maxBytes) {
+    if (form.resumeFile.size > 5 * 1024 * 1024)
       return setErr("Resume file is too large. Max size is 5 MB.");
-    }
 
-    // Prepare FormData (ready for backend)
     const fd = new FormData();
     fd.append("name", form.name.trim());
     fd.append("phone", form.phone.trim());
@@ -116,27 +111,38 @@ export default function Careers() {
     fd.append("category", activeTab);
     fd.append("resume", form.resumeFile);
 
-    // TODO: hook to backend (POST /api/apply) next
-    console.log("Application FormData ready", {
-      ...Object.fromEntries(fd.entries()),
-      resume: form.resumeFile?.name,
-    });
+    try {
+      if (submitting) return;
+      setSubmitting(true);
 
-    // ✅ Toast success
-    toast.success(
-      `Application submitted for ${selected?.title || "this role"}!`
-    );
+      await axios.post(
+        `${
+          import.meta.env.VITE_API_BASE_URL || "http://localhost:5000"
+        }/api/apply`,
+        fd,
+        { headers: { "Content-Type": "multipart/form-data" } }
+      );
 
-    // reset & close
-    setForm({ name: "", phone: "", email: "", resumeFile: null });
-    setApplyOpen(false);
+      toast.success(
+        `Application submitted for ${selected?.title || "this role"}!`,
+        {
+          id: "apply-success",
+        }
+      );
+
+      setForm({ name: "", phone: "", email: "", resumeFile: null });
+      setApplyOpen(false);
+    } catch (error) {
+      toast.error(error.response?.data?.message || "Something went wrong", {
+        id: "apply-error",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Toast container (local). If you already mount Toaster globally, remove this line */}
-      <Toaster position="top-center" toastOptions={{ duration: 3500 }} />
-
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
@@ -407,7 +413,7 @@ export default function Careers() {
                 <strong className="font-semibold">Why SKIEZ DIGITAL?</strong>
                 <ul className="mt-2 space-y-1 list-disc list-inside">
                   <li>Flexible hours & remote-friendly</li>
-                  <li>Teal/grey design system & modern stack</li>
+                  <li>Design system & modern stack</li>
                   <li>Fast feedback, portfolio-worthy projects</li>
                 </ul>
               </div>
@@ -449,7 +455,7 @@ export default function Careers() {
                   name="name"
                   value={form.name}
                   onChange={handleForm}
-                  placeholder="e.g., Mohamed Muzammil"
+                  placeholder="e.g., Kingston "
                   className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-300"
                   required
                 />
@@ -491,8 +497,8 @@ export default function Careers() {
                 </label>
                 <input
                   name="resumeFile"
-                  onChange={handleForm}
                   type="file"
+                  onChange={handleForm}
                   accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                   className="block w-full text-sm text-gray-700 file:mr-3 file:py-2 file:px-3 file:rounded-md file:border-0 file:bg-teal-600 file:text-white hover:file:bg-teal-700"
                   required
@@ -506,9 +512,10 @@ export default function Careers() {
 
               <button
                 type="submit"
-                className="w-full mt-1 px-4 py-2 rounded-lg bg-teal-600 text-white font-semibold"
+                disabled={submitting}
+                className="w-full mt-1 px-4 py-2 rounded-lg bg-teal-600 text-white font-semibold disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Submit application
+                {submitting ? "Submitting..." : "Submit application"}
               </button>
 
               {err && (

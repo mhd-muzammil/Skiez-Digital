@@ -12,7 +12,7 @@ function getInitials(name = "") {
 }
 
 /* Replace these sample posts with your real content or a CMS later */
-const samplePosts = [
+const samplePosts = [   
   {
     id: "featured-growth-seo",
     title: "The 7-point pre-launch SEO checklist for new websites",

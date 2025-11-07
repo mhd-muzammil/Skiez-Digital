@@ -4,12 +4,13 @@ import CardContainer from "../components/CardContainer";
 import StackHome from "../components/StackHome";
 import { motion } from 'framer-motion'
 import HomeSection from '@/components/HomeSection'
-
+import GCHeroWave from '@/components/GCHeroWave'
 const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <Hero />
+      {/* <GCHeroWave /> */}
+      <Hero/>
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         {/* Heading */}
@@ -46,7 +47,7 @@ const Home = () => {
           className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-justify"
           style={{ textAlign: "justify", textJustify: "inter-word" }}
         >
-          At <span className="font-semibold text-gray-900">Skiez Digital</span>,
+           <span className="font-semibold text-gray-900">Skiez Digital</span>,
           we are a performance-driven digital marketing agency based in Chennai,
           committed to helping businesses transform into powerful online brands.
           Our approach combines{" "}

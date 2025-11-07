@@ -13,11 +13,9 @@ import {
   FiStar,
   FiChevronRight,
 } from "react-icons/fi";
+import FloatingWhatsapp from "@/components/FloatingWatsapp";
 
-/**
- * About page — content pulled from user's Word doc.
- * Ready for Vite + React + Tailwind + Framer Motion + React Helmet
- */
+
 
 export default function AboutPage() {
   return (
@@ -35,7 +33,6 @@ export default function AboutPage() {
         <ServicesDoc />
         <ProofDoc />
         <ApproachDoc />
-        <TestimonialsDoc />
         <CTA />
       </div>
 
@@ -201,7 +198,7 @@ function ServicesDoc() {
       body: "We help your website rank higher and attract high-quality visitors through strategic keyword research, on-page optimization, high-quality content creation, and credible link building. Our goal is to make your brand visible to those who matter most — your target audience.",
       icon: <FiSearch />,
       image:
-        "https://images.unsplash.com/photo-1508385082359-f0c0c8a3b3b4?auto=format&fit=crop&w=900&q=80",
+        "https://plus.unsplash.com/premium_photo-1685283298465-e52e933a3312?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2VvfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
     },
     {
       title: "Google Ads & Meta (Facebook & Instagram) Advertising:",
@@ -229,7 +226,7 @@ function ServicesDoc() {
       body: "Keep your customers connected with personalised, well-structured email campaigns. We design email journeys that nurture leads, increase engagement, and inspire action.",
       icon: <FiMail />,
       image:
-        "https://images.unsplash.com/photo-1529336953126-1772c59c9e7d?auto=format&fit=crop&w=900&q=80",
+        "https://images.unsplash.com/photo-1683117927786-f146451082fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZW1haWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     },
     {
       title: "UI/UX DESIGN",
@@ -366,9 +363,9 @@ function ApproachDoc() {
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-1">
           <h3 className="text-xl font-bold">Our Commitment</h3>
-          <p className="mt-3 text-gray-600">
+          <p className="mt-3 text-gray-600 text-justify">
             At Skiez Digital, we go beyond traditional marketing. We work as
-            your strategic growth partner — helping your business adapt,
+            your strategic growth partner helping your business adapt,
             innovate, and thrive in an ever-evolving digital world.
           </p>
         </div>
@@ -399,92 +396,9 @@ function ApproachDoc() {
 
 /* ----------------- Testimonials ----------------- */
 
-function TestimonialsDoc() {
-  const testimonials = [
-    {
-      name: "Rita Fernandez",
-      role: "CMO, FinTech Co.",
-      quote:
-        "Skiez Digital rebuilt our acquisition funnel — our CAC dropped 28% and conversions rose 2.6x.",
-    },
-    {
-      name: "Jay Patel",
-      role: "Founder, SaaS Start",
-      quote:
-        "Fast, transparent, and outcome-obsessed. They shipped an MVP and we saw KPIs improve in 8 weeks.",
-    },
-    {
-      name: "Aisha Khan",
-      role: "Head of Marketing, Ecom",
-      quote:
-        "Creative storytelling + analytics — they helped us scale ROAS consistently across channels.",
-    },
-  ];
 
-  return (
-    <section className="mt-12">
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
-        <div>
-          <h3 className="text-xl font-bold">What our clients say</h3>
-          <p className="mt-2 text-gray-600">
-            Short, honest feedback from partners we’ve worked with.
-          </p>
-        </div>
 
-        <div>
-          <Carousel items={testimonials} />
-        </div>
-      </div>
-    </section>
-  );
-}
 
-function Carousel({ items }) {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    const t = setInterval(() => setI((p) => (p + 1) % items.length), 4200);
-    return () => clearInterval(t);
-  }, [items.length]);
-
-  return (
-    <div>
-      <motion.div
-        key={i}
-        initial={{ opacity: 0, y: 8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
-      >
-        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 font-semibold">
-              {getInitials(items[i].name)}
-            </div>
-            <div>
-              <p className="text-gray-700 italic">“{items[i].quote}”</p>
-              <div className="mt-3 text-sm text-gray-500">
-                <strong className="text-gray-900">{items[i].name}</strong> ·{" "}
-                {items[i].role}
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <div className="flex gap-2 mt-4">
-        {items.map((_, idx) => (
-          <button
-            key={idx}
-            aria-label={`show ${idx + 1}`}
-            onClick={() => setI(idx)}
-            className={`w-2 h-2 rounded-full ${
-              idx === i ? "bg-teal-600" : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
 
 /* ----------------- CTA ----------------- */
 
@@ -498,21 +412,21 @@ function CTA() {
               Ready to transform your digital growth?
             </h3>
             <p className="mt-2 text-teal-100 max-w-lg">
-              Partner with Skiez Digital — creativity, strategy, and measurable
+              Partner with Skiez Digital - creativity, strategy, and measurable
               outcomes.
             </p>
           </div>
 
           <div className="flex gap-3">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 bg-white text-teal-700 px-5 py-3 rounded-lg shadow hover:scale-[1.02] transition"
             >
               Request proposal
             </a>
 
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center gap-2 border border-white/30 text-white px-4 py-3 rounded-lg"
             >
               Talk to sales
@@ -520,6 +434,9 @@ function CTA() {
           </div>
         </div>
       </div>
+      <FloatingWhatsapp/>
     </section>
+
+    
   );
 }
