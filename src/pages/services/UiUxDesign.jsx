@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import FlipCardUIUX from '@/components/ui/FlipCardUIUX'
+import UiUxHero from '@/assets/uiuxHero.jpg'
 
 
 /**
@@ -15,12 +16,12 @@ const deliverables = [
   {
     title: "Web Design & Development",
     desc: "We create visually stunning, responsive, and high-performance websites that align with your brand and convert visitors into customers.",
-    img: "https://images.unsplash.com/photo-1502882700052-16828f04b02e?auto=format&fit=crop&w=1200&q=80",
+    img: "https://plus.unsplash.com/premium_vector-1712873279593-8ca46e4ff0e4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
   },
   {
     title: "Brand Identity & Strategy",
     desc: "From logo design to tone of voice, we build cohesive brand identities that connect emotionally and make you unforgettable.",
-    img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1648260296289-ab882814a005?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZGVzaWduJTIwc3RyYXRlZ3klMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
   },
   {
     title: "Mobile App Design & Prototyping",
@@ -35,7 +36,7 @@ const deliverables = [
   {
     title: "UI/UX Research & Testing",
     desc: "We apply user research, usability testing, and data-driven design to craft intuitive and impactful digital experiences.",
-    img: "https://images.unsplash.com/photo-1581090464956-7e4f29c34b92?auto=format&fit=crop&w=1200&q=80",
+    img: "https://images.unsplash.com/photo-1667422380246-3bed910ffae1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ViJTIwZGVzaWduJTIwdGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
   },
   {
     title: "Content & Social Media Management",
@@ -129,14 +130,14 @@ export default function UIUX() {
         className="relative w-full h-[420px] md:h-[520px] flex items-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')",
+            `url(${UiUxHero})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         aria-label="UI UX design hero"
       >
         {/* dark overlay for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/30"></div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -627,7 +628,7 @@ export default function UIUX() {
                     d="M2 3h4l2 5-2 2a11 11 0 005 5l2-2 5 2v4a2 2 0 01-2 2c-10.493 0-19-8.507-19-19 0-1.105.895-2 2-2z"
                   />
                 </svg>
-                Or call +91 98765 43210
+                Or call +91 82200 43041
               </motion.a>
             </div>
 

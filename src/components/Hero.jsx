@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import HeroFont from "../components/HeroFont";
 import GlowButton from "./ui/GlowButton";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const container = {
@@ -51,15 +52,15 @@ export default function Hero() {
               variants={fadeUp}
               className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-4"
             >
-              Best Digital Marketing in Chennai{" "}
+              Best Digital Marketing Agency in Chennai{" "}
               <span className="inline-block align-baseline ml-2">
-                <HeroFont
+                {/* <HeroFont
                   text="SKIEZ&nbsp;DIGITAL"
                   inline={true}
                   minFontSize={50}
                   textColor="#06B7A0"
                   scale={false}
-                />
+                /> */}
               </span>
             </motion.h1>
 
@@ -74,15 +75,12 @@ export default function Hero() {
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
               <InteractiveHoverButton
-                href="/Services"
-                className="inline-flex items-center gap-3 px-6 py-4 rounded-full bg-teal-500 text-white font-semibold shadow hover:brightness-95 transition"
+                to="/services"
+                className="bg-teal-500 border-teal-600 text-white"
               >
                 Our Services
               </InteractiveHoverButton>
-      
             </motion.div>
-
-            
           </motion.div>
 
           {/* RIGHT SIDE - IMAGE + shadow grouped so both hover together */}

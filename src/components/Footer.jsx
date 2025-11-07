@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
             <div className="text-sm space-y-2">
               <p>
                 <span className="font-semibold text-white">WhatsApp:</span> +91
-                9876543210
+                82200 43041
               </p>
               <p>
                 <span className="font-semibold text-white">Email:</span>{" "}
@@ -46,9 +47,6 @@ const Footer = () => {
               <li className="hover:text-sky-400 transition">Hire Developer</li>
               <li className="hover:text-sky-400 transition">
                 Hire Digital Marketer
-              </li>
-              <li className="hover:text-sky-400 transition">
-                Hire 3D Modelers
               </li>
             </ul>
           </div>
@@ -84,20 +82,17 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a
-                  href="/privacy-policy"
-                  className="hover:text-sky-400 transition"
-                >
+                <Link to="/privacy" className="hover:text-sky-400 transition">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/terms-and-conditions"
+                <Link
+                  to="/terms-and-conditions"
                   className="hover:text-sky-400 transition"
                 >
                   Terms & Conditions
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,7 +115,8 @@ const Footer = () => {
             <div className="footer-social-wrapper flex gap-3">
               {/* Facebook */}
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61574152816624"
+                target="_blank"
                 aria-label="Facebook"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#0d65d9] transition flex items-center justify-center"
                 style={{
@@ -142,7 +138,8 @@ const Footer = () => {
 
               {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/skiezdigital2025/"
+                target="_blank"
                 aria-label="Instagram"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-pink-600 transition flex items-center justify-center"
                 style={{
@@ -213,7 +210,8 @@ const Footer = () => {
 
               {/* LinkedIn */}
               <a
-                href="#"
+                href="https://www.linkedin.com/company/skiezdigital-marketing/posts/?feedView=all"
+                target="_blank"
                 aria-label="LinkedIn"
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#004182] transition flex items-center justify-center"
                 style={{

@@ -30,7 +30,7 @@ const items = [
     text: "Skiez Digital focuses on results beyond clicks and impressions, emphasizing measurable business growth and long-term brand success.",
     bg: "linear-gradient(135deg,#ff7a18 0%, #ff4e50 50%, #f9d423 100%)",
     image:
-      "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=60",
+      "https://plus.unsplash.com/premium_photo-1681487912304-274bac203320?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVzaW5lc3MlMjBncm93dGh8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     alt: "Analytics dashboard",
   },
   {
@@ -38,15 +38,15 @@ const items = [
     text: "Rooted in analytical precision and creative innovation, Skiez Digital ensures every campaign drives meaningful growth for Chennai-based and global clients alike.",
     bg: "linear-gradient(135deg,#a18cd1 0%, #fbc2eb 100%)",
     image:
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=60",
+      "https://plus.unsplash.com/premium_photo-1661412938808-a0f7be3c8cf1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
     alt: "Creative workspace",
   },
   {
     title: "Data-Driven Decisions",
-    text: "Every strategy we create is powered by analytics — ensuring smarter marketing and better ROI.",
+    text: "Every strategy we create is powered by analytics ensuring smarter marketing and better ROI.",
     bg: "linear-gradient(135deg,#43e97b 0%, #38f9d7 100%)",
     image:
-      "https://images.unsplash.com/photo-1517148815978-75f6acaaf32c?auto=format&fit=crop&w=800&q=60",
+      "https://media.istockphoto.com/id/1444150393/photo/3d-character-walking-on-the-road-leading-to-many-different-paths-with-open-doors-decisions.webp?a=1&b=1&s=612x612&w=0&k=20&c=5cYWbN-Y5v79az1vPcFSP7fr4T_u5o-gJSQx9Kht8pc=",
     alt: "Data charts",
   },
 ];
@@ -132,27 +132,33 @@ const CardInner = styled.div`
 /* Image and Content sizing */
 const ImageWrapper = styled.div`
   flex: 0 0 45%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+
+  /* Same responsive size for every image */
+  width: 100%;
+  aspect-ratio: 16 / 9; /* uniform ratio */
+  max-height: 380px; /* cap so cards don’t get too tall */
+
+  position: relative;
+  display: block;
 
   img {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* crop to fill the box */
     display: block;
-    border-radius: 12px;
-    /* keep subtle shadow but it will be clipped by Clip */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    object-fit: cover;
-    transform: none; /* avoid translate that might overflow */
-    max-height: 420px; /* prevents extremely tall images from pushing layout */
   }
 
   @media (max-width: 768px) {
-    flex: 0 0 auto;
-    width: 100%;
+    aspect-ratio: 4 / 3; /* a bit taller on mobile (optional) */
+    max-height: none;
   }
 `;
+
 
 const Content = styled.div`
   flex: 1 1 55%;
