@@ -4,7 +4,7 @@
     "title": "Full Stack Web Development Trainee Program",
     "location": "Hybrid / Remote",
     "duration": "6 Months",
-    "fee": "₹15,000",
+    "fee": "₹25,000",
     "shortDescription": "Master front-end and back-end web development with hands-on projects and industry-level guidance.",
     "fullDescription": "The Full Stack Web Development Trainee Program is designed to help you become a professional MERN stack developer. You’ll learn to build dynamic web applications using MongoDB, Express.js, React, and Node.js through guided mentorship, live projects, and assessments.",
     "responsibilities": [
@@ -30,8 +30,8 @@
     "id": 2,
     "title": "UI/UX Design Trainee Program",
     "location": "Remote / Hybrid",
-    "duration": "4 Months",
-    "fee": "₹10,000",
+    "duration": "6 Months",
+    "fee": "₹25,000",
     "shortDescription": "Learn how to design user-centric digital products through hands-on projects and design challenges.",
     "fullDescription": "This UI/UX Design Trainee Program focuses on mastering user experience principles and design systems. You’ll work on real design briefs, build wireframes, create interactive prototypes, and collaborate with developers to understand the product lifecycle.",
     "responsibilities": [
@@ -56,8 +56,8 @@
     "id": 3,
     "title": "Digital Marketing Trainee Program",
     "location": "Remote / On-site",
-    "duration": "3 Months",
-    "fee": "₹8,000",
+    "duration": "6 Months",
+    "fee": "₹15,000",
     "shortDescription": "Gain practical experience in SEO, social media marketing, and performance analytics for online growth.",
     "fullDescription": "The Digital Marketing Trainee Program offers complete exposure to real-world digital marketing tools and strategies. You’ll learn how to plan, execute, and analyze marketing campaigns that drive traffic and conversions for brands.",
     "responsibilities": [
@@ -82,8 +82,8 @@
     "id": 4,
     "title": "Mobile App Development Trainee Program (Flutter)",
     "location": "Hybrid / Remote",
-    "duration": "5 Months",
-    "fee": "₹12,000",
+    "duration": "6 Months",
+    "fee": "₹25,000",
     "shortDescription": "Build modern, cross-platform mobile apps using Flutter and Dart with hands-on mentorship.",
     "fullDescription": "This Flutter Development Trainee Program will help you learn mobile app development from scratch. You’ll design UIs, manage app states, connect APIs, and deploy real apps on Play Store under professional guidance.",
     "responsibilities": [

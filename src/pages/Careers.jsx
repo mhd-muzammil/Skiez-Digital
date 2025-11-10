@@ -141,6 +141,39 @@ export default function Careers() {
     }
   };
 
+
+  const shareRole = async (item) => {
+    const url = `${window.location.origin}${window.location.pathname}?role=${item?.id}`;
+
+    const data = {
+      title: item?.title || "SKIEZ DIGITAL — Careers",
+      text: `Check out this role at SKIEZ DIGITAL: ${item?.title}`,
+      url,
+    };
+
+    // If Web Share API is supported
+    if (navigator.share) {
+      try {
+        await navigator.share(data);
+        return;
+      } catch (err) {
+        console.log("Native share canceled or failed:", err);
+      }
+    }
+
+    // Fallback: Copy link to clipboard
+    try {
+      await navigator.clipboard.writeText(url);
+      alert("Link copied to clipboard ✅");
+    } catch {
+      // Last fallback: email share
+      window.location.href =
+        `mailto:?subject=${encodeURIComponent(data.title)}` +
+        `&body=${encodeURIComponent(`${data.text}\n\n${url}`)}`;
+    }
+  };
+
+
   return (
     <main className="min-h-screen bg-white">
       {/* HERO */}
@@ -394,14 +427,9 @@ export default function Careers() {
                       Apply now
                     </button>
                     <button
-                      onClick={() => {
-                        if (navigator.share) {
-                          navigator.share({ title: selected.title });
-                        } else {
-                          alert("Share this page/role link!");
-                        }
-                      }}
-                      className="px-3 py-2 rounded-md border text-gray-700"
+                      onClick={() => shareRole(selected)}
+                      className="px-3 py-2 rounded-md border text-gray-700 hover:bg-gray-50 transition"
+                      type="button"
                     >
                       Share
                     </button>
