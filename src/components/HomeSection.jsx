@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const bullets = [
-  "Every campaign at Skiez Digital is built on insight, innovation, and integrity, reflecting a commitment to measurable digital success.",
+  "Every campaign at Skiez Digital is built on insight, innovation and integrity, reflecting a commitment to measurable digital success.",
   "The team combines creativity with data analytics to help brands outperform their competitors through customized, result-driven strategies.",
   "Each marketing plan is tailored to suit Chennai’s evolving digital ecosystem, ensuring relevance and local market effectiveness.",
-  "As a trusted digital marketing company in Chennai, Skiez Digital provides holistic marketing solutions that integrate SEO, social media, and content for maximum performance.",
-  "Their goal is to drive consistent performance, enhance conversions, and deliver long-term, sustainable business growth.",
+  "As a trusted digital marketing company in Chennai, Skiez Digital provides holistic marketing solutions that integrate SEO, social media and content for maximum performance.",
+  "Their goal is to drive consistent performance, enhance conversions and deliver long-term, sustainable business growth.",
 ];
 
 export default function MissionSection() {
@@ -15,7 +15,7 @@ export default function MissionSection() {
       <Container>
         <Title>Our Mission</Title>
         <Intro>
-          At <span>Skiez Digital</span>, we craft measurable, creative, and
+          At <span>Skiez Digital</span>, we craft measurable, creative and
           locally-relevant digital strategies designed to grow brands in Chennai
           and beyond.
         </Intro>
