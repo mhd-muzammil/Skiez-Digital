@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: "Web Development",
-    desc: "Our expert developers craft fast, secure, and responsive websites that provide seamless user experiences across all devices.",
+    desc: "Our expert developers craft fast, secure and responsive websites that provide seamless user experiences across all devices.",
     image:
       "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     link: "/services/web-development",
@@ -62,7 +62,7 @@ export default function Services() {
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-6">
             {" "}
             <span className="text-teal-400 font-semibold">Skiez Digital</span>,
-            offers expert digital marketing, UI/UX design, SEO, web development,
+            offers expert digital marketing, UI/UX design, SEO, web development
             and social media services to boost visibility and grow your brand
             online.
           </p>
@@ -83,7 +83,7 @@ export default function Services() {
         <h4 className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
           <span className="font-semibold text-teal-600">Skiez Digital</span>, we
           don’t just create an online presence we build digital experiences that
-          connect, engage, and convert. In today’s competitive digital
+          connect, engage and convert. In today’s competitive digital
           landscape, your brand’s online identity defines how customers perceive
           and trust you. That’s why we focus on designing meaningful,
           performance-driven digital strategies that deliver real growth and
@@ -96,14 +96,14 @@ export default function Services() {
           </span>{" "}
           blends creativity, strategy, and technology to help businesses grow
           smarter and stronger. We create customized marketing plans tailored to
-          your brand goals, combining the best of design, development, and
+          your brand goals, combining the best of design, development and
           optimization to deliver impactful outcomes.
           <br />
           <br />
           Our expertise covers a wide range of services from digital marketing,
-          web development, app development, and UI/UX design. Each service is
+          web development, app development and UI/UX design. Each service is
           crafted with one goal in mind to help your business stand out, attract
-          customers, and build lasting relationships.
+          customers and build lasting relationships.
         </h4>
       </section>
 
@@ -166,7 +166,7 @@ export default function Services() {
             </h2>
             <p className="mt-3 text-gray-300 text-base md:text-lg">
               We turn your ideas into scalable digital experiences that drive
-              growth, engagement, and measurable results.
+              growth, engagement and measurable results.
             </p>
           </div>
 

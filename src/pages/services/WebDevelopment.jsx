@@ -201,7 +201,7 @@ export default function WebDevelopment() {
               href="tel:+919876543210"
               className="text-gray-200 hover:text-white"
             >
-              Or call: +91 98765 43210
+              Or call: +91 82200 43041
             </a>
           </div>
         </motion.div>
@@ -223,10 +223,10 @@ export default function WebDevelopment() {
             </h2>
 
             {/* Intro */}
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10 text-justify">
+            <p className="text-lg text-gray-700 leading-relaxed max-w-full mx-auto mb-10 text-justify">
               Skiez Digital, a leading web development company dedicated to
               transforming your digital vision into reality. Our comprehensive
-              web development services combine creativity, technology, and
+              web development services combine creativity, technology and
               strategy to build custom websites and applications that drive
               business growth. As a top web development agency, we specialize in
               delivering innovative web design and development solutions
@@ -238,7 +238,7 @@ export default function WebDevelopment() {
               structure, coding its features, and ensuring smooth user
               interaction. This field covers both front-end work (what users
               see) and back-end processes (server, database management). Common
-              languages used include HTML, CSS, and JavaScript to create
+              languages used include HTML, CSS and JavaScript to create
               responsive and interactive sites. Overall, web development turns
               digital concepts into practical and engaging online experiences
             </p>
@@ -625,7 +625,7 @@ export default function WebDevelopment() {
                 },
                 {
                   icon: "⚡",
-                  text: "Focus on performance, SEO, and measurable conversions.",
+                  text: "Focus on performance, SEO and measurable conversions.",
                 },
                 {
                   icon: "💡",
@@ -704,7 +704,7 @@ export default function WebDevelopment() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Web development services cover designing websites, rendering,
-                integrating CMS, setting upe- commerce, and ongoing point
+                integrating CMS, setting upe- commerce and ongoing point
                 conservation
               </div>
             </details>
@@ -728,7 +728,7 @@ export default function WebDevelopment() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Yes, all websites we develop are fully responsive, icing smooth
-                user experience across mobile, tablet, and desktop bias
+                user experience across mobile, tablet and desktop bias
               </div>
             </details>
             <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
@@ -737,7 +737,7 @@ export default function WebDevelopment() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Yes, we give ongoing conservation including regular updates,
-                security patches, backups, and performance optimizations post-
+                security patches, backups and performance optimizations post-
                 launch
               </div>
             </details>
@@ -764,7 +764,7 @@ export default function WebDevelopment() {
             <span className="bg-gradient-to-r from-yellow-300 to-white bg-clip-text text-transparent">
               fast, secure
             </span>{" "}
-            & high-converting website?
+            & high converting website?
           </motion.h3>
 
           <motion.p

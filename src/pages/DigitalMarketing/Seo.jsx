@@ -94,7 +94,7 @@ export default function SEO() {
             </span>
           </h1>
           <p className="text-gray-200 text-lg md:text-xl mb-6">
-            Data-driven SEO that improves visibility, traffic and conversions —
+            Data-driven SEO that improves visibility, traffic and conversions
             tailored to your business.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -105,7 +105,7 @@ export default function SEO() {
               Start with a Free SEO Audit
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+91 82200 40431"
               className="text-gray-200 hover:text-white"
             >
               Or call: +91 82200 40431
@@ -465,7 +465,7 @@ export default function SEO() {
                 How do I choose the right SEO agency for my business?
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
-                Look for experience, proven results, transparent practices, and
+                Look for experience, proven results, transparent practices and
                 a strategic approach aligned with your goals when selecting an
                 SEO partner.
               </div>

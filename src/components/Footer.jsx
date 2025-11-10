@@ -250,9 +250,24 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-700 pt-6 text-sm text-gray-400">
           <p>© {new Date().getFullYear()} YourBrand. All Rights Reserved.</p>
           <ul className="flex gap-6 mt-3 md:mt-0">
-            <li className="hover:text-sky-400 transition">Privacy Policy</li>
-            <li className="hover:text-sky-400 transition">Terms</li>
-            <li className="hover:text-sky-400 transition">Sitemap</li>
+            <li>
+              <a href="/privacy" className="hover:text-sky-400 transition">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="/terms-and-conditions"
+                className="hover:text-sky-400 transition"
+              >
+                Terms
+              </a>
+            </li>
+            <li>
+              <a href="/sitemap" className="hover:text-sky-400 transition">
+                Sitemap
+              </a>
+            </li>
           </ul>
         </div>
       </div>

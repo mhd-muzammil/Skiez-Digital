@@ -9,8 +9,8 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      {/* <GCHeroWave /> */}
-      <Hero/>
+      <GCHeroWave />
+      {/* <Hero/> */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         {/* Heading */}
@@ -56,7 +56,7 @@ const Home = () => {
           </span>{" "}
           with creative precision to empower startups, SMEs, and enterprises
           alike. We focus on enhancing your brand visibility, driving measurable
-          engagement, and delivering sustainable growth in today’s competitive
+          engagement and delivering sustainable growth in today’s competitive
           digital landscape.
         </motion.p>
       </section>

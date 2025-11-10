@@ -6,14 +6,14 @@ import IndustriesStatsSection from "@/components/IndustrialStats";
 const topics = [
   {
     title: "SEO (Search Engine Optimization)",
-    desc: "Improve organic visibility and drive qualified traffic with technical SEO, on-page optimization, and content strategies tailored to your niche.",
+    desc: "Improve organic visibility and drive qualified traffic with technical SEO, on-page optimization and content strategies tailored to your niche.",
     image:
       "https://plus.unsplash.com/premium_photo-1684225764999-3597a8da10ab?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8RGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
     link: "/services/digital-marketing/seo",
   },
   {
     title: "Email Marketing",
-    desc: "Build relationships and boost retention with targeted email flows, newsletters, and automated campaigns that convert prospects into repeat customers.",
+    desc: "Build relationships and boost retention with targeted email flows, newsletters and automated campaigns that convert prospects into repeat customers.",
     image:
       "https://plus.unsplash.com/premium_photo-1682309572625-791e25352998?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8RS1tYWlsJTIwbWFya2V0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
     link: "/services/digital-marketing/email-marketing",
@@ -27,21 +27,21 @@ const topics = [
   },
   {
     title: "Social Media Marketing",
-    desc: "Grow brand awareness and engagement with platform-specific strategies, creative assets, and community management across Instagram, LinkedIn, X, and more.",
+    desc: "Grow brand awareness and engagement with platform-specific strategies, creative assets and community management across Instagram, LinkedIn, X and more.",
     image:
       "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c29jaWFsJTIwbWVkaWF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     link: "/services/digital-marketing/social-media",
   },
   {
     title: "Meta Ads (Facebook & Instagram)",
-    desc: "Run conversion-focused Meta ad campaigns with precise audience targeting, creative testing, and ongoing optimization for maximum ROI.",
+    desc: "Run conversion-focused Meta ad campaigns with precise audience targeting, creative testing and ongoing optimization for maximum ROI.",
     image:
       "https://media.istockphoto.com/id/2098359215/photo/digital-marketing-concept-businessman-using-laptop-with-ads-dashboard-digital-marketing.webp?a=1&b=1&s=612x612&w=0&k=20&c=bo9P4L3HQM2cipWrh8W7_HwPYNnUdHKqucWnduQLge0=",
     link: "/services/digital-marketing/meta-ads",
   },
   {
     title: "Google Campaigns (Search & Display)",
-    desc: "Capture demand with Search Ads and build awareness with Display and YouTube campaigns — keyword strategy, bidding, and conversion tracking included.",
+    desc: "Capture demand with Search Ads and build awareness with Display and YouTube campaigns keyword strategy, bidding and conversion tracking included.",
     image:
       "https://images.unsplash.com/vector-1745065955144-6d0d06905350?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z29vZ2xlJTIwY2FtcGFpZ24lMjBtYXJrZXRpbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600",
     link: "/services/digital-marketing/google-campaigns",
@@ -51,7 +51,7 @@ const topics = [
 const whyCards = [
   {
     title: "Data-Driven Strategy",
-    text: "We use analytics and testing to make every decision measurable — your campaigns improve over time.",
+    text: "We use analytics and testing to make every decision measurable your campaigns improve over time.",
     icon: "📊",
   },
   {
@@ -75,25 +75,25 @@ const processSteps = [
   {
     step: "1",
     title: "Audit & Discovery",
-    desc: "Full-site and channel audit (SEO, paid ads, content & socials), competitor analysis, and audience research to identify quick wins and long-term opportunities.",
+    desc: "Full-site and channel audit (SEO, paid ads, content & socials), competitor analysis and audience research to identify quick wins and long-term opportunities.",
     accent: "Research & Audit",
   },
   {
     step: "2",
     title: "Strategy & Roadmap",
-    desc: "Define measurable goals (traffic, leads, CAC), select channels, set budgets, and create a 90-day roadmap with KPIs and testing plans.",
+    desc: "Define measurable goals (traffic, leads, CAC), select channels, set budgets and create a 90-day roadmap with KPIs and testing plans.",
     accent: "Channel Strategy",
   },
   {
     step: "3",
     title: "Creative & Setup",
-    desc: "Produce high-converting creatives, landing pages and ad copy; implement tracking, pixels, and analytics; setup campaign structures for testing.",
+    desc: "Produce high-converting creatives, landing pages and ad copy; implement tracking, pixels and analytics; setup campaign structures for testing.",
     accent: "Creative + Tracking",
   },
   {
     step: "4",
     title: "Launch & Optimize",
-    desc: "Run phased launches with A/B tests, audience experiments and bid strategies — iterate quickly to improve CTR, conversions and CAC.",
+    desc: "Run phased launches with A/B tests, audience experiments and bid strategies iterate quickly to improve CTR, conversions and CAC.",
     accent: "Testing & Optimization",
   },
   {
@@ -104,36 +104,6 @@ const processSteps = [
   },
 ];
 
-const industries = [
-  "SaaS & Startups",
-  "E-commerce",
-  "Healthcare",
-  "Education",
-  "Real Estate",
-  "Finance",
-];
-
-const stats = [
-  { label: "Avg. Organic Growth", value: "120%" },
-  { label: "Meta Ads ROI", value: "3.5x" },
-  { label: "Avg. Conversion Lift", value: "28%" },
-];
-
-const testimonials = [
-  {
-    quote:
-      "SKIEZ Digital boosted our leads within a month — highly recommended!",
-    author: "Aarav M., CEO",
-  },
-  {
-    quote: "Their SEO work increased our organic traffic and qualified leads.",
-    author: "Neha R., Marketing Head",
-  },
-  {
-    quote: "Great communication, clear reporting and consistent results.",
-    author: "Ravi S., Founder",
-  },
-];
 
 const faqs = [
   {
@@ -142,7 +112,7 @@ const faqs = [
   },
   {
     q: "Do you create ad creatives?",
-    a: "Yes we handle creatives, copy, A/B testing, and landing pages end-to-end.",
+    a: "Yes we handle creatives, copy, A/B testing and landing pages end-to-end.",
   },
   {
     q: "What’s the minimum budget?",
@@ -173,8 +143,8 @@ export default function DigitalMarketing() {
           </h1>
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto mb-6">
             Digital Marketing that helps your brand stand out increase
-            visibility, reach the right audience, and achieve real growth with
-            smart SEO, social media, and ads.
+            visibility, reach the right audience and achieve real growth with
+            smart SEO, social media and ads.
           </p>
           <a
             href="/contact"
@@ -236,7 +206,7 @@ export default function DigitalMarketing() {
         </motion.h3>
 
         <p className="text-center text-gray-600 max-w-2xl mx-auto mb-10">
-          We blend strategy, creativity, and technology to deliver measurable
+          We blend strategy, creativity and technology to deliver measurable
           digital growth built for ambitious brands.
         </p>
 

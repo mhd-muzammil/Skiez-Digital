@@ -44,7 +44,7 @@ export default function EmailMarketing() {
     {
       icon: "📊",
       title: "Real-time Analytics",
-      text: "Track open rates, click-throughs, and revenue attribution with detailed dashboards.",
+      text: "Track open rates, click-throughs and revenue attribution with detailed dashboards.",
     },
     {
       icon: "🧠",
@@ -54,7 +54,7 @@ export default function EmailMarketing() {
     {
       icon: "⚙️",
       title: "Seamless Integration",
-      text: "Connect with your CRM, CMS, and e-commerce platforms for unified marketing workflows.",
+      text: "Connect with your CRM, CMS and e-commerce platforms for unified marketing workflows.",
     },
   ];
 
@@ -254,7 +254,7 @@ export default function EmailMarketing() {
           <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
             <h4 className="font-semibold text-lg mb-2">Plan & Segment</h4>
             <p className="text-gray-600">
-              Audience mapping, list hygiene, and segmentation strategy to
+              Audience mapping, list hygiene and segmentation strategy to
               increase relevance.
             </p>
           </div>
@@ -297,7 +297,7 @@ export default function EmailMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 You can run promotions, product launches, event invitations,
-                feedback requests, and more to engage your audience effectively.
+                feedback requests and more to engage your audience effectively.
               </div>
             </details>
 
@@ -320,7 +320,7 @@ export default function EmailMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 A strong strategy involves audience analysis, content creation,
-                automated workflows, and performance tracking.
+                automated workflows and performance tracking.
               </div>
             </details>
             

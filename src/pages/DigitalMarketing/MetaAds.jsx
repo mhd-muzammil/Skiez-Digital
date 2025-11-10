@@ -157,7 +157,7 @@ export default function MetaAds() {
               Book a Free Strategy Call
             </Link>
             <a
-              href="tel:+918220043041"
+              href="tel:+91 82200 43041"
               className="text-gray-200 hover:text-white"
             >
               Or call: +91 82200 43041

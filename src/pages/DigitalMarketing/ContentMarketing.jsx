@@ -13,12 +13,12 @@ export default function ContentMarketing() {
     },
     {
       title: "SEO Optimization Content",
-      text: "Pillar pages, cluster strategy, and keyword-optimized articles built for topical authority and rankings.",
+      text: "Pillar pages, cluster strategy and keyword-optimized articles built for topical authority and rankings.",
       icon: "✍️",
     },
     {
       title: "Content Production",
-      text: "Long-form articles, guides, video scripts, and social snippets produced by experienced editors.",
+      text: "Long-form articles, guides, video scripts and social snippets produced by experienced editors.",
       icon: "🎬",
     },
     {
@@ -42,7 +42,7 @@ export default function ContentMarketing() {
     },
     {
       title: "Content Ops",
-      desc: "Workflow, briefs, and standards to ship high-quality content at scale.",
+      desc: "Workflow, briefs and standards to ship high-quality content at scale.",
     },
     {
       title: "Content Repurposing",
@@ -83,23 +83,6 @@ export default function ContentMarketing() {
     `<svg xmlns='http://www.w3.org/2000/svg' width='120' height='40'><rect width='100%' height='100%' fill='%23F3FCFB'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='10' fill='%23006666'>logo</text></svg>`
   )}`;
 
-  const testimonials = [
-    {
-      name: "Ram Kumar, Head of Growth — RetailCo",
-      quote:
-        "Skiez's content strategy doubled our organic traffic in 4 months. The editorial process was flawless and the results spoke for themselves.",
-    },
-    {
-      name: "Kingston, CMO — SaaSPro",
-      quote:
-        "Their content ops transformed how we ship content. We saw significant uplift in trial signups within weeks.",
-    },
-    {
-      name: "Ghost, Founder — LocalShop",
-      quote:
-        "Practical, measurable and focused on ROI. Our blog turned into a reliable lead channel.",
-    },
-  ];
 
   return (
     <main className="bg-white text-gray-900">
@@ -136,10 +119,10 @@ export default function ContentMarketing() {
               Plan a Content Audit
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+91 82200 43041"
               className="text-gray-200 hover:text-white"
             >
-              Or call: +91 98765 43210
+              Or call: +91 82200 43041
             </a>
           </div>
         </motion.div>
@@ -310,7 +293,7 @@ export default function ContentMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 A content marketing agency provides content planning, creation,
-                distribution, SEO optimization, and performance measurement
+                distribution, SEO optimization and performance measurement
                 services tailored to your brand
               </div>
             </details>
@@ -322,7 +305,7 @@ export default function ContentMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Effective strategies include audience analysis, keyword
-                research, competitor study, content planning, and multi-channel
+                research, competitor study, content planning and multi-channel
                 distribution to maximize impact
               </div>
             </details>
@@ -334,7 +317,7 @@ export default function ContentMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Content types range from blog posts, social media content, and
-                videos to infographics, e-books, and SEO-driven website copy,
+                videos to infographics, e-books and SEO-driven website copy,
                 designed to engage and educate
               </div>
             </details>
@@ -344,7 +327,7 @@ export default function ContentMarketing() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 By creating SEO-friendly content with targeted keywords,
-                user-focused messaging, and quality backlinks, content marketing
+                user-focused messaging and quality backlinks, content marketing
                 boosts organic visibility and website traffic
               </div>
             </details>

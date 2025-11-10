@@ -186,10 +186,10 @@ export default function Contact() {
             <div className="text-sm text-gray-300">
               Or email us at{" "}
               <a
-                className="text-sky-300 underline"
-                href="mailto:support@skiezdigital.com"
+                className="text-sky-300"
+                href="mailto:info@skiezdigital.com"
               >
-                support@skiezdigital.com
+                info@skiezdigital.com
               </a>
             </div>
           </div>

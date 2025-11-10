@@ -27,7 +27,7 @@ export default function SocialMediaMarketing() {
     },
     {
       title: "Paid Social",
-      desc: "Campaign setup, creative testing and ROAS optimisation across Meta, X, and TikTok.",
+      desc: "Campaign setup, creative testing and ROAS optimisation across Meta and Instagram.",
       img: "https://images.unsplash.com/photo-1740174459726-8c57d8366061?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFpZCUyMHNvY2lhbCUyMGltYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600",
     },
   ];
@@ -54,37 +54,11 @@ export default function SocialMediaMarketing() {
     },
     {
       title: "Analytics & Optimization",
-      desc: "Deep dive reporting on CTR, engagement, and conversion metrics to refine strategy each month.",
+      desc: "Deep dive reporting on CTR, engagement and conversion metrics to refine strategy each month.",
       icon: "📊",
     },
   ];
 
-  const packages = [
-    {
-      name: "Starter",
-      price: "₹15,000 / mo",
-      bullets: ["12 posts / mo", "Basic community support", "Monthly report"],
-    },
-    {
-      name: "Growth",
-      price: "₹45,000 / mo",
-      bullets: [
-        "30 posts + 8 reels",
-        "Weekly community & DMs",
-        "Bi-weekly reports",
-      ],
-      featured: true,
-    },
-    {
-      name: "Scale",
-      price: "Custom",
-      bullets: [
-        "Full-funnel paid + organic",
-        "Dedicated creative team",
-        "Advanced reporting & analytics",
-      ],
-    },
-  ];
 
   const tools = [
     {

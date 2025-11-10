@@ -15,7 +15,7 @@ import UiUxHero from '@/assets/uiuxHero.jpg'
 const deliverables = [
   {
     title: "Web Design & Development",
-    desc: "We create visually stunning, responsive, and high-performance websites that align with your brand and convert visitors into customers.",
+    desc: "We create visually stunning, responsive and high-performance websites that align with your brand and convert visitors into customers.",
     img: "https://plus.unsplash.com/premium_vector-1712873279593-8ca46e4ff0e4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
   },
   {
@@ -30,12 +30,12 @@ const deliverables = [
   },
   {
     title: "SEO & Digital Marketing",
-    desc: "Boost your online visibility and engagement through tailored SEO strategies, paid campaigns, and result-driven marketing.",
+    desc: "Boost your online visibility and engagement through tailored SEO strategies, paid campaigns and result-driven marketing.",
     img: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "UI/UX Research & Testing",
-    desc: "We apply user research, usability testing, and data-driven design to craft intuitive and impactful digital experiences.",
+    desc: "We apply user research, usability testing and data-driven design to craft intuitive and impactful digital experiences.",
     img: "https://images.unsplash.com/photo-1667422380246-3bed910ffae1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8d2ViJTIwZGVzaWduJTIwdGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600",
   },
   {
@@ -110,16 +110,16 @@ const deliverables = [
   
 const points = [
   // split from your original H4 content into scan-friendly checklist items
-  "UI/UX Design: This is short for User Interface and User Experience two of the most vital elements responsible for defining the way users interact with any digital platform, such as websites, mobile apps, and software.",
+  "UI/UX Design: This is short for User Interface and User Experience two of the most vital elements responsible for defining the way users interact with any digital platform, such as websites, mobile apps and software.",
   "Together, they ensure that every digital product is visually appealing, simple, engaging, and enjoyable to use.",
-  "UI Design is about the look and interaction of a product (layouts, color selection, icon design, and typography) ensuring small elements like buttons reflect brand identity while maintaining consistency, balance, and clarity.",
+  "UI Design is about the look and interaction of a product (layouts, color selection, icon design and typography) ensuring small elements like buttons reflect brand identity while maintaining consistency, balance and clarity.",
   "UX Design focuses on the user's journey and satisfaction: research, behavior study, navigation patterns and designing flows that help users reach goals without effort.",
-  "UI/UX Design is where creativity meets usability fusing artistic design with strategic thinking to create digital experiences that are stunning, natural to use, and meaningful.",
-  "At Skiez Digital, our UX/UI design philosophy revolves around understanding users, their needs, and how they interact with digital products we focus on emotion, usability, and measurable impact.",
+  "UI/UX Design is where creativity meets usability fusing artistic design with strategic thinking to create digital experiences that are stunning, natural to use and meaningful.",
+  "At Skiez Digital, our UX/UI design philosophy revolves around understanding users, their needs and how they interact with digital products we focus on emotion, usability and measurable impact.",
   "As a creative UI/UX Design Agency, we blend innovative design thinking with business goals to deliver results that delight and engage.",
-  "Our UI UX Design Service designs intuitive, engaging, and visually appealing interfaces that make products both beautiful and functional across websites, mobile apps, and enterprise platforms.",
-  "We handle every step of the UI & UX design process user research, journey mapping, wireframing, prototyping, and usability testing to ensure interactions feel effortless and memorable.",
-  "As a leading UI/UX Design Agency, we don’t just design — we innovate. Our UX designers enhance journeys while UI designers craft layouts that captivate and convert.",
+  "Our UI UX Design Service designs intuitive, engaging and visually appealing interfaces that make products both beautiful and functional across websites, mobile apps and enterprise platforms.",
+  "We handle every step of the UI & UX design process user research, journey mapping, wireframing, prototyping and usability testing to ensure interactions feel effortless and memorable.",
+  "As a leading UI/UX Design Agency, we don’t just design we innovate. Our UX designers enhance journeys while UI designers craft layouts that captivate and convert.",
 ];
 
 export default function UIUX() {
@@ -149,7 +149,7 @@ export default function UIUX() {
             UI / UX DESIGN
           </h1>
           <p className="text-gray-200 max-w-2xl mx-auto text-base md:text-lg mb-6">
-            UI/UX design services that create stunning, user-friendly, and
+            UI/UX design services that create stunning, user-friendly and
             conversion-driven digital experiences to elevate your brand and
             boost online engagement.
           </p>
@@ -185,11 +185,11 @@ export default function UIUX() {
       {/* Intro */}
       <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10 text-justify">
         UI/UX Design combines creativity and usability to build digital experiences that are visually appealing and effortless to use.  
-        At <span className="text-teal-600 font-semibold">Skiez Digital</span>, we blend research, strategy, and aesthetics to design interfaces that engage, convert, and inspire.
+        At <span className="text-teal-600 font-semibold">Skiez Digital</span>, we blend research, strategy and aesthetics to design interfaces that engage, convert and inspire.
       </p>
 
       {/* Checklist */}
-      <ul className="max-w-4xl mx-auto text-justify">
+      <ul className="w-full text-justify">
         {points.map((text, idx) => (
           <li
             key={idx}
@@ -320,7 +320,7 @@ export default function UIUX() {
               {
                 step: 2,
                 title: "Define",
-                desc: "Personas, journey maps, and product requirements bring clarity to the solution.",
+                desc: "Personas, journey maps and product requirements bring clarity to the solution.",
                 icon: (
                   <svg
                     className="w-6 h-6"
@@ -336,7 +336,7 @@ export default function UIUX() {
               {
                 step: 3,
                 title: "Design",
-                desc: "Wireframes, interactive prototypes, and visual design align teams and users.",
+                desc: "Wireframes, interactive prototypes and visual design align teams and users.",
                 icon: (
                   <svg
                     className="w-6 h-6"
@@ -352,7 +352,7 @@ export default function UIUX() {
               {
                 step: 4,
                 title: "Validate",
-                desc: "Usability testing, iterations, and engineering handoff for reliable implementation.",
+                desc: "Usability testing, iterations and engineering handoff for reliable implementation.",
                 icon: (
                   <svg
                     className="w-6 h-6"
@@ -511,11 +511,11 @@ export default function UIUX() {
             <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
               <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
                 What is the main difference between User Interface (UI) design
-                and User Experience (UX) design, and why do projects need both?
+                and User Experience (UX) design and why do projects need both?
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
-                UI design focuses on visuals buttons, typography, and color
-                schemes — while UX ensures that the journey is smooth, logical,
+                UI design focuses on visuals buttons, typography and color
+                schemes while UX ensures that the journey is smooth, logical,
                 and satisfying. Both are essential to create digital products
                 that look beautiful{" "}
                 <span className="text-teal-600 font-medium">and</span> function
@@ -526,12 +526,12 @@ export default function UIUX() {
             {/* FAQ 2 */}
             <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
               <summary className="font-semibold text-gray-600 cursor-pointer text-lg">
-                What steps are involved in a standard UI/UX design process, and
+                What steps are involved in a standard UI/UX design process and
                 how are client goals integrated throughout the project?
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Our process includes research, wireframes, prototypes, user
-                testing, and iteration. Client goals stay at the center — we
+                testing and iteration. Client goals stay at the center we
                 collaborate continuously to ensure the final design aligns with
                 your vision and delivers measurable results.
               </div>
@@ -545,7 +545,7 @@ export default function UIUX() {
                 principles?
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
-                Every design we create is 100% custom for your brand — we never
+                Every design we create is 100% custom for your brand we never
                 copy from others. We combine ethical design practices with
                 proven frameworks, ensuring your visuals are both unique and
                 effective.
@@ -572,7 +572,7 @@ export default function UIUX() {
 
             <p className="text-gray-600 text-base md:text-lg mb-6 max-w-2xl mx-auto">
               Book a UX audit and get a prioritized roadmap of improvements that
-              increase conversions and reduce friction — fast.
+              increase conversions and reduce friction fast.
             </p>
 
             {/* Buttons */}
@@ -609,7 +609,7 @@ export default function UIUX() {
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                href="tel:+919876543210"
+                href="tel:+91 82200 43041"
                 aria-label="Call to book UX audit"
                 className="inline-flex items-center gap-2 text-gray-800 px-4 py-3 rounded-full font-medium hover:text-teal-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-200"
               >

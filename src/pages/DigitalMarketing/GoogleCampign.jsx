@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 // --- Assets (kept from your version) ---
 const heroImg =
-  "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1600&auto=format&fit=crop";
+  "https://images.unsplash.com/photo-1762427354397-854a52e0ded7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHBpZSUyMGNoYXJ0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600";
 const case1 =
-  "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1200&auto=format&fit=crop";
+  "https://media.istockphoto.com/id/2218829098/photo/marketing-funnel-lead-generation-or-sales-conversion-process-convert-leads-into-sales-digital.webp?a=1&b=1&s=612x612&w=0&k=20&c=dblaEwaVmYFeZHCQKub4lMs0rJ6YlkU2-Eit6fN78so=";
 const case2 =
-  "https://images.unsplash.com/photo-1665686303381-f859504f2a58?q=80&w=1200&auto=format&fit=crop";
+  "https://media.istockphoto.com/id/1359839724/photo/high-speed-logo-typography-3d-letters-3d-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=g96e6cTmNvP0BbIWuCuRauOq-LR2psHIXRsInrbfheY=";
 const case3 =
-  "https://images.unsplash.com/photo-1605902711622-cfb43c4437b6?q=80&w=1200&auto=format&fit=crop";
+  "https://media.istockphoto.com/id/1161081515/photo/leads-new-business-prospects-customers-words-3d-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=1Tz3UAJXgUGqKEk8Yx1wL_xDAbbDlCrbCkzWEhZILyM=";
 const creativePreview =
   "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1600&auto=format&fit=crop";
 
@@ -18,17 +18,17 @@ export default function GoogleCampign() {
   const features = [
     {
       title: "Smart Keyword Targeting",
-      text: "Laser-focused keyword research, negatives, and match types to capture high intent and reduce wasted spend.",
+      text: "Laser-focused keyword research, negatives and match types to capture high intent and reduce wasted spend.",
       icon: "🎯",
     },
     {
       title: "Compelling Ad Creatives",
-      text: "High-converting ad copy, assets, and extensions aligned to your offer to boost CTR and Quality Score.",
+      text: "High-converting ad copy, assets and extensions aligned to your offer to boost CTR and Quality Score.",
       icon: "✍️",
     },
     {
       title: "Conversion Optimization",
-      text: "Tracking, landing page alignment, and iterative testing to lift CVR and maximize ROI.",
+      text: "Tracking, landing page alignment and iterative testing to lift CVR and maximize ROI.",
       icon: "📈",
     },
   ];
@@ -36,18 +36,18 @@ export default function GoogleCampign() {
   const stats = [
     { label: "Avg. CTR Lift", value: "2.4×" },
     { label: "Avg. CPA Reduction", value: "35%" },
-    { label: "Managed Budgets", value: "₹50L+" },
+    { label: "Businesses Served", value: "10+" },
     { label: "Optimization Cycles", value: "Weekly" },
   ];
 
   const faqs = [
     {
       q: "What Types of Google Ad Campaigns Can Help Your Business Grow?",
-      a: "Google offers Search, Display, Video, Shopping, App, Performance Max, Local, and Discovery campaigns for targeted business growth.",
+      a: "Google offers Search, Display, Video, Shopping, App, Performance Max, Local and Discovery campaigns for targeted business growth.",
     },
     {
       q: "How Do Google Ads Enhance Brand Visibility and Generate Leads?",
-      a: "Google Ads reach active audiences, increasing visibility, driving quality traffic, and converting potential customers into valuable leads.",
+      a: "Google Ads reach active audiences, increasing visibility, driving quality traffic and converting potential customers into valuable leads.",
     },
     {
       q: "Why Choose Skiez Digital for Google Ad Campaign Management?",
@@ -62,7 +62,7 @@ export default function GoogleCampign() {
     },
     {
       h3: "Reach Your Target Audience",
-      h4: "Target specific demographics, interests, and behaviours to connect with users most likely to engage with your brand.",
+      h4: "Target specific demographics, interests and behaviours to connect with users most likely to engage with your brand.",
     },
     {
       h3: "Control Your Advertising Costs",
@@ -70,7 +70,7 @@ export default function GoogleCampign() {
     },
     {
       h3: "Measure Campaign Performance",
-      h4: "Google Ads provides real-time insights on clicks, conversions, and ROI, enabling informed optimization decisions.",
+      h4: "Google Ads provides real-time insights on clicks, conversions and ROI, enabling informed optimization decisions.",
     },
     {
       h3: "Improve Brand Visibility",
@@ -156,10 +156,10 @@ export default function GoogleCampign() {
               Get a Free Consultation
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+91 82200 43041"
               className="text-gray-200 hover:text-white"
             >
-              Or call: +91 98765 43210
+              Or call: +91 82200 43041
             </a>
           </div>
         </motion.div>
@@ -182,7 +182,7 @@ export default function GoogleCampign() {
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mt-4">
               Skiez Digital understands that in the fast-paced digital market,
               an effective Google Ads campaign is essential for businesses
-              seeking to increase online visibility, attract quality leads, and
+              seeking to increase online visibility, attract quality leads and
               drive sales. We launch and manage campaigns aligned to your
               objectives.
             </p>
@@ -194,7 +194,7 @@ export default function GoogleCampign() {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 What is a Google Ads (AdWords) Campaign?
               </h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed text-justify">
                 A Google Ads campaign is a pay-per-click (PPC) method where ads
                 appear on Google Search, YouTube, and partner sites. It reaches
                 people actively searching for what you offer, ensuring your
@@ -204,7 +204,7 @@ export default function GoogleCampign() {
               <h3 className="mt-6 text-2xl font-bold text-gray-900 mb-2">
                 Advantages of Google Ads PPC
               </h3>
-              <ul className="mt-3 space-y-3">
+              <ul className="mt-3 space-y-3 text-justify">
                 {[
                   {
                     t: "Maximize Your Ad Spend",
@@ -216,7 +216,7 @@ export default function GoogleCampign() {
                   },
                   {
                     t: "Improve Click-Through Rates (CTR)",
-                    d: "Refined ad copy, intent-based keywords, and assets to lift CTR.",
+                    d: "Refined ad copy, intent-based keywords and assets to lift CTR.",
                   },
                   {
                     t: "Boost Conversions",
@@ -224,7 +224,7 @@ export default function GoogleCampign() {
                   },
                   {
                     t: "Ensure Best ROI",
-                    d: "Bid strategies, negatives, and creative testing aimed at profitable growth.",
+                    d: "Bid strategies, negatives and creative testing aimed at profitable growth.",
                   },
                 ].map((it, i) => (
                   <li key={i} className="flex items-start gap-3">
@@ -240,7 +240,7 @@ export default function GoogleCampign() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-teal-50 to-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+            <div className="bg-gradient-to-br from-teal-200 to-white border border-gray-100 rounded-2xl p-6 shadow-sm">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 Comprehensive Campaign Management
               </h3>
@@ -248,7 +248,7 @@ export default function GoogleCampign() {
                 From keyword research and competitor analysis to ad creation and
                 performance monitoring, we manage every aspect of your Google
                 advertising. Our analytics and optimization ensure your ads win
-                more auctions, gain visibility, and convert efficiently.
+                more auctions, gain visibility and convert efficiently.
               </p>
 
               <h3 className="mt-6 text-2xl font-bold text-gray-900 mb-2">
@@ -257,14 +257,14 @@ export default function GoogleCampign() {
               <p className="text-gray-700 leading-relaxed">
                 Work with experts who stay ahead of Google’s innovations and
                 best practices. We tailor every campaign to your market,
-                increase your customer base, and maintain a competitive edge.
+                increase your customer base and maintain a competitive edge.
               </p>
               <p className="text-gray-700 leading-relaxed mt-3">
                 <span className="font-semibold text-teal-600">
                   Drive Growth and Maximize Results:
                 </span>{" "}
                 From startup to enterprise, our strategies deliver measurable
-                revenue. Leverage Google Ads, optimise budget, and accelerate
+                revenue. Leverage Google Ads, optimise budget and accelerate
                 growth.
               </p>
             </div>

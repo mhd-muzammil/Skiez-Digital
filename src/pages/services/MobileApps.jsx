@@ -77,7 +77,7 @@ const deliverables = [
   },
   {
     title: "Enterprise Mobile App Solutions",
-    desc: "Robust and scalable enterprise-level mobile applications designed for efficiency, security, and performance.",
+    desc: "Robust and scalable enterprise-level mobile applications designed for efficiency, security and performance.",
     img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
   },
   {
@@ -87,12 +87,12 @@ const deliverables = [
   },
   {
     title: "App Testing & Quality Assurance",
-    desc: "Comprehensive testing to ensure smooth performance, user friendliness, and reliability before launch.",
+    desc: "Comprehensive testing to ensure smooth performance, user friendliness and reliability before launch.",
     img: "https://media.istockphoto.com/id/2152919218/photo/mini-mobile-shop-with-setup-tools-strategies-to-improve-sales-and-profitability-3d-render.webp?a=1&b=1&s=612x612&w=0&k=20&c=1Iuu4zqV5jQnblaaWS6TtVZFYqhA7130sEJyvDGaf9A=",
   },
   {
     title: "App Maintenance & Support",
-    desc: "Continuous monitoring, updates, optimization, and feature improvements post-launch.",
+    desc: "Continuous monitoring, updates, optimization and feature improvements post-launch.",
     img: "https://media.istockphoto.com/id/2211911993/photo/isolated-smartphone-repair-service-icon.webp?a=1&b=1&s=612x612&w=0&k=20&c=8u6OOAuaL2rJqjbMav1-_O9oKBQ_q9Bmdn8ac9CjddQ=",
   },
 ];
@@ -114,7 +114,7 @@ const STEPS = [
   {
     step: "3",
     title: "Build",
-    desc: "Component-driven development, automated tests, and CI/CD for reliable releases.",
+    desc: "Component-driven development, automated tests and CI/CD for reliable releases.",
     accent: "Engineering",
   },
   {
@@ -156,7 +156,7 @@ export default function MobileApp() {
             </h1>
             <p className="mt-4 text-gray-200">
               Skiez Digital offers expert mobile app development services with
-              skilled developers, custom solutions, and full support to grow
+              skilled developers, custom solutions and full support to grow
               your business efficiently.
             </p>
             <div className="mt-6 flex items-center gap-4 justify-center md:justify-start">
@@ -166,9 +166,7 @@ export default function MobileApp() {
               >
                 Build a Project
               </Link>
-              <a href="#process" className="text-gray-400 ">
-                See our process
-              </a>
+              
             </div>
           </div>
         </motion.div>
@@ -189,7 +187,7 @@ export default function MobileApp() {
 
           <p className="text-gray-700 text-lg leading-relaxed text-justify max-w-4xl mx-auto">
             App development involves creating mobile and web applications
-            designed to deliver smooth, efficient, and engaging experiences. The
+            designed to deliver smooth, efficient and engaging experiences. The
             process starts with planning and design, where ideas are
             conceptualized and visualized. Next, coding and development bring
             the app to life, ensuring it functions as intended. Testing follows
@@ -217,11 +215,11 @@ export default function MobileApp() {
           <p className="text-gray-700 leading-relaxed text-lg max-w-4xl mx-auto text-justify">
             As a leading app development company, Skiez Digital is committed to
             transforming your vision into a powerful mobile presence. Our team
-            combines creativity, technical excellence, and industry know-how to
+            combines creativity, technical excellence and industry know-how to
             deliver mobile solutions that drive tangible results. Whether you're
             a startup or an enterprise, our mobile app development services are
             built to scale your growth. Contact Skiez Digital today to bring
-            your ideas to life with innovative, reliable, and scalable mobile
+            your ideas to life with innovative, reliable and scalable mobile
             applications.
           </p>
         </div>
@@ -508,7 +506,7 @@ export default function MobileApp() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 Costs depend on app complexity, design, features, platform
-                choice, and ongoing maintenance needs.
+                choice and ongoing maintenance needs.
               </div>
             </details>
             <details className="p-5 bg-white rounded-xl shadow-sm hover:shadow-md transition">
@@ -517,7 +515,7 @@ export default function MobileApp() {
               </summary>
               <div className="mt-3 text-teal-600 leading-relaxed">
                 We offer ongoing maintenance and updates to keep your app
-                compatible, secure, and feature-rich post-launch.
+                compatible, secure and feature-rich post-launch.
               </div>
             </details>
           </div>
@@ -541,7 +539,7 @@ export default function MobileApp() {
             >
               Book discovery call
             </Link>
-            <a href="tel:+917550186096" className="text-gray-700">
+            <a href="tel:+91 82200 43041" className="text-gray-700">
               Or call +91 82200 43041
             </a>
           </div>
