@@ -23,6 +23,7 @@ import ScrollTop from "@/components/ui/ScrollTop";
 import Privacy from '@/pages/Privacy';
 import Terms from './pages/Terms';
 import FloatingWhatsapp from "./components/FloatingWatsapp";
+import BlogPost from "./pages/BlogPost";
 
 // ✅ Import Toaster
 import { Toaster } from "react-hot-toast";
@@ -62,6 +63,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services/digital-marketing/seo" element={<Seo />} />
           <Route
