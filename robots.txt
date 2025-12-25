@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /careers
+Disallow: /contact
+
+Sitemap: https://www.skiezdigital.com/sitemap.xml

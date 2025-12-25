@@ -358,7 +358,7 @@ export default function WebDevelopment() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: idx * 0.08 }}
-              className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition"
+              className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-teal-side hover:border-teal-500/40"
             >
               <div className="h-44 bg-gray-200">
                 <img

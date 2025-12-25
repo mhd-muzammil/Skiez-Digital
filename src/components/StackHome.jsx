@@ -96,7 +96,7 @@ const Section = styled.section`
   .section-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #111827;
   }
 `;

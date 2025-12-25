@@ -248,7 +248,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-700 pt-6 text-sm text-gray-400">
-          <p>© {new Date().getFullYear()} YourBrand. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Skiez Digital. All Rights Reserved.</p>
           <ul className="flex gap-6 mt-3 md:mt-0">
             <li>
               <a href="/privacy" className="hover:text-sky-400 transition">

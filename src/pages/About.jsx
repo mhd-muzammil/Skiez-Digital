@@ -294,7 +294,7 @@ function ServicesDoc() {
       </div>
     </section>
   );
-}
+} 
 
 /* ----------------- Proof / Why Choose ----------------- */
 
