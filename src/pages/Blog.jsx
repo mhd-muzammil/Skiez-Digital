@@ -2,10 +2,37 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { posts, allCategories, allTags } from "../data/posts";
+import { useEffect } from "react"; 
 
 const PER_PAGE = 6;
 
 export default function Blog() {
+  
+  useEffect(() => {
+    document.title = "Skiez Digital Marketing & Growth Insights Blog";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute(
+      "content",
+      "Read the Skiez Digital blog for practical tips on digital marketing, social media marketing, web development, ads and content strategies that support steady online growth for businesses."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/blog";
+  }, []);
+
+
   const [searchParams, setSearchParams] = useSearchParams();
   const q = searchParams.get("q") || "";
   const cat = searchParams.get("cat") || "All";

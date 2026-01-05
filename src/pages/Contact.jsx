@@ -6,12 +6,41 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { toast } from "react-hot-toast";
 import emailjs from "@emailjs/browser";
+import { useEffect } from "react";
 
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
+  
+  
+  useEffect(() => {
+    document.title = "Contact Skiez Digital Marketing Experts Today";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute(
+      "content",
+      "Contact Skiez Digital to discuss custom digital marketing, web development, content marketing, social media and meta ads campaigns that can accelerate your brand’s online visibility and growth."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/contact";
+  }, []);
+
+
+
   const {
     register,
     handleSubmit,

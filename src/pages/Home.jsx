@@ -1,16 +1,44 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../components/Hero";
 import CardContainer from "../components/CardContainer";
 import StackHome from "../components/StackHome";
-import { motion } from 'framer-motion'
-import HomeSection from '@/components/HomeSection'
-import GCHeroWave from '@/components/GCHeroWave'
+import { motion } from "framer-motion";
+import HomeSection from "@/components/HomeSection";
+import GCHeroWave from "@/components/GCHeroWave";
+
 const Home = () => {
+
+  
+  useEffect(() => {
+    // Title
+    document.title = "Skiez Digital Marketing for Web Development & Growth";
+
+    // Meta description
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute(
+      "content",
+      "Skiez Digital is a Chennai agency helping brands grow with smart digital marketing, social media, content, web development and ads focused on measurable business results."
+    );
+
+    // ✅ Canonical
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/";
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
       <GCHeroWave />
-      {/* <Hero/> */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         {/* Heading */}
@@ -38,17 +66,16 @@ const Home = () => {
           className="w-24 h-1 bg-gradient-to-r from-teal-500 to-cyan-400 mx-auto mt-5 mb-8 rounded-full"
         ></motion.div>
 
-        {/* Animated and justified paragraph */}
+        {/* Paragraph */}
         <motion.p
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto text-justify"
-          style={{ textAlign: "justify", textJustify: "inter-word" }}
         >
-           <span className="font-semibold text-gray-900">Skiez Digital</span>,
-          we are a performance-driven digital marketing agency based in Chennai,
+          <span className="font-semibold text-gray-900">Skiez Digital</span>, we
+          are a performance-driven digital marketing agency based in Chennai,
           committed to helping businesses transform into powerful online brands.
           Our approach combines{" "}
           <span className="font-semibold text-gray-900">
@@ -61,12 +88,9 @@ const Home = () => {
         </motion.p>
       </section>
 
-      {/* Our Services Section */}
       <CardContainer />
-
-      {/* Stack / Tech Section */}
       <StackHome />
-      <HomeSection/>
+      <HomeSection />
     </>
   );
 };

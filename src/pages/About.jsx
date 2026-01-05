@@ -18,6 +18,32 @@ import FloatingWhatsapp from "@/components/FloatingWatsapp";
 
 
 export default function AboutPage() {
+
+  useEffect(() => {
+    document.title = "About Skiez Digital Marketing Agency in Chennai";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute(
+      "content",
+      "Discover how Skiez Digital blends digital marketing, social media, content marketing, meta ads and web development expertise to drive long-term online growth for modern businesses."
+    );
+
+    // ✅ Canonical
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/about";
+  }, []);
+
+
   return (
     <div className="bg-white text-gray-900 antialiased">
       <Helmet>

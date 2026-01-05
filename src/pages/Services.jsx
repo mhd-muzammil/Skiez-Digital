@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ServiceHero from '@/assets/ServiceHero.jpg'
+import { useEffect } from "react";
 
 const services = [
   {
@@ -35,6 +36,32 @@ const services = [
 ];
 
 export default function Services() {
+
+  
+  useEffect(() => {
+    document.title = "Digital Marketing, Web Development & Meta Ads Services";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute(
+      "content",
+      "Explore Skiez Digital services including digital marketing, social media marketing, content marketing, meta ads and web development designed to improve visibility, leads and brand growth."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/services/";
+  }, []);
+
   return (
     <div className="relative overflow-hidden bg-white">
       {/* 🌄 Hero Section with Background Image */}

@@ -1,5 +1,5 @@
 // src/pages/Careers.jsx
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import jobsData from "../data/jobs.json";
 import internshipsData from "../data/internships.json";
 import traineeCoursesData from "../data/traineeCourses.json";
@@ -7,6 +7,33 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 
 export default function Careers() {
+  
+  useEffect(() => {
+    document.title = "Careers at Skiez Digital Marketing & Web Team";
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute(
+      "content",
+      "Build your career at Skiez Digital with roles in digital marketing, social media, content, web development and ads, gaining hands on experience while helping clients achieve sustainable growth."
+    );
+
+    let canonical = document.querySelector("link[rel='canonical']");
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://www.skiezdigital.com/careers";
+  }, []);
+
+
+
   const [activeTab, setActiveTab] = useState("jobs");
   const [query, setQuery] = useState("");
   const [location, setLocation] = useState("All");
@@ -141,7 +168,6 @@ export default function Careers() {
     }
   };
 
-
   const shareRole = async (item) => {
     const url = `${window.location.origin}${window.location.pathname}?role=${item?.id}`;
 
@@ -172,7 +198,6 @@ export default function Careers() {
         `&body=${encodeURIComponent(`${data.text}\n\n${url}`)}`;
     }
   };
-
 
   return (
     <main className="min-h-screen bg-white">

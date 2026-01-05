@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-import logo from "../assets/Skiez-logo.png";
+import logo from "/skiez-logo.png";
 
 const MotionLink = motion(Link);
 
