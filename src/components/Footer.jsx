@@ -264,7 +264,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/sitemap" className="hover:text-sky-400 transition">
+              <a href="/public/sitemap.xml" className="hover:text-sky-400 transition">
                 Sitemap
               </a>
             </li>
