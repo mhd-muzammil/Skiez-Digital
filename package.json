@@ -10,16 +10,20 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
- "reactSnap": {
-  "source": "dist",
-  "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
-  "navigationTimeout": 60000
-},
+  "reactSnap": {
+    "source": "dist",
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "navigationTimeout": 60000
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-toggle": "^1.1.10",
+    "axios": "^1.13.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "emailjs-com": "^3.2.0",
