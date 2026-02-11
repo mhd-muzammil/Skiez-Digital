@@ -5,6 +5,7 @@ import StackHome from "../components/StackHome";
 import { motion } from "framer-motion";
 import HomeSection from "@/components/HomeSection";
 import GCHeroWave from "@/components/GCHeroWave";
+import Showcase from "@/components/Showcase";
 
 const Home = () => {
 
@@ -22,7 +23,7 @@ const Home = () => {
     }
     meta.setAttribute(
       "content",
-      "Skiez Digital is a Chennai agency helping brands grow with smart digital marketing, social media, content, web development and ads focused on measurable business results."
+      "Skiez Digital is a Chennai agency driving brand growth with smart marketing, social media, web dev and ads. We focus on delivering measurable business results.",
     );
 
     // ✅ Canonical
@@ -91,6 +92,7 @@ const Home = () => {
       <CardContainer />
       <StackHome />
       <HomeSection />
+      <Showcase />
     </>
   );
 };

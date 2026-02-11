@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Brand & Description */}
           <div className="col-span-2">
             <img
-              src="/src/assets/Skiez-logo.png"
+              src="/skiez-logo.png"
               alt="Skiez Digital Logo"
               className="h-14 w-22 mb-5 rounded-lg"
               style={{ display: "block" }}

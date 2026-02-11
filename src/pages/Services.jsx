@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import ServiceHero from '@/assets/ServiceHero.jpg'
+
 import { useEffect } from "react";
 
 const services = [
@@ -68,8 +68,7 @@ export default function Services() {
       <section
         className="relative w-full h-[420px] md:h-[500px] flex mb-24 items-center justify-center text-center"
         style={{
-          backgroundImage:
-            `url(${ServiceHero})`, // <-- image URL
+          backgroundImage: `url(${"https://plus.unsplash.com/premium_photo-1680509034814-e733c5f873ac?q=80&w=1027&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"})`, // <-- image URL
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -110,11 +109,10 @@ export default function Services() {
         <h4 className="text-gray-700 text-base md:text-lg leading-relaxed text-justify">
           <span className="font-semibold text-teal-600">Skiez Digital</span>, we
           don’t just create an online presence we build digital experiences that
-          connect, engage and convert. In today’s competitive digital
-          landscape, your brand’s online identity defines how customers perceive
-          and trust you. That’s why we focus on designing meaningful,
-          performance-driven digital strategies that deliver real growth and
-          measurable results.
+          connect, engage and convert. In today’s competitive digital landscape,
+          your brand’s online identity defines how customers perceive and trust
+          you. That’s why we focus on designing meaningful, performance-driven
+          digital strategies that deliver real growth and measurable results.
           <br />
           <br />
           As a full-service digital marketing agency in Chengalpattu,{" "}

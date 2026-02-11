@@ -166,21 +166,25 @@ export default function Navbar() {
                       }}
                     >
                       {/* Parent button */}
-                      <Link
-                        to={l.href}
+                      <a
+                        href="/services/"
                         data-dd-button
                         aria-haspopup="true"
                         aria-expanded={isOpen}
                         onFocus={() => {
                           clearCloseTimer();
-                          setOpenDropdown(l.label);
+                          setOpenDropdown("Services");
                         }}
                         onBlur={() => {
                           scheduleClose(120);
                         }}
+                        onMouseEnter={() => {
+                          clearCloseTimer();
+                          setOpenDropdown("Services");
+                        }}
                         className="flex items-center gap-2 group text-slate-700 hover:text-slate-900 transition"
                       >
-                        {l.label}
+                        Services
                         <svg
                           className="w-3 h-3 mt-0.5 text-slate-500 group-hover:text-slate-700"
                           viewBox="0 0 20 20"
@@ -189,7 +193,7 @@ export default function Navbar() {
                         >
                           <path d="M5.23 7.21a.75.75 0 011.06-.02L10 10.67l3.71-3.48a.75.75 0 111.04 1.08l-4.24 4a.75.75 0 01-1.04 0l-4.24-4a.75.75 0 01-.02-1.06z" />
                         </svg>
-                      </Link>
+                      </a>
 
                       {/* First-level Dropdown panel */}
                       <div
@@ -199,7 +203,7 @@ export default function Navbar() {
                           "absolute left-0 top-full mt-0 w-64 rounded-md bg-white border border-slate-200 shadow-lg transition-all duration-150 z-50",
                           isOpen
                             ? "opacity-100 pointer-events-auto translate-y-0"
-                            : "opacity-0 pointer-events-none -translate-y-1"
+                            : "opacity-0 pointer-events-none -translate-y-1",
                         )}
                       >
                         <ul className="py-2">
@@ -245,7 +249,7 @@ export default function Navbar() {
                                         e.stopPropagation();
                                         // toggle nested on click (useful for touchpad)
                                         setOpenNested((cur) =>
-                                          cur === c.label ? null : c.label
+                                          cur === c.label ? null : c.label,
                                         );
                                       }}
                                     >
@@ -270,7 +274,7 @@ export default function Navbar() {
                                       "absolute left-full top-0 ml-0 w-56 rounded-md bg-white border border-slate-200 shadow-lg transition-all duration-150 z-50",
                                       nestedOpen
                                         ? "opacity-100 pointer-events-auto translate-x-0"
-                                        : "opacity-0 pointer-events-none -translate-x-1"
+                                        : "opacity-0 pointer-events-none -translate-x-1",
                                     )}
                                     onMouseEnter={() => {
                                       clearCloseTimer();
