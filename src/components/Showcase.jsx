@@ -15,13 +15,20 @@ function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
+// --- IMAGES ---
+import marinePro from "../assets/marine pro.png";
+import taspefPro from "../assets/taspef pro.png";
+import laundryPro from "../assets/laundry pro.png";
+import webuytreePro from "../assets/webuytree pro.jpeg";
+import mbctAppPro from "../assets/MBCT App Pro.png";
+
 // --- DATA ---
 const projects = [
   {
     id: 1,
     title: "Marine Biodiversity",
     category: "NGO / Social Welfare",
-    image: "/src/assets/marine pro.png",
+    image: marinePro,
     description:
       "Real-time ecosystem monitoring platform with integrated RSS feeds and data visualization.",
     techStack: ["React", "Node.js", "Tailwind"],
@@ -31,7 +38,7 @@ const projects = [
     id: 2,
     title: "TASPEF",
     category: "Service Platform",
-    image: "/src/assets/taspef pro.png",
+    image: taspefPro,
     description:
       "Official platform for TASPEF, driving social impact through community initiatives and digital outreach.",
     techStack: ["React", "Tailwind", "Framer Motion"],
@@ -42,7 +49,7 @@ const projects = [
     id: 3,
     title: "Divine Laundry ",
     category: "Service Platform",
-    image: "/src/assets/laundry pro.png",
+    image: laundryPro,
     description:
       "Modern on-demand laundry booking system with real-time order tracking and slot scheduling.",
     techStack: ["MERN Stack", "Redux", "Stripe"],
@@ -53,7 +60,7 @@ const projects = [
     id: 4,
     title: "We Buy Trees",
     category: "Service Platform",
-    image: "/src/assets/webuytree pro.jpeg",
+    image: webuytreePro,
     description:
       "Modern on-demand laundry booking system with real-time order tracking and slot scheduling.",
     techStack: ["MERN Stack", "Redux", "Stripe"],
@@ -64,7 +71,7 @@ const projects = [
     id: 5,
     title: "MBCT Mobile App",
     category: "NGO / Social Welfare",
-    image: "/src/assets/MBCT App Pro.png",
+    image: mbctAppPro,
     description:
       "Modern on-demand laundry booking system with real-time order tracking and slot scheduling.",
     techStack: ["MERN Stack", "Redux", "Stripe"],

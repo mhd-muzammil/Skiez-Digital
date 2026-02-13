@@ -139,7 +139,9 @@ const useCanvasCursor = () => {
     this.vx = 0;
   }
   const renderCanvas = function () {
-    ctx = document.getElementById("canvas").getContext("2d");
+    const canvas = document.getElementById("canvas");
+    if (!canvas) return;
+    ctx = canvas.getContext("2d");
     ctx.running = true;
     ctx.frame = 1;
     f = new n({

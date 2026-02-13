@@ -11,6 +11,7 @@ const Home = () => {
 
   
   useEffect(() => {
+    if (typeof window === "undefined") return;
     // Title
     document.title = "Skiez Digital Marketing for Web Development & Growth";
 

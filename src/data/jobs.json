@@ -1,29 +1,31 @@
 [
   {
     "id": 1,
-    "title": "Flutter Developer",
-    "location": "On-site",
+    "title": "Direct Marketing Executive",
+    "location": "On-site / Field Work",
     "type": "Full-time",
-    "salary": "₹14,000 – ₹20,000",
-    "shortDescription": "Build beautiful, high-performance mobile apps for Android and iOS using Flutter and Dart.",
-    "fullDescription": "We are seeking a skilled Flutter Developer to join our growing engineering team. You’ll be responsible for developing clean, responsive, and scalable mobile applications. Collaborating with designers and backend engineers, you’ll turn product ideas into smooth, pixel-perfect mobile experiences that delight users.",
+    "salary": "₹12,000 – ₹25,000 + Incentives",
+    "shortDescription": "Promote our website development and digital marketing services directly to businesses and convert leads into clients.",
+    "fullDescription": "We are looking for a confident and result-driven Direct Marketing Executive to promote our website development and digital marketing services. You will be responsible for approaching local businesses, startups, and entrepreneurs, explaining our services, and converting them into paying clients. This role requires strong communication skills, persuasion ability, and a target-oriented mindset.",
     "responsibilities": [
-      "Develop cross-platform mobile apps using Flutter and Dart.",
-      "Collaborate with backend developers and UI/UX designers for seamless integrations.",
-      "Write clean, maintainable, and efficient code.",
-      "Optimize performance and fix bugs for a smooth user experience.",
-      "Stay updated with the latest Flutter releases and mobile development trends."
+      "Identify and approach potential clients such as shops, startups, schools, clinics, and small businesses.",
+      "Explain our website development and digital marketing services clearly.",
+      "Generate leads through field visits, cold calling, and networking.",
+      "Maintain follow-up with interested prospects and close deals.",
+      "Collect client requirements and coordinate with the development team.",
+      "Achieve monthly sales targets and revenue goals."
     ],
     "requirements": [
-      "1–2 years of experience in Flutter app development.",
-      "Strong understanding of Dart, REST APIs, and state management (e.g., Provider, Riverpod, or Bloc).",
-      "Experience with Firebase, push notifications, and app deployment.",
-      "Familiarity with Git and CI/CD workflows.",
-      "Strong debugging and problem-solving skills."
+      "0–2 years of experience in sales, marketing, or business development.",
+      "Strong communication and convincing skills.",
+      "Basic understanding of websites and digital marketing.",
+      "Confidence in direct client interaction and negotiations.",
+      "Self-motivated and target-driven personality."
     ],
     "bonusPoints": [
-      "Experience publishing apps on Play Store or App Store.",
-      "Understanding of native Android/iOS integrations."
+      "Experience in selling digital services or websites.",
+      "Knowledge of SEO, social media marketing, and paid ads.",
+      "Existing local business network."
     ]
   },
   {

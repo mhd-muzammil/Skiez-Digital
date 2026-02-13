@@ -56,6 +56,9 @@
     }, []);
 
     const getScrollData = useCallback(() => {
+      if (typeof window === "undefined") {
+         return { scrollTop: 0, containerHeight: 0, scrollContainer: null };
+      }
       if (useWindowScroll) {
         return {
           scrollTop: window.scrollY || window.pageYOffset,
@@ -255,6 +258,8 @@
 
     // Robust Lenis init with fallbacks
     const setupScrolling = useCallback(() => {
+      if (typeof window === "undefined") return;
+
       if (lenisRef.current) {
         try {
           lenisRef.current.destroy();

@@ -43,6 +43,8 @@ const HeroFont = ({
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleMouseMove = e => {
       cursorRef.current.x = e.clientX;
       cursorRef.current.y = e.clientY;
@@ -95,6 +97,7 @@ const HeroFont = ({
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     setSize();
     window.addEventListener('resize', setSize);
     return () => window.removeEventListener('resize', setSize);

@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import canvaLogo from "../../assets/canva.png";
 
 
 
@@ -32,13 +33,14 @@ export default function SocialMediaMarketing() {
     },
   ];
 
+
   const gallery = [
-    "/public/postImages/postImg1.png",
-    "/public/postImages/postImg2.png",
-    "/public/postImages/postImg3.png",
-    "/public/postImages/postImg4.png",
-    "/public/postImages/postImg5.png",
-    "/public/postImages/postImg6.png",
+    "/postImages/postImg1.png",
+    "/postImages/postImg2.png",
+    "/postImages/postImg3.png",
+    "/postImages/postImg4.png",
+    "/postImages/postImg5.png",
+    "/postImages/postImg6.png",
   ];
 
   const highlights = [
@@ -63,7 +65,7 @@ export default function SocialMediaMarketing() {
   const tools = [
     {
       name: "Canva",
-      logo: "/src/assets/canva.png",
+      logo: canvaLogo,
     },
     {
       name: "Light Room",

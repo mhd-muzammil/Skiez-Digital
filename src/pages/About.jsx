@@ -20,6 +20,8 @@ import FloatingWhatsapp from "@/components/FloatingWatsapp";
 export default function AboutPage() {
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     document.title = "About Skiez Digital Marketing Agency in Chennai";
 
     let meta = document.querySelector('meta[name="description"]');

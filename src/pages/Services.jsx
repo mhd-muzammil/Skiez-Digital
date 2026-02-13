@@ -39,6 +39,8 @@ export default function Services() {
 
   
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     document.title = "Digital Marketing, Web Development & Meta Ads Services";
 
     let meta = document.querySelector('meta[name="description"]');

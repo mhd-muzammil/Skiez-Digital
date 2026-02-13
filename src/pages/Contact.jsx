@@ -274,6 +274,7 @@ function CursorGlow() {
         mix-blend-mode: screen;
         backdrop-filter: blur(2px);
         opacity: 0.9;
+        // ... (rest unchanged)
       }
       @media (max-width: 640px) {
         #skiez-cursor-glow {
@@ -283,4 +284,3 @@ function CursorGlow() {
     `}</style>
   );
 }
-
