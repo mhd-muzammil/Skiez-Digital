@@ -1,7 +1,6 @@
 // src/components/HeroCowork.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import heroIllustration from "../assets/vector1.png";
 import { InteractiveHoverButton } from "./ui/interactive-hover-button";
 import HeroFont from "./HeroFont";
 
@@ -107,8 +106,10 @@ export default function HeroCowork() {
           >
             <div className="flex justify-center md:justify-end">
               <img
-                src={heroIllustration}
+                src="/vector1.webp"
                 alt="Coworking illustration"
+                width="760"
+                height="500"
                 className="w-[440px] md:w-[600px] lg:w-[680px] xl:w-[760px] max-w-full object-contain select-none drop-shadow-xl"
                 loading="eager"
                 fetchPriority="high"

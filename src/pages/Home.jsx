@@ -44,7 +44,7 @@ const Home = () => {
 
       <section className="max-w-5xl mx-auto px-6 py-16 text-center">
         {/* Heading */}
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -57,7 +57,7 @@ const Home = () => {
           </span>{" "}
           Empowering Businesses with{" "}
           <span className="text-gray-900">Data-Driven Growth</span>
-        </motion.h3>
+        </motion.h2>
 
         {/* Accent line */}
         <motion.div

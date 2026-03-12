@@ -64,7 +64,7 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 800;

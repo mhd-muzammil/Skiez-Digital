@@ -150,6 +150,7 @@ const TiltCard = ({ project }) => {
               href={project.liveLink}
               target="_blank"
               rel="noreferrer"
+              aria-label={`Visit ${project.title} live site`}
               className="rounded-full bg-slate-800 p-2 text-slate-400 transition-all hover:bg-teal-500 hover:text-white"
             >
               <ArrowUpRight size={18} />

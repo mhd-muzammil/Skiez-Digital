@@ -10,9 +10,7 @@ export default defineConfig({
     },
   },
   build: {
-    // ⬇️ This converts modern '?' syntax into code the old crawler understands
     target: "es2015",
-    // ⬇️ Increases limit to help with those 2MB+ hero image warnings
     chunkSizeWarningLimit: 2000,
   },
 });

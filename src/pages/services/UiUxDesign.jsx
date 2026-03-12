@@ -250,6 +250,8 @@ export default function UIUX() {
                   src={d.img}
                   alt={d.title}
                   loading="lazy"
+                  width="600"
+                  height="400"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -427,6 +429,8 @@ export default function UIUX() {
                   <img
                     src={t.logo}
                     alt={t.name}
+                    width="40"
+                    height="40"
                     className="h-10 w-auto object-contain drop-shadow-md"
                     loading="lazy"
                   />
@@ -452,6 +456,8 @@ export default function UIUX() {
                   <img
                     src={t.logo}
                     alt={t.name}
+                    width="40"
+                    height="40"
                     className="h-10 w-auto object-contain drop-shadow-md"
                     loading="lazy"
                   />

@@ -364,6 +364,9 @@ export default function WebDevelopment() {
                 <img
                   src={c.img}
                   alt={c.title}
+                  width="600"
+                  height="400"
+                  loading="lazy"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -401,6 +404,8 @@ export default function WebDevelopment() {
                   <img
                     src={t.logo}
                     alt={t.name}
+                    width="40"
+                    height="40"
                     className="h-10 w-auto object-contain drop-shadow-md"
                     loading="lazy"
                   />
@@ -426,6 +431,8 @@ export default function WebDevelopment() {
                   <img
                     src={t.logo}
                     alt={t.name}
+                    width="40"
+                    height="40"
                     className="h-10 w-auto object-contain drop-shadow-md"
                     loading="lazy"
                   />

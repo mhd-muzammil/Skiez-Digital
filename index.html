@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Skiez Digital</title>
 
-    <!-- ✅ Schema.org: LocalBusiness -->
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preload" as="image" href="/vector1.webp" />
+
+    <!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,7 +30,6 @@
 }
 </script>
 
-<!-- ✅ Schema.org: Organization (Identity) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,8 +45,7 @@
 }
 </script>
 
-    <!-- Google Analytics -->
-    <!-- Google Analytics -->
+    <!-- Google Analytics (Deferred execution pattern) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3ET5ZCGSS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -51,7 +55,8 @@
     </script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet"></noscript>
   </head>
 
   <body>

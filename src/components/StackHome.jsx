@@ -69,11 +69,11 @@ const StackHome = () => {
                 <Clip style={{ background: it.bg }}>
                   <CardInner reverse={isReversed}>
                     <ImageWrapper>
-                      <img src={it.image} alt={it.alt} loading="lazy" />
+                      <img src={it.image} alt={it.alt} loading="lazy" width="600" height="338" />
                     </ImageWrapper>
 
                     <Content>
-                      <h2 className="text-white">{it.title}</h2>
+                      <h3 className="text-white">{it.title}</h3>
                       <p className="text-white/85">{it.text}</p>
                     </Content>
                   </CardInner>
