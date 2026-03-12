@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import FlipCardUIUX from '@/components/ui/FlipCardUIUX'
-import UiUxHero from '@/assets/uiuxHero.jpg'
+import UiUxHero from '@/assets/uiuxhero.jpg'
 
 
 /**
